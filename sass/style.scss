@@ -1,4 +1,7 @@
-$background-color: grey;
+
+@import './colors';
+
+
 @mixin addons {
     background-color: gold;
     border-radius: 25px;
@@ -13,7 +16,7 @@ $background-color: grey;
 
 body
 {
-   background-color: $background-color;
+   background-color: $mainHeader;
 }
 nav
 {
