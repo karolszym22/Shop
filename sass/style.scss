@@ -6,7 +6,8 @@
     padding: 20;
 } 
 body{
-   background-color: rgb(223, 219, 219);
+   background-color: $bodyBackgroundColor;
+   margin: 0px;
 }
 
 header
@@ -370,5 +371,15 @@ header
 }
 .main-wrapper
 {
-  background-image: ;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  .background-image
+  {
+   
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: contain
+    
+  }
 }

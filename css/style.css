@@ -4,7 +4,8 @@
 }
 
 body {
-  background-color: #dfdbdb;
+  background-color: #28a9e2;
+  margin: 0px;
 }
 
 header {
@@ -476,5 +477,21 @@ header .secondary-head .nav-container .users-opinion h3 {
 header .secondary-head .nav-container .users-opinion h3:hover {
   border: 1px solid #e6e6e0;
   border-radius: 2px;
+}
+
+.main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.main-wrapper .background-image {
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: contain;
 }
 /*# sourceMappingURL=style.css.map */
