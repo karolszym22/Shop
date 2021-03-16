@@ -3,13 +3,19 @@
   padding: 20;
 }
 
+body {
+  background-color: #dfdbdb;
+}
+
 header {
   width: 100vw;
-  height: 60px;
-  background-color: #131921;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header .main-head {
@@ -17,7 +23,9 @@ header .main-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 60px;
   font-family: 'PT Sans', sans-serif;
+  background-color: #131921;
 }
 
 header .main-head .left-head {
@@ -374,5 +382,99 @@ header .main-head .right-head .shopping-cart .cart i {
 header .main-head .right-head .shopping-cart .cart p {
   margin: 0 15px;
   font-size: 22px;
+}
+
+header .secondary-head {
+  height: 50px;
+  width: 100vw;
+  background-color: #232f3e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'PT Sans', sans-serif;
+  color: white;
+}
+
+header .secondary-head .nav-container {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .secondary-head .nav-container .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .secondary-head .nav-container .nav-menu .menu-bars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: bold;
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  width: 80px;
+  cursor: pointer;
+}
+
+header .secondary-head .nav-container .nav-menu .menu-bars:hover {
+  border: 1px solid #e6e6e0;
+  border-radius: 2px;
+}
+
+header .secondary-head .nav-container .nav-menu a {
+  display: inline-block;
+  margin: 0px 7.5px;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+header .secondary-head .nav-container .nav-menu a:hover {
+  border: 1px solid #e6e6e0;
+  border-radius: 2px;
+}
+
+header .secondary-head .nav-container .users-opinion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.685);
+  cursor: pointer;
+}
+
+header .secondary-head .nav-container .users-opinion h3 {
+  color: rgba(255, 255, 255, 0.685);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+header .secondary-head .nav-container .users-opinion h3:hover {
+  border: 1px solid #e6e6e0;
+  border-radius: 2px;
 }
 /*# sourceMappingURL=style.css.map */
