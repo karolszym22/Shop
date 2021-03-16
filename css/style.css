@@ -17,6 +17,7 @@ header .main-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: 'PT Sans', sans-serif;
 }
 
 header .main-head .left-head {
@@ -144,9 +145,9 @@ header .main-head .left-head .addres-head .addres p {
 }
 
 header .main-head .center-head {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
+  -webkit-box-flex: 7;
+      -ms-flex-positive: 7;
+          flex-grow: 7;
   color: #222121;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,7 +160,6 @@ header .main-head .center-head {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'PT Sans', sans-serif;
 }
 
 header .main-head .center-head .search-container {
@@ -227,5 +227,152 @@ header .main-head .right-head {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .main-head .right-head .user-data {
+  color: white;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+header .main-head .right-head .user-data .data {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 85%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+header .main-head .right-head .user-data .data:hover {
+  border: 1px solid #e6e6e0;
+  border-radius: 2px;
+}
+
+header .main-head .right-head .user-data .data h5 {
+  color: white;
+  font-weight: 100;
+}
+
+header .main-head .right-head .user-data .data p {
+  margin: 0;
+  font-weight: bold;
+}
+
+header .main-head .right-head .user-order {
+  color: white;
+  cursor: pointer;
+}
+
+header .main-head .right-head .user-order .data {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 85%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+header .main-head .right-head .user-order .data:hover {
+  border: 1px solid #e6e6e0;
+  border-radius: 2px;
+}
+
+header .main-head .right-head .user-order .data h5 {
+  color: white;
+  font-weight: 100;
+}
+
+header .main-head .right-head .user-order .data p {
+  margin: 0;
+  font-weight: bold;
+}
+
+header .main-head .right-head .shopping-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .main-head .right-head .shopping-cart .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 85%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+header .main-head .right-head .shopping-cart .cart:hover {
+  border: 1px solid #e6e6e0;
+  border-radius: 2px;
+}
+
+header .main-head .right-head .shopping-cart .cart i {
+  color: orange;
+}
+
+header .main-head .right-head .shopping-cart .cart p {
+  margin: 0 15px;
+  font-size: 22px;
 }
 /*# sourceMappingURL=style.css.map */

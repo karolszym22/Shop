@@ -19,6 +19,7 @@ header
     {
      width: 100%;   
      display: flex;
+     font-family: 'PT Sans', sans-serif;
        .left-head
        {
          display: flex;  
@@ -112,14 +113,14 @@ header
        }
        .center-head
        {
-           flex-grow: 3;
+           flex-grow: 7;
            color: rgb(34, 33, 33);
            display: flex;
            font-weight: 300;
            font-size: 14px;
            justify-content: center;
            align-items: center;
-           font-family: 'PT Sans', sans-serif;
+           
 
            .search-container
            {
@@ -172,7 +173,118 @@ header
        .right-head
        {
         flex-grow: 1;
-        
+        display: flex;  
+        height: 100%;
+        align-items: center;
+        box-sizing: border-box;
+        .user-data
+        {
+          
+          color: white;
+          cursor: pointer;
+          margin: 0 5px;
+          .data
+          {
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 85%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            &:hover
+               {
+                 border: 1px solid rgb(230, 230, 224);
+                 border-radius: 2px;
+               }
+            h5
+                {
+                 color: rgb(255, 255, 255);
+                 font-weight: 100;
+                }
+            p
+                {
+                 margin: 0;
+                 font-weight: bold;
+                 }
+          }
+        }
+        .user-order
+        {
+          color: white;
+          cursor: pointer;
+          .data
+          {
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 85%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            &:hover
+               {
+                 border: 1px solid rgb(230, 230, 224);
+                 border-radius: 2px;
+               }
+            h5
+                {
+                 color: rgb(255, 255, 255);
+                 font-weight: 100;
+                }
+            p
+                {
+                 margin: 0;
+                 font-weight: bold;
+                 }
+          
+          }
+        }
+        .shopping-cart
+        {
+          display: flex;
+          color: white;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          .cart
+          {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 85%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            margin: 0 15px;
+            cursor: pointer;
+            &:hover
+            {
+              border: 1px solid rgb(230, 230, 224);
+              border-radius: 2px;
+             
+            }
+            i
+            {
+              color: orange;
+            }
+            p
+            {
+              margin: 0 15px;
+              font-size: 22px;
+            }
+          }
+        }
        }
     }
 }
