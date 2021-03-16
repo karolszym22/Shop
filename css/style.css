@@ -57,6 +57,7 @@ header .main-head .left-head .logo-head {
   font-size: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-weight: bold;
 }
 
 header .main-head .left-head .logo-head .logo {
@@ -139,19 +140,92 @@ header .main-head .left-head .addres-head .addres h5 {
 
 header .main-head .left-head .addres-head .addres p {
   margin: 0;
+  font-weight: bold;
 }
 
 header .main-head .center-head {
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
-  background-color: red;
+  color: #222121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 300;
+  font-size: 14px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'PT Sans', sans-serif;
+}
+
+header .main-head .center-head .search-container {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+
+header .main-head .center-head .search-container .search-category {
+  min-width: 150px;
+  background-color: #f3f3f3;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1.5px solid rgba(128, 128, 128, 0.37);
+  cursor: pointer;
+}
+
+header .main-head .center-head .search-container input[type=search] {
+  resize: none;
+  width: 80%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+}
+
+header .main-head .center-head .search-container .search-button {
+  background-color: #febd69;
+  height: 40px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+header .main-head .center-head .search-container .search-button:hover {
+  background-color: #ebb450;
 }
 
 header .main-head .right-head {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background-color: #1f1c1c;
 }
 /*# sourceMappingURL=style.css.map */
