@@ -5,3 +5,63 @@
     margin: 0;
     padding: 20;
 } 
+body{
+   
+}
+
+header
+{
+    width: 100vw;
+    height: 60px;
+    background-color: $primaryHeader;
+    display: flex;
+    .main-head
+    {
+     width: 100%;   
+     display: flex;
+       .left-head
+       {
+         display: flex;  
+         height: 100%;
+         width: 300px;
+         justify-content: center;
+         align-items: center;
+           .logo-head
+           {
+             box-sizing: border-box;  
+             color: white;
+             width: 50%;
+             height: 100%;
+             padding: 10px;
+             display: flex;
+             background-color: blue;
+             justify-content: center;
+             padding: 5px;
+             font-size: 24px;
+             font-family: 'PT Sans', sans-serif;
+             cursor: pointer;
+             
+                &:hover
+                {
+                   border: 1px solid white;
+                   border-radius: 5px;
+                }
+             
+           }
+           .logo-head2
+           {
+            background-color: red;
+           }
+       }
+       .center-head
+       {
+           flex-grow: 2;
+           background-color: red;
+       }
+       .right-head
+       {
+        flex-grow: 1;
+        background-color: rgb(31, 28, 28);
+       }
+    }
+}
