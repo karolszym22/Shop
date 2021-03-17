@@ -371,19 +371,39 @@ header
 }
 .main-wrapper
 {
-  display: flex;
-  justify-content: center;
+  
   height: 100vh;
   .background-image
   {
-    position: relative;
+  
     height: 100%;
-    z-index: -1;
     background-image: url("./../images/backgroundNature.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+  }
+  .wrapper
+  {
+    width: 100vw;
+    position: relative;
+    height: 100%;
+    top: -100%;
+    display: flex;
+    justify-content: center;
+    .main-section
+    {
+      width: 1300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .article-products
+      {
+        width: 95%;
+        height: 90%;
+        background-color: wheat;
+      }
+    }
   }
 }
 
@@ -496,7 +516,9 @@ header
 
   header
   {
-    .center-head
+    .main-head
+    {
+      .center-head
     {
       .search-container
       {
@@ -506,6 +528,8 @@ header
         }
       }
     }
+    }
+    
   }
 
 }
