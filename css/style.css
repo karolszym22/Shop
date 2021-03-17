@@ -154,9 +154,9 @@ header .main-head .left-head .addres-head .addres p {
 }
 
 header .main-head .center-head {
-  -webkit-box-flex: 7;
-      -ms-flex-positive: 7;
-          flex-grow: 7;
+  -webkit-box-flex: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
   color: #222121;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,5 +493,22 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   background-repeat: no-repeat;
   height: 100%;
   background-size: contain;
+  position: relative;
+  z-index: -1;
+}
+
+@media (max-width: 1100px) {
+  body {
+    background-color: black;
+  }
+  header .main-head .right-head .user-data {
+    display: none;
+  }
+  header .main-head .right-head .user-order {
+    display: none;
+  }
+  header .secondary-head .nav-container .nav-menu .users-opinion {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
