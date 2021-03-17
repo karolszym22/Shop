@@ -407,19 +407,21 @@ header
             display: none;
           }
         }
+        .left-head
+        {
+          min-width: 320px;
+        }
       }
       .secondary-head
       {
         .nav-container
         {
-          .nav-menu{
-            .users-opinion{
+          .users-opinion{
               
                 display: none;
               
             }
-          }
-        }
+           }
       }
     }
     

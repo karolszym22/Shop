@@ -507,7 +507,10 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   header .main-head .right-head .user-order {
     display: none;
   }
-  header .secondary-head .nav-container .nav-menu .users-opinion {
+  header .main-head .left-head {
+    min-width: 320px;
+  }
+  header .secondary-head .nav-container .users-opinion {
     display: none;
   }
 }
