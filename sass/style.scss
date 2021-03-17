@@ -483,6 +483,31 @@ header
                   background-position: center;
                 }
               }
+              .sale
+              {
+                flex-basis: 100%;
+                
+                .square-image
+                {
+                  background-image: url("./../images/wyprzedaż.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              .suits
+              {
+                flex-basis: 100%;
+                .square-image
+                {
+                  background-image: url("./../images/ubranie.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              
+              
               .computer
               {
                 
@@ -532,6 +557,34 @@ header
                   background-position: center
                   
                 }
+              }
+            }
+            .horizontal
+            {
+              flex-direction: column;
+              .cars
+              {
+                
+                .square-image
+                {
+                  background-image: url("./../images/samochód.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+
+              }
+              .motors 
+              {
+                
+                .square-image
+                {
+                  background-image: url("./../images/motor.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+
               }
             }
         }

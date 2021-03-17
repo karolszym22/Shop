@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 20;
@@ -609,6 +610,30 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   background-position: center;
 }
 
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .sale {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .sale .square-image {
+  background-image: url("./../images/wyprzedaż.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .suits {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .suits .square-image {
+  background-image: url("./../images/ubranie.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
 .main-wrapper .wrapper .main-section .article-products .square .square-2 .computer {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -642,6 +667,27 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 
 .main-wrapper .wrapper .main-section .article-products .square .square-2 .furniture .square-image {
   background-image: url("./../images/mebel.png");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .horizontal {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .horizontal .cars .square-image {
+  background-image: url("./../images/samochód.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .horizontal .motors .square-image {
+  background-image: url("./../images/motor.jpg");
   height: 100%;
   background-size: cover;
   background-position: center;
