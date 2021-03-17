@@ -387,21 +387,38 @@ header
   {
     width: 100vw;
     position: relative;
-    height: 100%;
     top: -100%;
     display: flex;
     justify-content: center;
+    font-family: 'PT Sans', sans-serif;
     .main-section
     {
       width: 1300px;
       display: flex;
       justify-content: center;
-      align-items: center;
       .article-products
       {
-        width: 95%;
-        height: 90%;
-        background-color: wheat;
+       
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: black;
+        
+        .square
+        {
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          flex-basis: 30%;
+          height: 320px;
+          margin: 10px;
+          min-width: 235px;
+          h3
+          {
+            margin: 10px;
+          }
+        }
       }
     }
   }

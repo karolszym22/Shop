@@ -495,7 +495,6 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 .main-wrapper .wrapper {
   width: 100vw;
   position: relative;
-  height: 100%;
   top: -100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -503,6 +502,7 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .main-wrapper .wrapper .main-section {
@@ -513,15 +513,39 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .main-wrapper .wrapper .main-section .article-products {
-  width: 95%;
-  height: 90%;
-  background-color: wheat;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  height: 320px;
+  margin: 10px;
+  min-width: 235px;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square h3 {
+  margin: 10px;
 }
 
 @media (max-width: 1100px) {
