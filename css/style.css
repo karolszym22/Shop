@@ -536,19 +536,40 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
-  height: 320px;
   margin: 10px;
   min-width: 242px;
+  min-height: 350px;
 }
 
 .main-wrapper .wrapper .main-section .article-products .square h3 {
   margin: 15px;
-  width: 100%;
+  width: 90%;
 }
 
 .main-wrapper .wrapper .main-section .article-products .square .square-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  min-height: 260px;
+  background-color: black;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .category-container {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  height: 47%;
+  margin: 7.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,9 +577,38 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: black;
-  width: 80%;
-  height: 260px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #6e6c6c;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .home-article .square-image {
+  background-image: url("./../images/kuchnia.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .motor-article .square-image {
+  background-image: url("./../images/motoryzacja.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .suits-article .square-image {
+  background-image: url("./../images/ubrania.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .electronics-article .square-image {
+  background-image: url("./../images/elektronika.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .main-wrapper .wrapper .main-section .article-products .bestseller-section {
