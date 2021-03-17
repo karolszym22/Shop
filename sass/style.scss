@@ -403,7 +403,7 @@ header
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        background-color: black;
+       
         
         .square
         {
@@ -413,11 +413,26 @@ header
           flex-basis: 30%;
           height: 320px;
           margin: 10px;
-          min-width: 235px;
+          min-width: 242px;
+          
           h3
           {
-            margin: 10px;
+            margin: 15px;
+            width: 100%;
           }
+            .square-2
+            {
+             display: flex; 
+             flex-direction: column;
+             background-color: black;
+             width: 80%;
+             height: 260px;
+            }
+        }
+        .bestseller-section
+        {
+          flex-basis: 100%;
+          margin: 50px;
         }
       }
     }
@@ -473,6 +488,11 @@ header
 
 
 @media  (max-width: 700px) {
+  
+  body
+  {
+    background-color: rgb(95, 203, 230);
+  }
   header
     {
       .main-head
