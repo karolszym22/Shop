@@ -529,7 +529,7 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 }
 
 .main-wrapper .wrapper .main-section .article-products .square {
-  background-color: white;
+  background-color: #fffefa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
