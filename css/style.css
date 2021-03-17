@@ -561,15 +561,13 @@ header .secondary-head .nav-container .users-opinion h3:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 90%;
-  min-height: 260px;
-  background-color: black;
+  min-height: 280px;
 }
 
 .main-wrapper .wrapper .main-section .article-products .square .square-2 .category-container {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
-  height: 47%;
-  margin: 7.5px;
+  margin: 5.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -609,6 +607,30 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   height: 100%;
   background-size: cover;
   background-position: center;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .computer {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .computer .square-image {
+  background-image: url("./../images/laptop.png");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .shaver {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.main-wrapper .wrapper .main-section .article-products .square .square-2 .shaver .square-image {
+  background-image: url("./../images/golarka.png");
+  height: 100%;
+  background-size: cover;
+  background-position: top;
 }
 
 .main-wrapper .wrapper .main-section .article-products .bestseller-section {
