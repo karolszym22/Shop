@@ -490,17 +490,17 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 }
 
 .main-wrapper .background-image {
-  background-repeat: no-repeat;
-  height: 100%;
-  background-size: contain;
   position: relative;
+  height: 100%;
   z-index: -1;
+  background-image: url("./../images/backgroundNature.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
 @media (max-width: 1100px) {
-  body {
-    background-color: black;
-  }
   header .main-head .right-head .user-data {
     display: none;
   }
@@ -511,6 +511,36 @@ header .secondary-head .nav-container .users-opinion h3:hover {
     min-width: 320px;
   }
   header .secondary-head .nav-container .users-opinion {
+    display: none;
+  }
+  .main-wrapper .background-image {
+    background-image: url("./../images/backgroundNatureMedium.jpg");
+  }
+}
+
+@media (max-width: 700px) {
+  header .main-head .left-head {
+    min-width: 160px;
+  }
+  header .main-head .left-head .addres-head {
+    display: none;
+  }
+  .main-wrapper .background-image {
+    background-image: none;
+  }
+}
+
+@media (max-width: 600px) {
+  header .main-head .left-head {
+    display: none;
+  }
+  header .secondary-head .nav-container .nav-menu a {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  header .center-head .search-container .search-category {
     display: none;
   }
 }
