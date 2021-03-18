@@ -12,7 +12,7 @@
         screen: "15,6 cala, 1920 x 1080 pikseli 60 Hz",
         quantity: 15,
         sold: 5,
-
+        producer: "Lenovo"
 
         
     },
@@ -29,7 +29,7 @@
         screen: " 15,6 cala, 1920 x 1080 pikseli 120 Hz",
         quantity: 19,
         sold: 1,
-        
+        producer: "Lenovo"
     },
     {
         name: "ASUS X509JA-EJ073T",
@@ -44,7 +44,7 @@
         screen: "15,6 cala, 1920 x 1080 pikseli",
         quantity: 16,
         sold: 4,
-        
+        producer: "ASUS"
     },
     {
         name: "Acer Nitro 5",
@@ -59,7 +59,7 @@
         screen: "15,6 cala, 1920 x 1080 pikseli",
         quantity: 14,
         sold: 6,
-        
+        producer: "Acer"
     },
 
 ]
@@ -73,6 +73,7 @@ let shavers = [
         powerSupply: "Akumulatorowe",
         quantity: 9,
         sold: 6,
+        producer: "BrAun"
         
     },
     {
@@ -83,6 +84,7 @@ let shavers = [
         powerSupply: "Akumulatorowo-sieciowe",
         quantity: 9,
         sold: 6,
+        producer: "PHILIPS"
         
     }
     

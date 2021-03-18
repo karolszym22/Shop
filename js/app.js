@@ -1,3 +1,7 @@
-import showProducts from "./ArticleToolsFactory.js";
+import {Show} from "./ArticleToolsFactory.js";
 
-showProducts();
+
+let user = new Show()
+
+console.log("mój użytkownik:"+user.showProducts());
+console.log("no co sie dzieje????");
