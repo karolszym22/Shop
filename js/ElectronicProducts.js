@@ -89,5 +89,4 @@ let shavers = [
 
 ]
 
-export default laptops;
-export default shavers;
+export default {laptops,shavers};
