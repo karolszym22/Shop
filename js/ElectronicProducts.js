@@ -1,4 +1,4 @@
- let laptops = [
+     let laptops = [
     {
         name: "Lenovo IdeaPad Gaming",
         description: "Lenovo IdeaPad Gaming 3 15ARH05 15,6 AMD Ryzen 5 4600H - 8GB RAM - 512GB Dysk - GTX1650 Grafika - Win10",
@@ -61,6 +61,31 @@
         sold: 6,
         
     },
+
+]
+
+let shavers = [
+    {
+        name: "Golarka BRAUN 300 ",
+        description: "Potrójny system golący , Potrójny system golący z folią Smart",
+        price: 249,
+        discount: false,
+        powerSupply: "Akumulatorowe",
+        quantity: 9,
+        sold: 6,
+        
+    },
+    {
+        name: "Golarka PHILIPS OneBlade Pro",
+        description: "Ruchoma głowica, Na mokro , Na sucho",
+        price: 199,
+        discount: false,
+        powerSupply: "Akumulatorowo-sieciowe",
+        quantity: 9,
+        sold: 6,
+        
+    }
+    
 
 ]
 
