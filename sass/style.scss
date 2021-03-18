@@ -9,6 +9,12 @@ body{
    background-color: $bodyBackgroundColor;
    margin: 0px;
    font-family: 'PT Sans', sans-serif;
+   background-image: url(../images/backgroundNature.jpg);
+   background-position: top;
+   background-repeat: no-repeat;
+   background-size: 105%;
+ 
+
 }
 
 header
@@ -372,27 +378,19 @@ header
 }
 .main-wrapper
 {
-  
-  
-  .background-image
-  {
-  
-    height: 100%;
-    background-image: url("./../images/backgroundNature.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-  }
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+ 
   .wrapper
   {
     width: 100vw;
-    position: relative;
-    top: -100%;
     display: flex;
     justify-content: center;
     font-family: 'PT Sans', sans-serif;
-    
+    display: none;
+ 
     .main-section
     {
       width: 1300px;
@@ -439,6 +437,7 @@ header
                 cursor: pointer;
                 font-weight: bold;
                 color: rgb(110, 108, 108);
+                
               }
 
               .home-article
@@ -608,8 +607,8 @@ header
   background-color: rgb(255, 254, 250);
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 110px);
- display: none; 
+  flex-basis: 100%;
+  
    .nav-subnav
    {
      width: 100%;
@@ -643,7 +642,7 @@ header
      margin-top: 20px;
      .nav-menu-articles
      {
-       min-width: 300px;
+       min-width: 250px;
        border-right: 1px solid rgba(0, 0, 0, 0.233);
        border-bottom: 1px solid rgba(0, 0, 0, 0.233);
        display: flex;
@@ -702,7 +701,7 @@ header
                width: 200px;
                display: flex;
                flex-direction: column;
-               margin: 15px 40px;
+               margin: 15px 20px;
                min-width: 230px;
                .product-image
                {
@@ -711,8 +710,37 @@ header
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
+                .shadow-box
+                {
+                  height: 100%;
+                  width: 100%;
+                  
+                  &:hover
+                  {
+                    background-color: rgba(0, 0, 0, 0.356);
+                    color: white;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   
+                  }
+                }
+                cursor: pointer;
+               }
+               .product-producer
+               {
+                 font-size: 14px;
+                 font-weight: bold;
+                 color: gray;
+               }
+               .product-price
+               {
+                font-weight: bold;
+                color: rgb(0, 0, 0);
                }
            }
+
           }
        }
      }
