@@ -714,16 +714,29 @@ header
                 {
                   height: 100%;
                   width: 100%;
-                  
+                  p
+                  {
+                    display: none;
+                    
+                  }
                   &:hover
                   {
-                    background-color: rgba(0, 0, 0, 0.356);
-                    color: white;
+                    
+                    background-color: rgba(0, 0, 0, 0.253);
+                    
                     font-weight: bold;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                   
+                    p
+                    {
+                      display: block;
+                      color: white;
+                    }
+                  }
+                  @keyframes shadow {
+                    
+                    
                   }
                 }
                 cursor: pointer;

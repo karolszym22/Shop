@@ -861,9 +861,12 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   width: 100%;
 }
 
+.category-articles .articles-container .articles-products .products-list .products-list-container article .product-image .shadow-box p {
+  display: none;
+}
+
 .category-articles .articles-container .articles-products .products-list .products-list-container article .product-image .shadow-box:hover {
-  background-color: rgba(0, 0, 0, 0.356);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.253);
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -876,7 +879,14 @@ header .secondary-head .nav-container .users-opinion h3:hover {
           align-items: center;
 }
 
-.category-articles .articles-container .articles-products .products-list .products-list-container article .product-producer {
+.category-articles .articles-container .articles-products .products-list .products-list-container article .product-image .shadow-box:hover p {
+  display: block;
+  color: white;
+}
+
+@-webkit-keyframes shadow {}
+
+@keyframes shadow {}.category-articles .articles-container .articles-products .products-list .products-list-container article .product-producer {
   font-size: 14px;
   font-weight: bold;
   color: gray;
