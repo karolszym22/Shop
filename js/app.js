@@ -1,7 +1,5 @@
-import {Show} from "./ArticleToolsFactory.js";
+
+import {ArticleToolsUI} from "./ArticleToolsUI.js";
 
 
-let user = new Show()
-
-console.log("mój użytkownik:"+user.showProducts());
-console.log("no co sie dzieje????");
+let user = new  ArticleToolsUI;
