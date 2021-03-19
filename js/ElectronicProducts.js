@@ -65,6 +65,22 @@
         producer: "Acer",
         productImage: "./../images/laptop.jpg"
     },
+    {
+        name: "Acer Nitro 5 V2",
+        description: "Acer Nitro 5 15,6 AMD Ryzen 7 4800H - 8GB RAM - 512GB SSD Dysk - GTX1650Ti Grafika - Win10",
+        price: 4499.99,
+        discount: false,
+        graphicsCard: "nVidia® GeForce GTX1650Ti + Intel UHD Graphics 630",
+        operatingSystem: "Windows 10 Home Edition",
+        ram: "16gb",
+        memory: "512 GB SSD",
+        processor: "AMD Ryzen 7 4800H 2,4 - 4,1 GHz",
+        screen: "15,6 cala, 1920 x 1080 pikseli",
+        quantity: 10,
+        sold: 10,
+        producer: "Acer",
+        productImage: "./../images/laptop.jpg"
+    },
 
 ]
 

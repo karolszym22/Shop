@@ -741,6 +741,15 @@ header
                 }
                 cursor: pointer;
                }
+               .product-description
+               {
+                 font-size: 14px;
+                 margin:  5px 0px;
+                 max-height: 45px;
+                 text-overflow: ellipsis;
+                 white-space: nowrap;
+                 overflow: hidden;
+               }
                .product-producer
                {
                  font-size: 14px;

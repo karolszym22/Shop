@@ -44,7 +44,7 @@ export class ArticleToolsUI
             Zobacz więcej</p> </div></div>
             <p class ="product-description">${laptop.description}</p>
             <a class ="product-producer">${laptop.producer}</a>
-            <a class ="product-producer">${laptop.price+" zł"}</a>`
+            <a class ="product-price">${laptop.price+" zł"}</a>`
             productsContainer.appendChild(product);
             
         })

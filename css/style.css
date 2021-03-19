@@ -886,7 +886,16 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 
 @-webkit-keyframes shadow {}
 
-@keyframes shadow {}.category-articles .articles-container .articles-products .products-list .products-list-container article .product-producer {
+@keyframes shadow {}.category-articles .articles-container .articles-products .products-list .products-list-container article .product-description {
+  font-size: 14px;
+  margin: 5px 0px;
+  max-height: 45px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.category-articles .articles-container .articles-products .products-list .products-list-container article .product-producer {
   font-size: 14px;
   font-weight: bold;
   color: gray;
