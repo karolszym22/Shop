@@ -389,7 +389,7 @@ header
     display: flex;
     justify-content: center;
     font-family: 'PT Sans', sans-serif;
-    display: none;
+   
  
     .main-section
     {
@@ -608,6 +608,7 @@ header
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
+  display: none;
   
    .nav-subnav
    {

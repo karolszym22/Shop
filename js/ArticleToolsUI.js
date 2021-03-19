@@ -34,7 +34,7 @@ export class ArticleToolsUI
 
     showProducts(productsContainer)
     {
-     console.log("wykonuje sie");   
+  
      const {laptops} = devices;
      laptops.forEach(laptop =>
         {

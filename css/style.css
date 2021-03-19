@@ -505,7 +505,6 @@ header .secondary-head .nav-container .users-opinion h3:hover {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: 'PT Sans', sans-serif;
-  display: none;
 }
 
 .main-wrapper .wrapper .main-section {
@@ -713,6 +712,7 @@ header .secondary-head .nav-container .users-opinion h3:hover {
           flex-direction: column;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  display: none;
 }
 
 .category-articles .nav-subnav {
