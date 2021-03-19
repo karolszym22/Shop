@@ -8,7 +8,7 @@ import ArticleToolsUI from "./ArticleToolsUI.js";
          
      }
 
-     showArticle()
+     showArticle(article)
      {
          switch(article)
          {
