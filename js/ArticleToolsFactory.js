@@ -5,8 +5,6 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
  {
      constructor(state)
      {
-         console.log(state);
-         console.log("teraz nic nie ma");
          this.showArticle(state);
      }
 

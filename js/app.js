@@ -15,7 +15,7 @@ class App
       }else 
       {
         console.log("nie ma");
-        sessionStorage.setItem("devices", devices);
+        sessionStorage.setItem("devices", JSON.stringify(devices));
       }
     }
    

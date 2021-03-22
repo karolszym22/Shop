@@ -6,7 +6,7 @@ export class Redirection
         articleBttn.forEach(bttn => bttn.addEventListener('click', ev =>
         {
             const state = ev.target.getAttribute('data-state');
-            sessionStorage.setItem("state",state );
+            sessionStorage.setItem("state",state);
             
         }))
       }
