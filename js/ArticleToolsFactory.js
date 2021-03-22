@@ -3,9 +3,9 @@ import ArticleToolsUI from "./ArticleToolsUI.js";
 
  export class ArticleToolsFactory
  {
-     constructor()
+     constructor(state)
      {
-         
+         this.showArticle(state);
      }
 
      showArticle(article)
@@ -17,8 +17,7 @@ import ArticleToolsUI from "./ArticleToolsUI.js";
              case 'shavers':
                   const shavers = new ArticleToolsUI(article);
              case 'eletronicks':
-                  const laptops = new ArticleToolsUI(article);
-                  const shavers = new ArticleToolsUI(article);
+                  
          }
      }
     

@@ -1,16 +1,19 @@
 
 import {ArticleToolsUI} from "./ArticleToolsUI.js";
 import devices from "./ElectronicProducts.js";
-const create = new ArticleToolsUI();
+import {ArticleToolsFactory} from './ArticleToolsFactory.js'
 
-const {laptops,shavers} = devices;
 
-localStorage.setItem("sds",JSON.stringify(shavers));
-console.log("teraz!!!!");
-document.querySelectorAll(".show-product").
-forEach(bttn =>bttn.addEventListener('click', e =>
+const articleBttn = document.querySelectorAll('.open-article');
+
+
+
+const openArticle = () =>
 {
-    const data = e.target.getAttribute('data-product');
-   
-   
-}))
+    articleBttn.forEach(bttn => bttn.addEventListener('click', ev =>
+    {
+        const state = ev.target.getAttribute('data-state');
+        alert(state);
+    }))
+}
+ 

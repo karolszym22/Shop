@@ -712,7 +712,6 @@ header .secondary-head .nav-container .users-opinion h3:hover {
           flex-direction: column;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  display: none;
 }
 
 .category-articles .nav-subnav {
