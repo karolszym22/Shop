@@ -4,7 +4,7 @@ import devices from "./ElectronicProducts.js";
 
 export class ArticleToolsUI
 {
-    constructor()
+    constructor(article)
     {
       const root = this.createSectionContainer();
       const productContainer = this.createProductsContainer(root);

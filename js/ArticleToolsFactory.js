@@ -6,6 +6,7 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
      constructor(state)
      {
          console.log(state);
+         console.log("teraz nic nie ma");
          this.showArticle(state);
      }
 
@@ -16,9 +17,11 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
          {
              case 'laptops':
                   const laptops = new ArticleToolsUI(article);
+                  console.log("teraz wyswietlam: "+ toString(article))
                   break;
              case 'shavers':
                   const shavers = new ArticleToolsUI(article);
+                  console.log("teraz wyswietlam: "+ toString(article))
                   break;
             
                   
