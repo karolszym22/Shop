@@ -14,7 +14,7 @@ export class ArticleToolsUI
   
     createSectionContainer = () =>
     {
-      document.querySelector(".products-list").remove();
+      console.log("funkcja wykonałą sie");
       const root = document.createElement("section");
       root.classList.add("products-list");
       root.innerHTML = `<h1 class="product-category">${"Laptopy"}</h1><h3 class="chosen-by-us">Wyróżnione przez nas</h3>`
