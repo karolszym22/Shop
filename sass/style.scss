@@ -73,6 +73,26 @@ body{
         width: 400px;
         height: 520px;
         border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        .product-heading-container
+        {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid black;
+          width: 95%;
+          margin: 2.5%;
+          h3
+          {
+            margin: 5px 10px;
+            font-weight: 600;
+          }
+          a
+          {
+            margin: 5px 10px;
+            color: $productProducerName;
+          }
+        }
       }
     }
       
