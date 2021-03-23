@@ -7,7 +7,7 @@ const buttons = new Redirection();
 console.log(devices);
 class App
 {
-    getAllProducts()
+    getAllProducts() ///refaktoring wskazany
     {
       if(sessionStorage.getItem("devices"))
       {
