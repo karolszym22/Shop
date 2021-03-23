@@ -56,7 +56,6 @@ body {
   overflow: hidden;
   border: 3px solid #fff;
   position: relative;
-  cursor: -moz-zoom-in;
 }
 
 .dark-body .product-modal .product-information-container .product-image-zoom figure img {
