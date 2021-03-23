@@ -847,8 +847,11 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 }
 
 .category-articles .articles-container .articles-products .products-list .products-list-container article .product-image {
-  height: 240px;
+  height: 150px;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer;
 }
 
@@ -885,10 +888,11 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 @keyframes shadow {}.category-articles .articles-container .articles-products .products-list .products-list-container article .product-description {
   font-size: 14px;
   margin: 5px 0px;
-  max-height: 45px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .category-articles .articles-container .articles-products .products-list .products-list-container article .product-producer {
