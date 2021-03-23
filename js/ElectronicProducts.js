@@ -33,6 +33,7 @@
         sold: 1,
         producer: "Lenovo",
         productImage: "./images/lenovo.jpg",
+        productImageZoom: "./images/lenovoZoom.jpg",
         productId: "laptop2",
     },
     {

@@ -32,23 +32,48 @@ body{
   align-items: center;
   .product-modal
   {
-    width: 800px;
+    width: 850px;
     height: 600px;
     background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
+ 
     
     
     .product-information-container
     {
-    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      height: 90%;
       .product-image-zoom
       {
-        flex-basis: 50%;
+        
+        
+        figure{
+          width: 400px;
+          height: 400px;
+          overflow:hidden;
+          border:3px solid #fff;
+          position: relative;
+          cursor: -moz-zoom-in;
+          img{
+            max-width: 100%;
+            min-width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 10;
+            pointer-events: none;
+          }
+        }
+        
       }
       .product-details
       {
-        flex-basis: 50%;
+        width: 400px;
+        height: 520px;
+        border: 1px solid black;
       }
     }
       
