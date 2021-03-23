@@ -848,10 +848,7 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 
 .category-articles .articles-container .articles-products .products-list .products-list-container article .product-image {
   height: 240px;
-  background-image: url("./../images/laptop.jpg");
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   cursor: pointer;
 }
 

@@ -706,11 +706,9 @@ header
                min-width: 230px;
                .product-image
                {
-                height: 240px; 
-                background-image: url("./../images/laptop.jpg");
-                background-position: center;
+                height: 240px;                
                 background-repeat: no-repeat;
-                background-size: cover;
+                
                 .shadow-box
                 {
                   height: 100%;

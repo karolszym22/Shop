@@ -45,8 +45,7 @@ export class ArticleToolsUI
           
             const product = document.createElement("article");
             product.classList.add("product");
-            product.innerHTML = ` <div class ="product-image"><div class="shadow-box"><p class="see-more">
-            Zobacz więcej</p> </div></div>
+            product.innerHTML = ` <div class ="product-image"><img src=${productInformation.productImage}>
             <p class ="product-description">${productInformation.description}</p>
             <a class ="product-producer">${productInformation.producer}</a>
             <a class ="product-price">${productInformation.price+" zł"}</a>`

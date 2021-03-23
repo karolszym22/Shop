@@ -13,7 +13,8 @@
         quantity: 15,
         sold: 5,
         producer: "Lenovo",
-        productImage: "./../images/laptop.jpg"
+        productImage: "./images/lenovo.jpg",
+        productId: "laptop1",
 
         
     },
@@ -31,7 +32,8 @@
         quantity: 19,
         sold: 1,
         producer: "Lenovo",
-        productImage: "./../images/laptop.jpg"
+        productImage: "./images/lenovo.jpg",
+        productId: "laptop2",
     },
     {
         name: "ASUS X509JA-EJ073T",
@@ -47,7 +49,8 @@
         quantity: 16,
         sold: 4,
         producer: "ASUS",
-        productImage: "./../images/laptop.jpg"
+        productImage: "./images/asus.jpg",
+        productId: "laptop3",
     },
     {
         name: "Acer Nitro 5",
@@ -63,7 +66,8 @@
         quantity: 14,
         sold: 6,
         producer: "Acer",
-        productImage: "./../images/laptop.jpg"
+        productImage: "./images/acer.jpg",
+        productId: "laptop4",
     },
     {
         name: "Acer Nitro 5 V2",
@@ -79,7 +83,8 @@
         quantity: 10,
         sold: 10,
         producer: "Acer",
-        productImage: "./../images/laptop.jpg"
+        productImage: "./images/acer.jpg",
+        productId: "laptop5",
     },
 
 ]
@@ -93,7 +98,9 @@ let shavers = [
         powerSupply: "Akumulatorowe",
         quantity: 9,
         sold: 6,
-        producer: "BrAun"
+        producer: "BrAun",
+        productImage:"./images/braun.jpg",
+        productId: "shaver1",
         
     },
     {
@@ -104,7 +111,10 @@ let shavers = [
         powerSupply: "Akumulatorowo-sieciowe",
         quantity: 9,
         sold: 6,
-        producer: "PHILIPS"
+        producer: "PHILIPS",
+        productImage:"./images/philips.jpg",
+        productId: "shaver2",
+        
         
     }
     
