@@ -5,16 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	margin: 0;
+	background: #fff;
+	min-height: 100vh;
+	background:#020819;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+figure{
+	width: 800px;
+	height: 500px;
+	overflow:hidden;
+	border:3px solid #fff;
+	position: relative;
+}
+figure img{
+	max-width: 100%;
+	min-width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+	pointer-events: none;
+}
+    </style>
 </head>
 <body>
 
 
 
+    <figure id="magnifying_area">
+        <img id="magnifying_img" src="images/pic1.png">
+    </figure>
 
 
 
 
-    
     <script>
 var magnifying_area =  document.getElementById("magnifying_area");
 var magnifying_img =  document.getElementById("magnifying_img");
