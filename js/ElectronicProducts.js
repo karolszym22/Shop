@@ -14,7 +14,7 @@
         sold: 5,
         producer: "Lenovo",
         productImage: "./images/lenovo.jpg",
-        productImageZoom: "./images/lenovoZoom.jpg",
+        productImageZoom: "./images/asusZoom.jpg",
         productId: "laptop1",
 
         
@@ -34,7 +34,7 @@
         sold: 1,
         producer: "Lenovo",
         productImage: "./images/lenovo.jpg",
-        productImageZoom: "./images/lenovoZoom.jpg",
+        productImageZoom: "./images/asusZoom.jpg",
         productId: "laptop2",
     },
     {
@@ -52,7 +52,7 @@
         sold: 4,
         producer: "ASUS",
         productImage: "./images/asus.jpg",
-        productImageZoom: "./images/lenovoZoom.jpg",
+        productImageZoom: "./images/asusZoom.jpg",
         productId: "laptop3",
     },
     {
@@ -70,7 +70,7 @@
         sold: 6,
         producer: "Acer",
         productImage: "./images/acer.jpg",
-        productImageZoom: "./images/lenovoZoom.jpg",
+        productImageZoom: "./images/asusZoom.jpg",
         productId: "laptop4",
     },
     {
@@ -88,7 +88,7 @@
         sold: 10,
         producer: "Acer",
         productImage: "./images/acer.jpg",
-        productImageZoom: "./images/lenovoZoom.jpg",
+        productImageZoom: "./images/asusZoom.jpg",
         productId: "laptop5",
     },
 
@@ -105,6 +105,7 @@ let shavers = [
         sold: 6,
         producer: "BrAun",
         productImage:"./images/braun.jpg",
+        productImageZoom: "./images/asusZoom.jpg",
         productId: "shaver1",
         
     },
@@ -118,8 +119,8 @@ let shavers = [
         sold: 6,
         producer: "PHILIPS",
         productImage:"./images/philips.jpg",
+        productImageZoom: "./images/asusZoom.jpg",
         productId: "shaver2",
-        
         
     }
     

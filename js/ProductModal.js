@@ -5,6 +5,7 @@ export class ProdcutModal
         const product = this.findItem(productId);
         const modal = document.querySelector('.product-modal');
         this.showModal(modal,productId);
+        this.addZoomImage(product);
     }
 
 
@@ -14,9 +15,12 @@ export class ProdcutModal
          modal.style.display = "block";
            
     }
-    addZoomImage = (productId) =>
+    addZoomImage = (product) =>
     {
-      const image = document.getElementById("magnifying_img")
+        console.log(product.productImageZoom);
+      const image = document.getElementById("magnifying_img");
+      image.src = product.productImageZoom;
+      
     }
     closeModal = () =>
     {
