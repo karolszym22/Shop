@@ -36,4 +36,9 @@ export class ProdcutModal
         
     }
 
+    addProducer = () =>
+    {
+
+    }
+
 }
