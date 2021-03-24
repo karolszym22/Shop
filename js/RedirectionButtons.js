@@ -2,6 +2,11 @@ export class Redirection
 {
       constructor()
       {
+       this.openArticle();
+      }
+
+      openArticle = () =>
+      {
         const articleBttn = document.querySelectorAll('.open-article');
         articleBttn.forEach(bttn => bttn.addEventListener('click', ev =>
         {

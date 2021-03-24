@@ -4,7 +4,6 @@ import {Redirection} from "./RedirectionButtons.js"
 
 
 const buttons = new Redirection();
-console.log(devices);
 class App
 {
     getAllProducts() ///refaktoring wskazany
