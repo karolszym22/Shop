@@ -14,6 +14,7 @@
         sold: 5,
         producer: "Lenovo",
         productImage: "./images/lenovo.jpg",
+        productImageZoom: "./images/lenovoZoom.jpg",
         productId: "laptop1",
 
         
@@ -51,6 +52,7 @@
         sold: 4,
         producer: "ASUS",
         productImage: "./images/asus.jpg",
+        productImageZoom: "./images/lenovoZoom.jpg",
         productId: "laptop3",
     },
     {
@@ -68,6 +70,7 @@
         sold: 6,
         producer: "Acer",
         productImage: "./images/acer.jpg",
+        productImageZoom: "./images/lenovoZoom.jpg",
         productId: "laptop4",
     },
     {
@@ -85,6 +88,7 @@
         sold: 10,
         producer: "Acer",
         productImage: "./images/acer.jpg",
+        productImageZoom: "./images/lenovoZoom.jpg",
         productId: "laptop5",
     },
 

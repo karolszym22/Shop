@@ -39,7 +39,7 @@ export class ArticleToolsUI
     showProducts(productsContainer,article)
     {
      let devices = JSON.parse(sessionStorage.devices);
-     let products= eval("devices."+article);
+     let products = eval("devices."+article);
      sessionStorage.setItem("products", JSON.stringify(products));
      products.forEach(productInformation =>
         {
