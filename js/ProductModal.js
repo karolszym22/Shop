@@ -1,7 +1,8 @@
 export class ProdcutModal
 {
-    constructor()
+    constructor(productId)
     {
+
         const modal = document.querySelector('product-modal');
         this.showModal(modal);
     }
@@ -11,6 +12,10 @@ export class ProdcutModal
     {
        
         modal.style.display = "block";
+    }
+    addZoomImage = (productId) =>
+    {
+      const image = document.getElementById("magnifying_img")
     }
     closeModal = () =>
     {
