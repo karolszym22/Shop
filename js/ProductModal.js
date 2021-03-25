@@ -13,7 +13,7 @@ export class ProdcutModal
         this.addProducerName(product);
         this.addProductPrice(product);
         this.addProductQuantity(product);
-        
+        this.addProductInformation(product);
         
     }
 
@@ -68,15 +68,30 @@ export class ProdcutModal
         let productQuantity = document.querySelector(".quantity-product");
         productQuantity.textContent = "Nowe ("+ product.quantity+ ") od ";
     }
-    getProductInformation = (product) =>
+    getProductInformation = () =>
     {   let info = sessionStorage.state;
         for (let item in information){
             if(item === info)
-            return information[prd];
+            return information[info];
         }
     }
-    addProductInformation = () =>
+    addProductInformation = (product) =>
     {
+        console.log(product)
+        const container = document.querySelector("div");
+        container.classList.add(".product-information");
         let information = this.getProductInformation();
+        information.forEach((info, index) =>
+            {
+             let infoName = document.createElement('div');
+             info.classList.add(".information");
+              let item = product[Object.keys(product)[index]]
+              infoName = this.addProductValue(info,item);
+            })
+    }
+    addProductValue = (info,item) =>
+    {
+      const productValue = `<a class ="feature">${info}</a><a class ="feature-value">${item}</a>`;
+      return productValue;
     }
 }
