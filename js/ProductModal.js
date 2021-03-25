@@ -8,6 +8,7 @@ export class ProdcutModal
         this.addZoomImage(product);
         this.addProductName(product);
         this.addProducerName(product);
+        this.addProductPrice(product);
     }
 
 
@@ -48,5 +49,11 @@ export class ProdcutModal
         let producerName = document.querySelector(".producer-name");
         producerName.textContent = product.producer;
     }
-
+    addProductPrice = (product) =>
+    {
+        let productPrice = document.querySelector(".price-value")///do refaktoringu
+        let productPrice2 = document.querySelector(".price")///do refaktoringu
+        productPrice.textContent = product.price;
+        productPrice2.textContent = product.price;
+    }
 }
