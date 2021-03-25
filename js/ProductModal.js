@@ -77,21 +77,26 @@ export class ProdcutModal
     }
     addProductInformation = (product) =>
     {
-        console.log(product)
-        const container = document.querySelector("div");
-        container.classList.add(".product-information");
+      
+        const container = document.createElement("div");
+        container.classList.add("product-information");
         let information = this.getProductInformation();
         information.forEach((info, index) =>
             {
              let infoName = document.createElement('div');
-             info.classList.add(".information");
+             console.log(infoName);
+             infoName.classList.add("information");
               let item = product[Object.keys(product)[index]]
-              infoName = this.addProductValue(info,item);
+              infoName.innerHTML = this.addProductValue(info,item);
+              container.appendChild(infoName);
+              
             })
+            console.log(container);
+            document.querySelector(".main-product-information").appendChild(container);
     }
     addProductValue = (info,item) =>
     {
-      const productValue = `<a class ="feature">${info}</a><a class ="feature-value">${item}</a>`;
+      const productValue = `<a class ="feature"> ${info}</a><a class ="feature-value"> ${item}</a>`;
       return productValue;
     }
 }
