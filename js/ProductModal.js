@@ -1,3 +1,5 @@
+import productDetail from "./ProductsInformation.js"
+
 export class ProdcutModal
 {
     constructor(productId)
@@ -65,6 +67,7 @@ export class ProdcutModal
     }
     addProductInformation = (product) =>
     {
-        
+        let productInformation = document.createElement("div");
+        productInformation.classList.add(".product-information");
     }
 }
