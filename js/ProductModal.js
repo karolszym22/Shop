@@ -9,6 +9,7 @@ export class ProdcutModal
         this.addProductName(product);
         this.addProducerName(product);
         this.addProductPrice(product);
+        this.addProductQuantity(product);
     }
 
 
@@ -53,7 +54,17 @@ export class ProdcutModal
     {
         let productPrice = document.querySelector(".price-value")///do refaktoringu
         let productPrice2 = document.querySelector(".price")///do refaktoringu
-        productPrice.textContent = product.price;
-        productPrice2.textContent = product.price;
+        productPrice.textContent = product.price + " zł";
+        productPrice2.textContent = product.price + " zł";
+    }
+    addProductQuantity = (product) =>
+    {
+
+        let productQuantity = document.querySelector(".quantity-product");
+        productQuantity.textContent = "Nowe ("+ product.quantity+ ") od ";
+    }
+    addProductInformation = (product) =>
+    {
+        
     }
 }
