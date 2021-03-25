@@ -1,9 +1,10 @@
-import productDetail from "./ProductsInformation.js"
 
+import information from "./ProductsInformation.js";
 export class ProdcutModal
 {
     constructor(productId)
     {
+        
         const product = this.findItem(productId);
         const modal = document.querySelector('.product-modal');
         this.showModal(modal,productId);
@@ -12,6 +13,8 @@ export class ProdcutModal
         this.addProducerName(product);
         this.addProductPrice(product);
         this.addProductQuantity(product);
+        
+        
     }
 
 
@@ -65,9 +68,15 @@ export class ProdcutModal
         let productQuantity = document.querySelector(".quantity-product");
         productQuantity.textContent = "Nowe ("+ product.quantity+ ") od ";
     }
-    addProductInformation = (product) =>
+    getProductInformation = (product) =>
+    {   let info = sessionStorage.state;
+        for (let item in information){
+            if(item === info)
+            return information[prd];
+        }
+    }
+    addProductInformation = () =>
     {
-        let productInformation = document.createElement("div");
-        productInformation.classList.add(".product-information");
+        let information = this.getProductInformation();
     }
 }
