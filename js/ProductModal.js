@@ -6,6 +6,8 @@ export class ProdcutModal
         const modal = document.querySelector('.product-modal');
         this.showModal(modal,productId);
         this.addZoomImage(product);
+        this.addProductName(product);
+        this.addProducerName(product);
     }
 
 
@@ -36,9 +38,15 @@ export class ProdcutModal
         
     }
 
-    addProducer = () =>
+    addProductName = (product) =>
     {
-
+        let productName = document.querySelector(".product-name");
+        productName.textContent = product.name;
+    }
+    addProducerName = (product) =>
+    {
+        let producerName = document.querySelector(".producer-name");
+        producerName.textContent = product.producer;
     }
 
 }
