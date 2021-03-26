@@ -2,9 +2,9 @@
 import information from "./ProductsInformation.js";
 export class ProdcutModal
 {
-    constructor(productId)
+   
+    createProductModal = (productId) =>
     {
-        
         const product = this.findItem(productId);
         const modal = document.querySelector('.product-modal');
         this.showModal(modal,productId);
@@ -16,8 +16,6 @@ export class ProdcutModal
         this.addProductInformation(product);
         this.closeModal(modal);
     }
-
-
     showModal = (modal) =>
     {
          document.querySelector('.dark-body').style.display = "flex";;
