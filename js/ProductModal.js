@@ -99,4 +99,11 @@ export class ProdcutModal
       const productValue = `<a class ="feature"> ${info}</a><a class ="feature-value"> ${item}</a>`;
       return productValue;
     }
+    closeModal = () =>
+    {
+        document.querySelector("product-information").remove;
+        document.querySelector('.dark-body').style.display = "none";;
+        modal.style.display = "none";
+
+    }
 }
