@@ -162,7 +162,7 @@ body {
   font-size: 13px;
 }
 
-.close-modal {
+.close-modal-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,7 +173,7 @@ body {
   cursor: pointer;
 }
 
-.close-modal h2 {
+.close-modal-container h2 {
   padding: 2.5px 7.5px;
   background-color: orange;
   color: white;

@@ -20,6 +20,7 @@ export class Redirection
           
         }))
       }
+     
 
       openArticle = () =>
       {
@@ -32,4 +33,5 @@ export class Redirection
             
         }))
       }
+
 }
