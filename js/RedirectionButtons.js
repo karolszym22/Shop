@@ -1,5 +1,5 @@
 import {ProdcutModal} from './ProductModal.js';
-const modal = new ProdcutModal();
+
 export class Redirection
 {
       constructor()
@@ -11,13 +11,13 @@ export class Redirection
 
       openProductModal = () =>
       {
-       
+         
 
         const modalBttn = document.querySelectorAll('.look-image');
         modalBttn.forEach(bttn => bttn.addEventListener('click', function () 
         {
           let productId = bttn.id;
-          modal.createProductModal(productId);
+          let modal = new ProdcutModal(productId);
           
         }))
       }

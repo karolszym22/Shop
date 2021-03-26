@@ -2,9 +2,9 @@
 import information from "./ProductsInformation.js";
 export class ProdcutModal
 {
-   
-    createProductModal = (productId) =>
+    constructor(productId)
     {
+        
         const product = this.findItem(productId);
         const modal = document.querySelector('.product-modal');
         this.showModal(modal,productId);
@@ -16,6 +16,8 @@ export class ProdcutModal
         this.addProductInformation(product);
         this.closeModal(modal);
     }
+
+
     showModal = (modal) =>
     {
          document.querySelector('.dark-body').style.display = "flex";;
@@ -103,9 +105,10 @@ export class ProdcutModal
         const closeBttn = document.querySelector(".close-modal");
         closeBttn.addEventListener("click", () =>
         {
-  
-            console.log("zamyka się");
+            console.log(document.getElementById("productInformation"))
             document.getElementById("productInformation").remove();
+            console.log(document.getElementById("productInformation"))
+            console.log("informacja")
             document.querySelector('.dark-body').style.display = "none";
             modal.style.display = "none";
         })
