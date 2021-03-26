@@ -4,6 +4,7 @@ export class Redirection
 {
       constructor()
       {
+       
        this.openArticle();
        this.openProductModal();
       }
@@ -14,10 +15,8 @@ export class Redirection
         console.log(modalBttn);
         modalBttn.forEach(bttn => bttn.addEventListener('click', function () 
         {
-        
-          const productId = bttn.id;
-          const modal = new ProdcutModal(productId);
-          
+          let productId = bttn.id;
+          let modal = new ProdcutModal(productId);
         }))
       }
      

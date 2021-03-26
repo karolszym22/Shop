@@ -14,7 +14,7 @@ export class ProdcutModal
         this.addProductPrice(product);
         this.addProductQuantity(product);
         this.addProductInformation(product);
-        
+        this.closeModal(modal);
     }
 
 
@@ -80,6 +80,7 @@ export class ProdcutModal
       
         const container = document.createElement("div");
         container.classList.add("product-information");
+        container.id = "productInformation";
         let information = this.getProductInformation();
         information.forEach((info, index) =>
             {
@@ -99,11 +100,18 @@ export class ProdcutModal
       const productValue = `<a class ="feature"> ${info}</a><a class ="feature-value"> ${item}</a>`;
       return productValue;
     }
-    closeModal = () =>
+    closeModal = (modal) =>
     {
-        document.querySelector("product-information").remove;
-        document.querySelector('.dark-body').style.display = "none";;
-        modal.style.display = "none";
+        const closeBttn = document.querySelector(".close-modal");
+        closeBttn.addEventListener("click", () =>
+        {
+  
+            console.log("zamyka się");
+            document.getElementById("productInformation").remove();
+            document.querySelector('.dark-body').style.display = "none";
+            modal.style.display = "none";
+        })
+        
 
     }
 }
