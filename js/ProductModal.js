@@ -6,15 +6,15 @@ export class ProdcutModal
     {
         
         const product = this.findItem(productId);
-        const modal = document.querySelector('.product-modal');
-        this.showModal(modal,productId);
+        this.modal = document.querySelector('.product-modal');
+        this.showModal(this.modal,productId);
         this.addZoomImage(product);
         this.addProductName(product);
         this.addProducerName(product);
         this.addProductPrice(product);
         this.addProductQuantity(product);
         this.addProductInformation(product);
-        this.closeModal(modal);
+        this.closeModal();
     }
 
 
@@ -100,19 +100,18 @@ export class ProdcutModal
       const productValue = `<a class ="feature"> ${info}</a><a class ="feature-value"> ${item}</a>`;
       return productValue;
     }
-    closeModal = (modal) =>
+    closeModal = () =>
     {
         const closeBttn = document.querySelector(".close-modal");
-        closeBttn.addEventListener("click", () =>
-        {
-            console.log(document.getElementById("productInformation"))
-            document.getElementById("productInformation").remove();
-            console.log(document.getElementById("productInformation"))
-            console.log("informacja")
-            document.querySelector('.dark-body').style.display = "none";
-            modal.style.display = "none";
-        })
-        
-
+        closeBttn.addEventListener("click", this.deleteModalInformation);
+      
+    }
+    deleteModalInformation()
+    {
+        console.log(document.getElementById("productInformation"))
+        document.getElementById("productInformation").remove();
+        document.querySelector('.dark-body').style.display = "none";
+        console.log("modal z this:"+ this.modal);
+       
     }
 }
