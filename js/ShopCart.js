@@ -8,7 +8,7 @@ export class ShopCart
         console.log("czy to tablica?: "+cart);
 
     }
-    addToCart()
+    addToCart(product)
     {
         
     }
