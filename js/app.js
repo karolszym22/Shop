@@ -17,13 +17,27 @@ class App
         sessionStorage.setItem("devices", JSON.stringify(devices));
       }
     }
+    getCart()///refaktoring wskazany
+    {
+      let cart = new Array;
+
+      if(sessionStorage.getItem("cart"))
+      {
+          console.log("jest");
+      }else 
+      {
+        console.log("nie ma");
+        sessionStorage.setItem("cart", cart );
+
+      }
+    }
    
 }
 
 
 const app = new App();
 app.getAllProducts();
-  
+app.getCart();  
 let magnifying_area =  document.getElementById("magnifying_area");
 let magnifying_img =  document.getElementById("magnifying_img");
 

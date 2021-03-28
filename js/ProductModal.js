@@ -1,4 +1,4 @@
-
+import {ShopCart} from './ShopCart.js'
 import information from "./ProductsInformation.js";
 export class ProdcutModal
 {
@@ -14,7 +14,9 @@ export class ProdcutModal
         this.addProductPrice(product);
         this.addProductQuantity(product);
         this.addProductInformation(product);
+        this.dropToCart(product);
         this.closeModal();
+       
     }
 
 
@@ -108,10 +110,15 @@ export class ProdcutModal
     }
     deleteModalInformation()
     {
-        console.log(document.getElementById("productInformation"))
+   
         document.getElementById("productInformation").remove();
         document.querySelector('.dark-body').style.display = "none";
-        console.log("modal z this:"+ this.modal);
+        document.querySelector('.product-modal').style.display = "none";
        
+    }
+
+    dropToCart = (product) =>
+    {
+      
     }
 }
