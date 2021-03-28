@@ -1201,6 +1201,29 @@ header .secondary-head .nav-container .users-opinion h3:hover {
           align-items: center;
 }
 
+.category-articles .nav-subnav-order .cash-register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.category-articles .nav-subnav-order .cash-register h2 {
+  font-weight: lighter;
+}
+
+.category-articles .nav-subnav-order .cash-register a {
+  font-size: 24px;
+  color: #2596be;
+}
+
+.category-articles .nav-subnav-order i {
+  color: grey;
+}
+
 @media (max-width: 1100px) {
   header .main-head .right-head .user-data {
     display: none;

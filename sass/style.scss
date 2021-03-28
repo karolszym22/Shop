@@ -1019,6 +1019,30 @@ header
     display: flex;
     justify-content: space-around;
     align-items: center;
+    h2
+    {
+
+    }
+    .cash-register
+    {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      h2
+      {
+        font-weight: lighter;
+        
+      }
+      a
+      {
+        font-size: 24px;
+        color: $productProducerName;
+      }
+    }
+    i
+    {
+      color: grey;
+    }
   }
 }
 
