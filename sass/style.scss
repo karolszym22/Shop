@@ -156,6 +156,74 @@ body{
               }
             }
           }
+          .product-buttons
+          {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+              .add-to-cart
+              {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin: 5px 0px;
+                  width: 180px;
+                  height: 30px;
+                  border: 0px;
+                  cursor: pointer;
+                  background-image: linear-gradient(to top, #f0c63e, #f4ad3c, #f6b83b, #f8c33b, #f9ce3b);
+                  i
+                  {
+                    background-color: rgb(48, 47, 47);
+                    color: white;
+                    height: 80%;
+                    margin: 0px 5px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30px;
+                  }
+                  a
+                  {
+                   display: flex;
+                   width: 100%;
+                   justify-content: center;
+                  }
+              }
+              .buy-now
+              {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin: 5px 0px;
+                  width: 180px;
+                  height: 30px;
+                  border: 0px;
+                  cursor: pointer;
+                  background-image: linear-gradient(to top, #eb8b0f, #ea9826, #e9a438, #e8af4a, #e8ba5c);
+                  i
+                  {
+                    background-color: rgb(48, 47, 47);
+                    color: white;
+                    height: 80%;
+                    margin: 0px 5px;
+                    width: 30px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                  }
+                  a
+                  {
+                    
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                  }
+              }
+          }
 
         }
       }
