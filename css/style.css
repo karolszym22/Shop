@@ -29,11 +29,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 .dark-body .product-modal {
   width: 850px;
   background-color: white;
+  display: none;
 }
 
 .dark-body .product-modal .product-information-container {
@@ -653,6 +655,20 @@ header .main-head .right-head .shopping-cart .cart:hover {
 
 header .main-head .right-head .shopping-cart .cart i {
   color: orange;
+  width: 50px;
+}
+
+header .main-head .right-head .shopping-cart .cart i a {
+  padding: 3px 7px;
+  position: relative;
+  color: white;
+  font-size: 14px;
+  background-color: #fd6704;
+  border-radius: 20px;
+  text-align: center;
+  right: 10px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
 }
 
 header .main-head .right-head .shopping-cart .cart p {

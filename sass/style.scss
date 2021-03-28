@@ -30,13 +30,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  display: none;
   
   .product-modal
   {
     width: 850px;
     background-color: rgb(255, 255, 255);
-    
+    display: none;
     
     
     .product-information-container
@@ -506,6 +506,8 @@ header
             border-radius: 2px;
             margin: 0 15px;
             cursor: pointer;
+           
+            
             &:hover
             {
               border: 1px solid rgb(230, 230, 224);
@@ -515,6 +517,21 @@ header
             i
             {
               color: orange;
+              width: 50px;
+              a
+              {
+                
+                padding: 3px 7px;
+                position: relative;
+                color: rgb(255, 255, 255);
+                font-size: 14px;
+                background-color: rgb(253, 103, 4);
+                border-radius: 20px;
+                text-align: center;
+                right: 10px;
+                font-family: 'PT Sans', sans-serif;
+                font-weight: bold;
+              }
             }
             p
             {
