@@ -1224,6 +1224,18 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   color: grey;
 }
 
+.category-articles .order-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.category-articles .order-container .order-summary {
+  width: 200px;
+}
+
 @media (max-width: 1100px) {
   header .main-head .right-head .user-data {
     display: none;

@@ -1044,6 +1044,16 @@ header
       color: grey;
     }
   }
+  .order-container
+  {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    .order-summary
+    {
+      width: 200px;
+    }
+  }
 }
 
 
