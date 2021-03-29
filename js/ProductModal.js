@@ -119,6 +119,11 @@ export class ProdcutModal
 
     dropToCart = (product) =>
     {
-      
+      let addToCartBttn = document.querySelector(".add-to-cart");
+      addToCartBttn.addEventListener('click', function()
+      {
+          let cart = new ShopCart(product);
+          console.log(cart);
+      })
     }
 }

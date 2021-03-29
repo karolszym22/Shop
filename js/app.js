@@ -17,9 +17,9 @@ class App
         sessionStorage.setItem("devices", JSON.stringify(devices));
       }
     }
-    getCart()///refaktoring wskazany
+    setCart()///refaktoring wskazany
     {
-      let cart = new Array;
+      let cart = new Array();
 
       if(sessionStorage.getItem("cart"))
       {
@@ -31,13 +31,14 @@ class App
 
       }
     }
+    
    
 }
 
 
 const app = new App();
 app.getAllProducts();
-app.getCart();  
+app.setCart();  
 let magnifying_area =  document.getElementById("magnifying_area");
 let magnifying_img =  document.getElementById("magnifying_img");
 
