@@ -4,20 +4,22 @@ export class Redirection
 {
       constructor()
       {
-       
+        this.modalBttn = document.querySelectorAll(".look-image");
        this.openArticle();
-       this.openProductModal();
+       this.openProductModal(this.modalBttn);
+       console.log("jest i dzial");
       }
 
-      openProductModal = () =>
+      openProductModal(modalBttn)
       {
-          let modalBttn = document.querySelectorAll(".look-image");
-          modalBttn.forEach(bttn => bttn.addEventListener('click', function () {
-            let productId = bttn.id;
-            modal.createModal(productId );
-          }, false));
+         
+          modalBttn.forEach(bttn => bttn.addEventListener('click', e => this.createProductModal(e), false));
       }
-      
+      createProductModal(e)
+      {
+        let productId = e.target.id;
+        modal.createModal(productId );
+      }
       openArticle = () =>
       {
         const articleBttn = document.querySelectorAll('.open-article');

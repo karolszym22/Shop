@@ -12,12 +12,12 @@ export class ShopCart
         {
             this.cart.push(product);
             console.log(product);
-            sessionStorage.setItem("cart", JSON.stringify(this.cart));
+            
         }else
         {
             this.cart = new Array();
             this.cart.push(product);
-            console.log(JSON.parse(sessionStorage.cart));
+          
         }
         
     }

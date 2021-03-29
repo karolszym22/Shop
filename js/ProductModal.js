@@ -5,16 +5,17 @@ export class ProdcutModal
    
     createModal(productId)
     {
-        const product = this.findItem(productId);
+        this.product = this.findItem(productId);
+        console.log("w konstruktorze"+this.product);
         this.modal = document.querySelector('.product-modal');
         this.showModal(this.modal,productId);
-        this.addZoomImage(product);
-        this.addProductName(product);
-        this.addProducerName(product);
-        this.addProductPrice(product);
-        this.addProductQuantity(product);
-        this.addProductInformation(product);
-        this.dropToCart(product);
+        this.addZoomImage(this.product);
+        this.addProductName(this.product);
+        this.addProducerName(this.product);
+        this.addProductPrice(this.product);
+        this.addProductQuantity(this.product);
+        this.addProductInformation(this.product);
+        this.dropToCart();
         this.closeModal();
         console.log("asdsadasdasdasdasdasdas");
     }
@@ -45,24 +46,24 @@ export class ProdcutModal
         
     }
 
-    addProductName = (product) =>
+    addProductName(product)
     {
         let productName = document.querySelector(".product-name");
         productName.textContent = product.name;
     }
-    addProducerName = (product) =>
+    addProducerName(product)
     {
         let producerName = document.querySelector(".producer-name");
         producerName.textContent = product.producer;
     }
-    addProductPrice = (product) =>
+    addProductPrice(product) 
     {
         let productPrice = document.querySelector(".price-value")///do refaktoringu
         let productPrice2 = document.querySelector(".price")///do refaktoringu
         productPrice.textContent = product.price + " zł";
         productPrice2.textContent = product.price + " zł";
     }
-    addProductQuantity = (product) =>
+    addProductQuantity(product)
     {
 
         let productQuantity = document.querySelector(".quantity-product");
@@ -75,7 +76,7 @@ export class ProdcutModal
             return information[info];
         }
     }
-    addProductInformation = (product) =>
+    addProductInformation(product)
     {
       
         const container = document.createElement("div");
@@ -116,14 +117,23 @@ export class ProdcutModal
         
     }
 
-    dropToCart = (product) =>
+    dropToCart = () =>
     {
       let addToCartBttn = document.querySelector(".add-to-cart");
-      addToCartBttn.addEventListener('click', function()
-      {
-          let cart = new ShopCart(product);
-          console.log(cart);
-      }, false)
+      addToCartBttn.addEventListener('click',this.createShopCart, false)
+      console.log("w metodzie"+this.product);
+    }
+    createShopCart = () =>
+    {
+        console.log("w funkcji strzałkowej"+ this.product)
+        console.log("w JSON.stringify"+ JSON.stringify(this.product))
+        let test = JSON.stringify(this.product);
+        console.log("w JSON.parse"+ JSON.parse(test))
+        let test2 = JSON.parse(test);
+        console.log(test2.name);
+        let cart = new ShopCart();
+        console.log(cart);
+    
     }
   
 }

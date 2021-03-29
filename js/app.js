@@ -2,7 +2,7 @@ import devices from "./ElectronicProducts.js";
 import {ArticleToolsFactory} from './ArticleToolsFactory.js'
 import {Redirection} from "./RedirectionButtons.js"
 
-
+const buttons = new Redirection();
 
 class App
 {
@@ -40,4 +40,3 @@ console.log("no zadziałaj w koncu!");
 const app = new App();
 app.getAllProducts();
 app.setCart();  
-const buttons = new Redirection();
