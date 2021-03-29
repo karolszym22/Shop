@@ -2,9 +2,9 @@ import {ShopCart} from './ShopCart.js'
 import information from "./ProductsInformation.js";
 export class ProdcutModal
 {
-    constructor(productId)
+   
+    createModal(productId)
     {
-        
         const product = this.findItem(productId);
         this.modal = document.querySelector('.product-modal');
         this.showModal(this.modal,productId);
@@ -16,10 +16,8 @@ export class ProdcutModal
         this.addProductInformation(product);
         this.dropToCart(product);
         this.closeModal();
-       
+        console.log("asdsadasdasdasdasdasdas");
     }
-
-
     showModal = (modal) =>
     {
          document.querySelector('.dark-body').style.display = "flex";;
@@ -114,7 +112,8 @@ export class ProdcutModal
         document.getElementById("productInformation").remove();
         document.querySelector('.dark-body').style.display = "none";
         document.querySelector('.product-modal').style.display = "none";
-       
+        console.log("asdsadas");
+        
     }
 
     dropToCart = (product) =>
@@ -124,6 +123,7 @@ export class ProdcutModal
       {
           let cart = new ShopCart(product);
           console.log(cart);
-      })
+      }, false)
     }
+  
 }
