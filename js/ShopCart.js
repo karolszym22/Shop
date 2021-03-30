@@ -3,6 +3,7 @@ export class ShopCart
     constructor(product)
     {
         this.addToCart(product);
+        this.updateCart();
 
     }
     addToCart(product)
@@ -21,7 +22,16 @@ export class ShopCart
     }
     updateCart()
     {
-        
+        const cart = document.querySelector(".shop-cart-info");
+        const numberItems = JSON.parse(sessionStorage.cart).length;
+        if(sessionStorage.cart.length==0)
+        {
+         cart.style.display = "none";
+        }else
+        {
+            cart.style.display = "inline";
+            cart.textContent = numberItems;
+        }
     }
 }
    

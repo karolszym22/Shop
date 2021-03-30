@@ -506,10 +506,7 @@ header
             border-radius: 2px;
             margin: 0 15px;
             cursor: pointer;
-            .shop-cart-info
-            {
-              display: none;
-            }
+           
             
             &:hover
             {
@@ -521,7 +518,7 @@ header
             {
               color: orange;
               width: 50px;
-              a
+              .shop-cart-info
               {
                 
                 padding: 3px 7px;
@@ -534,6 +531,7 @@ header
                 right: 10px;
                 font-family: 'PT Sans', sans-serif;
                 font-weight: bold;
+                display: none;
               }
             }
             p
