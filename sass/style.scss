@@ -1048,9 +1048,7 @@ header
   .order-container
   {
     display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    flex-basis: 50%;
     .order-summary
     {
       margin: 15px;
@@ -1059,7 +1057,6 @@ header
       display: flex;
       flex-direction: column;
       border: 1px solid rgba(0, 0, 0, 0.281);
-      height: 500px;
       align-items: center;
       .complete-transaction
       {
@@ -1292,7 +1289,8 @@ header
           flex-direction: column;
           margin: 10px 50px;
           background-color: rgb(238, 235, 229);
-          
+          border: 1px solid rgba(0, 0, 0, 0.178);
+
           .delivery-time
           {
             display: flex;
@@ -1318,28 +1316,31 @@ header
              margin: 15px;
              display: flex;
              flex-direction: column;
+             width: 45%;
              .product-order
             {
               display: flex;
-              max-width: 350px;
-              flex-wrap: wrap;
               margin: 10px 0px;
               .product-order-image
               {
-                flex-basis: 50%;
+               width: 250px;
                 img
                 {
                   
                   width: 100%;
-                  max-width: 250px;
                   display:block;
+                  min-width: 130px;
                 }
               }
               .product-order-description
               {
-                flex-basis: 50%;
-                font-size: 13px;
+               
+                font-size: 12px;
                 font-weight: bold;
+                max-width: 230px;
+                min-width: 100px;
+                
+               
               }
               .product-order-number
               {
@@ -1356,7 +1357,7 @@ header
           .delivery-period
           {
             padding: 30px;
-            width: 100%;
+            
             .period-time
             {
               label
