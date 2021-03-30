@@ -1054,6 +1054,7 @@ header
     {
       margin: 15px;
       width: 320px;
+      min-width: 320px;
       display: flex;
       flex-direction: column;
       border: 1px solid rgba(0, 0, 0, 0.281);
@@ -1176,12 +1177,50 @@ header
     }
     .finalizing-order
     {
+      margin: 15px;
       display: flex;
       flex-direction: column;
+      width: 100%;
       .delivery-address-order
       {
         display: flex;
-        
+        width: 100%;
+        justify-content: space-around;
+        box-sizing: border-box;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        .delivery-address
+        {
+          display: flex;
+          flex-basis: 25%;
+          h3
+          {
+            margin: 0 20px
+          }
+        }
+        .delivery-addres-details
+        {
+          display: flex;
+          flex-direction: column;
+          flex-basis: 65%;
+          div
+          {
+            margin: 0px 40px;
+            font-size: 13px;
+            .value
+            {
+              font-weight: bold;
+            }
+          }
+        }
+        .change-delivery-addres
+        {
+          display: flex;
+          flex-basis: 10%;
+          font-size: 14px;
+          color: $productProducerName;
+          cursor: pointer;
+        }
       }
     }
   }
