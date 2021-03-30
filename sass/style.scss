@@ -1267,6 +1267,73 @@ header
           
         }
       }
+      .products-order
+      {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        padding-bottom: 15px;
+        .products-order-options
+        {
+          flex-basis: 100%;
+          display: flex;
+          h3
+          {
+            margin: 10px 20px
+          }
+        }
+        .user-products-order
+        {
+          
+          display: flex;
+          flex-direction: column;
+          margin: 10px 50px;
+          background-color: rgb(230, 227, 222);
+          
+          .delivery-time
+          {
+            display: flex;
+            flex-direction: column;
+            font-size: 22px;
+            font-weight: bold;
+            .delivery-info
+            {
+              font-size: 14px;
+              color: rgb(97, 96, 96);
+
+            }
+          }
+          .products-order-container
+          {
+            display: flex;
+            .order-container
+            {
+             width: 60%;
+             height: 300px;
+             border: 1px solid black;
+             margin: 15px;
+             .product-order
+            {
+              display: flex;
+              flex-direction: column;
+              .product-order-image
+              {
+                
+                img
+                {
+                  height: auto;
+                  max-width: 50%;
+                  display:block;
+                }
+              }
+            }
+            }
+            
+          }
+        }
+      }
     }
   }
 }
