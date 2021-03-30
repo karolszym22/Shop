@@ -125,8 +125,8 @@ export class ProdcutModal
     {
        
         let test = JSON.stringify(this.product);
-        let test2 = JSON.parse(test);
         let cart = new ShopCart(test);
+       
     
     }
   

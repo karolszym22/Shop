@@ -1,9 +1,9 @@
 import devices from "./ElectronicProducts.js";
 import {ArticleToolsFactory} from './ArticleToolsFactory.js'
 import {Redirection} from "./RedirectionButtons.js"
+import {ShopCart} from "./ShopCart.js"
 
 const buttons = new Redirection();
-
 class App
 {
     getAllProducts() ///refaktoring wskazany
@@ -32,6 +32,7 @@ class App
 
       }
     }
+
     
    
 }
