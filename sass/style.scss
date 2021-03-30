@@ -1048,6 +1048,7 @@ header
   .order-container
   {
     display: flex;
+    align-items: center;
     height: 100%;
     width: 100%;
     .order-summary
@@ -1290,7 +1291,7 @@ header
           display: flex;
           flex-direction: column;
           margin: 10px 50px;
-          background-color: rgb(230, 227, 222);
+          background-color: rgb(238, 235, 229);
           
           .delivery-time
           {
@@ -1298,11 +1299,15 @@ header
             flex-direction: column;
             font-size: 22px;
             font-weight: bold;
+            .delivery-time-info
+            {
+              margin: 0px 10px;
+            }
             .delivery-info
             {
               font-size: 14px;
               color: rgb(97, 96, 96);
-
+              margin: 0px 10px;
             }
           }
           .products-order-container
@@ -1310,27 +1315,62 @@ header
             display: flex;
             .order-container
             {
-             width: 60%;
-             height: 300px;
-             border: 1px solid black;
              margin: 15px;
+             display: flex;
+             flex-direction: column;
              .product-order
             {
               display: flex;
-              flex-direction: column;
+              max-width: 350px;
+              flex-wrap: wrap;
+              margin: 10px 0px;
               .product-order-image
               {
-                
+                flex-basis: 50%;
                 img
                 {
-                  height: auto;
-                  max-width: 50%;
+                  
+                  width: 100%;
+                  max-width: 250px;
                   display:block;
+                }
+              }
+              .product-order-description
+              {
+                flex-basis: 50%;
+                font-size: 13px;
+                font-weight: bold;
+              }
+              .product-order-number
+              {
+                color: rgb(75, 75, 75);
+                a
+                {
+                  margin: 5px;
                 }
               }
             }
             }
             
+          }
+          .delivery-period
+          {
+            padding: 30px;
+            width: 100%;
+            .period-time
+            {
+              label
+              {
+                a
+                {
+                  font-size: 14px;
+                }
+                .delivery-info
+                {
+                  color: rgb(39, 126, 27);
+                }
+              }
+            }
           }
         }
       }
