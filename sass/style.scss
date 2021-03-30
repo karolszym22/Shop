@@ -1181,14 +1181,15 @@ header
       display: flex;
       flex-direction: column;
       width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
       .delivery-address-order
       {
         display: flex;
         width: 100%;
         justify-content: space-around;
-        box-sizing: border-box;
-        padding: 10px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        padding-bottom: 15px;
         .delivery-address
         {
           display: flex;
@@ -1220,6 +1221,50 @@ header
           font-size: 14px;
           color: $productProducerName;
           cursor: pointer;
+        }
+      }
+      .payment-method
+      {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        padding-bottom: 15px;
+
+        .delivery-payment
+        {
+          display: flex;
+          flex-basis: 25%;
+          h3
+          {
+            margin: 10px 20px
+          }
+        }
+        .payment-method-type
+        {
+          flex-basis: 75%;
+
+          .payment-method-input
+          {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            font-weight: bold;
+            .credit-card
+            {
+              height: 40px;
+              display: flex;
+              align-items: center;
+              i
+              {
+                margin: 0 10px;
+                background: -webkit-linear-gradient(rgb(145, 8, 8), rgb(247, 177, 47));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+          
         }
       }
     }
