@@ -506,7 +506,10 @@ header
             border-radius: 2px;
             margin: 0 15px;
             cursor: pointer;
-           
+            .shop-cart-info
+            {
+              display: none;
+            }
             
             &:hover
             {

@@ -2,7 +2,6 @@ export class ShopCart
 {
     constructor(product)
     {
-        this.cart = new Array();
         this.addToCart(product);
 
     }
@@ -10,15 +9,18 @@ export class ShopCart
     {
         if(sessionStorage.cart.length==0)
         {
-            this.cart.push(product);
-            console.log(product);
             
+            sessionStorage.cart = "["+ product+ "]";
         }else
         {
-            this.cart = new Array();
-            this.cart.push(product);
-          
+            let cart = JSON.parse(sessionStorage.cart);
+            cart.push(JSON.parse(product));
+            sessionStorage.cart = JSON.stringify(cart);
         }
+        
+    }
+    updateCart()
+    {
         
     }
 }

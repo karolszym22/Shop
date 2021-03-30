@@ -648,6 +648,10 @@ header .main-head .right-head .shopping-cart .cart {
   cursor: pointer;
 }
 
+header .main-head .right-head .shopping-cart .cart .shop-cart-info {
+  display: none;
+}
+
 header .main-head .right-head .shopping-cart .cart:hover {
   border: 1px solid #e6e6e0;
   border-radius: 2px;

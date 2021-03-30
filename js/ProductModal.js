@@ -86,14 +86,12 @@ export class ProdcutModal
         information.forEach((info, index) =>
             {
              let infoName = document.createElement('div');
-             console.log(infoName);
              infoName.classList.add("information");
               let item = product[Object.keys(product)[index]]
               infoName.innerHTML = this.addProductValue(info,item);
               container.appendChild(infoName);
               
             })
-            console.log(container);
             document.querySelector(".main-product-information").appendChild(container);
     }
     addProductValue = (info,item) =>
@@ -125,14 +123,10 @@ export class ProdcutModal
     }
     createShopCart = () =>
     {
-        console.log("w funkcji strzałkowej"+ this.product)
-        console.log("w JSON.stringify"+ JSON.stringify(this.product))
+       
         let test = JSON.stringify(this.product);
-        console.log("w JSON.parse"+ JSON.parse(test))
         let test2 = JSON.parse(test);
-        console.log(test2.name);
-        let cart = new ShopCart();
-        console.log(cart);
+        let cart = new ShopCart(test);
     
     }
   
