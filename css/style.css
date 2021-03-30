@@ -1383,6 +1383,22 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   margin: 5px 10px;
 }
 
+.category-articles .order-container .finalizing-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.category-articles .order-container .finalizing-order .delivery-address-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 1100px) {
   header .main-head .right-head .user-data {
     display: none;

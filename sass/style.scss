@@ -1174,6 +1174,16 @@ header
         }
       }
     }
+    .finalizing-order
+    {
+      display: flex;
+      flex-direction: column;
+      .delivery-address-order
+      {
+        display: flex;
+        
+      }
+    }
   }
 }
 
