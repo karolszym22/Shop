@@ -1546,7 +1546,7 @@ header .secondary-head .nav-container .users-opinion h3:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 10px 50px;
-  background-color: #eeebe5;
+  background-color: #f7f5f3;
   border: 1px solid rgba(0, 0, 0, 0.178);
 }
 
