@@ -6,7 +6,6 @@ export class ProdcutModal
     createModal(productId)
     {
         this.product = this.findItem(productId);
-        console.log("w konstruktorze"+this.product);
         this.modal = document.querySelector('.product-modal');
         this.showModal(this.modal,productId);
         this.addZoomImage(this.product);
@@ -17,7 +16,6 @@ export class ProdcutModal
         this.addProductInformation(this.product);
         this.dropToCart();
         this.closeModal();
-        console.log("asdsadasdasdasdasdasdas");
     }
     showModal = (modal) =>
     {
