@@ -4,7 +4,7 @@ export class OrderSummary
     {
      this.generalPrice = 0; 
      this.shippingCost = 0;
-     this.cartPruducts = JSON.parse(sessionStorage.cart);
+     this.cartPruducts = JSON.parse(sessionStorage.cart); //dodać "jeśli taki się znajduje"
      this.setGeneralPrice();
      this.paymentMethod(this.generalPrice,this.shippingCost);
      
@@ -15,8 +15,11 @@ export class OrderSummary
       for(let i=0; i<this.cartPruducts.length; i++)
       {
           sum+=this.cartPruducts[i].price;
+          console.log("sum to jest: "+typeof sum);
       }
-      this.generalPrice = sum.toFixed(2);
+      console.log("generalPrice przed"+ typeof this.generalPrice)
+      this.generalPrice = toInt(sum.toFixed(2));
+      console.log("generalPrice po"+ typeof this.generalPrice)
       this.updateGeneralPrice(this.generalPrice);
     }
     updateGeneralPrice = (generalPrice) =>
@@ -37,7 +40,7 @@ export class OrderSummary
          let price = document.querySelectorAll(".general-price");
          for(let i=0; i<price.length; i++)
          price[i].textContent = (generalPrice + shippingCost);
-         console.log(generalPrice + shippingCost)
+         console.log(typeof generalPrice, typeof shippingCost)
         })
 
         cash.addEventListener("click", function()
@@ -50,4 +53,7 @@ export class OrderSummary
     }
     
 }  
-const test = new OrderSummary();
+if(window.location.href=='http://127.0.0.1:5500/order-fulfillment.html')
+ {
+    const test = new OrderSummary();
+ }
