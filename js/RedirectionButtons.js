@@ -1,13 +1,13 @@
 import {ProdcutModal} from './ProductModal.js';
+import {ArticleToolsFactory} from "./ArticleToolsFactory.js";
 let modal = new ProdcutModal();
 export class Redirection
 {
       constructor()
       {
-        this.modalBttn = document.querySelectorAll(".look-image");
+       this.modalBttn = document.querySelectorAll(".look-image");
        this.openArticle();
        this.openProductModal(this.modalBttn);
-       console.log("jest i dzial");
       }
 
       openProductModal(modalBttn)
@@ -27,9 +27,7 @@ export class Redirection
         {
             const state = ev.target.getAttribute('data-state');
             sessionStorage.setItem("state",state);
-            console.log("artykuł")
-            bttn.removeChild('click');
-            
+        
         }))
       }
 

@@ -28,6 +28,10 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
     
  }
 
-const tools = new ArticleToolsFactory(sessionStorage["state"]); 
+ if(window.location.href=='http://127.0.0.1:5500/category.html')
+ {
+    const tools = new ArticleToolsFactory(sessionStorage["state"]); 
+ }
+
 
 

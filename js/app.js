@@ -39,6 +39,7 @@ class App
       if(sessionStorage.cart.length!=0)
       {
         cart.style.display = "inline";
+        cart.textContent = JSON.parse(sessionStorage.cart).length;
       }
     }
     lastState()
@@ -48,6 +49,9 @@ class App
           sessionStorage.state = sessionStorage.lastState;
       }
     }
+
+  
+  
     
    
 }
