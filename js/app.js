@@ -32,7 +32,22 @@ class App
 
       }
     }
-
+    cartContent()
+    {
+      console.log("cartContent się wykonuje teraz");
+      const cart = document.querySelector(".shop-cart-info");
+      if(sessionStorage.cart.length!=0)
+      {
+        cart.style.display = "inline";
+      }
+    }
+    lastState()
+    {
+      if(sessionStorage.getItem("lastState"))
+      {
+          sessionStorage.state = sessionStorage.lastState;
+      }
+    }
     
    
 }
@@ -41,6 +56,8 @@ console.log("no zadziałaj w koncu!");
 const app = new App();
 app.getAllProducts();
 app.setCart();  
+app.cartContent();
+app.lastState();
 let magnifying_area =  document.getElementById("magnifying_area");
 let magnifying_img =  document.getElementById("magnifying_img");
 

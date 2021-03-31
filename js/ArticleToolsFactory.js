@@ -15,11 +15,11 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
          {
              case 'laptops':
                   const laptops = new ArticleToolsUI(article);
-                  console.log("teraz wyswietlam: "+ toString(article))
+                  sessionStorage.setItem("lastState", article);
                   break;
              case 'shavers':
                   const shavers = new ArticleToolsUI(article);
-                  console.log("teraz wyswietlam: "+ toString(article))
+                  sessionStorage.setItem("lastState", article);
                   break;
             
                   

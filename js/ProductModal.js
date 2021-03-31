@@ -15,6 +15,7 @@ export class ProdcutModal
         this.addProductQuantity(this.product);
         this.addProductInformation(this.product);
         this.dropToCart();
+        this.buyNow();
         this.closeModal();
     }
     showModal = (modal) =>
@@ -119,13 +120,19 @@ export class ProdcutModal
       addToCartBttn.addEventListener('click',this.createShopCart, false)
       console.log("w metodzie"+this.product);
     }
+    buyNow()
+    {
+        let buyNowBttn = document.querySelector(".buy-now"); 
+        buyNowBttn.addEventListener('click', function()
+        {
+            sessionStorage.state = "";
+        }) 
+    }
     createShopCart = () =>
     {
        
         let test = JSON.stringify(this.product);
         let cart = new ShopCart(test);
-       
-    
     }
   
 }
