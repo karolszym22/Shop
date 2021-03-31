@@ -2,12 +2,20 @@ export class OrderSummary
 {
     constructor()
     {
-     this.itemsFromCart();
+     this.generalPrice = 0; 
+     this.cartPruducts = JSON.parse(sessionStorage.cart);
+     this.setGeneralPrice();
+     
     }
-    itemsFromCart()
+    setGeneralPrice() //Możliwy refactoring
     {
-        console.l("podsumowanie się wykonuje");
-        console.log(JSON.parse(sessionStorage.cart));
+      let sum = 0;
+      for(let i=0; i<this.cartPruducts.length; i++)
+      {
+          sum+=this.cartPruducts[i].price;
+      }
+      this.generalPrice = sum.toFixed(2);
     }
-}
-const test = OrderSummary();
+    update
+}  
+const test = new OrderSummary();
