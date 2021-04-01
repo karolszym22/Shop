@@ -270,7 +270,34 @@
     </div>
     </main>
      <div class="dark-body">
-    
+        <div class="address-modal">
+            <div class="close-address-modal">
+                <h2>X</h2>
+            </div>
+            <h2>Podaj adres zamieszkania</h2>
+           <div class="address-information-container">
+             <div class="first-name address-input">
+                <label for="first-name"><a>Imię:</a></label>
+                <input  class="address-method"  type="text" id="first-name" name="first-name" placeholder="Podaj imię">
+            </div>
+            <div class="last-name address-input">
+                <label for="standard"><a>Nazwisko:</a></label>
+                <input  class="address-method"  type="text" id="last-name" name="last-name" placeholder="Podaj nazwisko">
+            </div>
+            <div class="city address-input">
+                <label for="standard"><a>Miasto:</a></label>
+                <input  class="address-method"  type="text" id="city" name="city" placeholder="Podaj miasto">
+            </div>
+            <div class="phone-number address-input">
+                <label for="standard"><a>Telefon:</a></label>
+                <input  class="address-method"  type="text" id="phone-number" pattern="[0-9] {10}" name="city" placeholder="Podaj telefon">
+            </div>
+            <div class="phone-number address-input">
+                <label for="standard"><a>Ulica:</a></label>
+                <input  class="address-method"  type="text" id="phone-number" pattern="[0-9] {10}" name="city" placeholder="Podaj ulicę">
+            </div>
+           </div>
+        </div>
     </div>
     <script type="module" src="./js/app.js"></script>
 </body>

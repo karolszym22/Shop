@@ -29,7 +29,66 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
+}
+
+.dark-body .address-modal {
+  width: 400px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dark-body .address-modal .close-address-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.dark-body .address-modal .address-information-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.dark-body .address-modal .address-information-container .address-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 0px;
+}
+
+.dark-body .address-modal .address-information-container .address-input label {
+  width: 100%;
+  text-align: end;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.dark-body .address-modal .address-information-container .address-input .address-method {
+  resize: none;
+  width: 100%;
 }
 
 .dark-body .product-modal {
