@@ -53,7 +53,7 @@ export class AddressModal
         if(this.emailValidation == true && this.phoneNumberValidation == true && this.cityNameValidation == true && 
             this.firstNameValidation == true && this.lastNameValidation == true)
             {
-              sessionStorage.setItem("address", `{[${this.addressContainer}]}`);
+              sessionStorage.setItem("address", JSON.stringify(this.addressContainer));
               this.hideAddressModal();
             }else 
             {
