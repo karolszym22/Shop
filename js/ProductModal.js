@@ -31,11 +31,7 @@ export class ProdcutModal
       image.src = product.productImageZoom;
       
     }
-    closeModal = () =>
-    {
-        const modal = document.querySelector('product-modal');
-        modal.style.display = "none";
-    }
+   
     findItem = (productId) =>
     {
         const products = JSON.parse(sessionStorage.products);
