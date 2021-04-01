@@ -1578,7 +1578,7 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   display: flex;
 }
 
-.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-container {
+.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-product-container {
   margin: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1590,35 +1590,35 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   width: 45%;
 }
 
-.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-container .product-order {
+.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-product-container .product-order {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 10px 0px;
 }
 
-.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-container .product-order .product-order-image {
+.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-product-container .product-order .product-order-image {
   width: 250px;
 }
 
-.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-container .product-order .product-order-image img {
+.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-product-container .product-order .product-order-image img {
   width: 100%;
   display: block;
   min-width: 130px;
 }
 
-.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-container .product-order .product-order-description {
+.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-product-container .product-order .product-order-description {
   font-size: 12px;
   font-weight: bold;
   max-width: 230px;
   min-width: 100px;
 }
 
-.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-container .product-order .product-order-number {
+.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-product-container .product-order .product-order-number {
   color: #4b4b4b;
 }
 
-.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-container .product-order .product-order-number a {
+.category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container .order-product-container .product-order .product-order-number a {
   margin: 5px;
 }
 

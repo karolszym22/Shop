@@ -8,31 +8,32 @@ export class OrderSummary
      this.setGeneralPrice();
      this.paymentMethod(this.generalPrice,this.shippingCost);
      this.deliveryOption();
+     this.setProductToOrder();
      
      
     }
     setProductToOrder()
     {
-        const orderContainer = document.querySelector(".order-container");
-        const productOrder = document.createElement("div");
-        productOrder.classList.add("product-order");
-        this.createProductContainer(productOrder);
+        const orderContainer = document.querySelector(".order-product-container");
+        this.createProductContainer(orderContainer);
      
     }
-    createProductContainer(productOrder)
+    createProductContainer(orderContainer)
     {
         let cartProducts = JSON.parse(sessionStorage.cart);
         for(let i=0; i<cartProducts.length; i++)
         {
-          productOrder.innerHTML = `<div class="product-order">
+         const productOrder = document.createElement("div");
+         productOrder.classList.add("product-order");
+          productOrder.innerHTML = `
           <div class="product-order-image">
               <img src=${cartProducts[i].productImage}> 
           </div>
           <div class="product-order-description">
             <p>${cartProducts[i].description}</p>
             <div class="product-order-number"><a>Ilość:</a><a>${cartProducts[i].quantity}</a></div>
-           </div></div>`
-           orderContainer.appendChild(productOrder);
+           </div>`
+         orderContainer.appendChild(productOrder);
         }
     }
 
