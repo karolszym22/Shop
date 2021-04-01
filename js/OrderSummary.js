@@ -15,11 +15,8 @@ export class OrderSummary
       for(let i=0; i<this.cartPruducts.length; i++)
       {
           sum+=this.cartPruducts[i].price;
-          console.log("sum to jest: "+typeof sum);
       }
-      console.log("generalPrice przed"+ typeof this.generalPrice)
       this.generalPrice = parseFloat(sum.toFixed(2));
-      console.log("generalPrice po"+ typeof this.generalPrice)
       this.updateGeneralPrice(this.generalPrice);
     }
     updateGeneralPrice = (generalPrice) =>
