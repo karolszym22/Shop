@@ -54,6 +54,17 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  cursor: pointer;
+}
+
+.dark-body .address-modal .close-address-modal h2 {
+  padding: 2.5px 7.5px;
+  background-color: orange;
+  color: white;
+}
+
+.dark-body .address-modal .address-welcome {
+  margin: 5px 0px;
 }
 
 .dark-body .address-modal .address-information-container {
@@ -64,7 +75,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 60%;
   font-size: 14px;
   padding: 10px;
 }
@@ -76,7 +87,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 5px 0px;
 }
 
 .dark-body .address-modal .address-information-container .address-input label {
@@ -89,6 +99,32 @@ body {
 .dark-body .address-modal .address-information-container .address-input .address-method {
   resize: none;
   width: 100%;
+}
+
+.dark-body .address-modal .address-information-container p {
+  text-align: end;
+  color: #851212;
+  font-size: 12px;
+  height: 15px;
+}
+
+.dark-body .address-modal .save-address-information {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dark-body .address-modal .save-address-information .save-information {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f0c63e), color-stop(#f4ad3c), color-stop(#f6b83b), color-stop(#f8c33b), to(#f9ce3b));
+  background-image: linear-gradient(to top, #f0c63e, #f4ad3c, #f6b83b, #f8c33b, #f9ce3b);
+  height: 30px;
+  border: 1px solid grey;
+  width: 100px;
+  margin: 10px 0px;
 }
 
 .dark-body .product-modal {
