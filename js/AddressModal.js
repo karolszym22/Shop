@@ -17,7 +17,7 @@ export class AddressModal
         console.log(email);
         var re = /^[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)*@([a-zA-Z0-9_-]+)(\.[a-zA-Z0-9_-]+)*(\.[a-zA-Z]{2,4})$/i;
         if(email.match(re) == null)
-            alert('Ten adres jest nieprawidłowy');
+           document.querySelector(".email-attention").textContent = "Ten adres nie jest prawidłowy";
         else
             alert('Ten adres jest prawidłowy');
     }

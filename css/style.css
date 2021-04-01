@@ -87,6 +87,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 1px 0px;
 }
 
 .dark-body .address-modal .address-information-container .address-input label {
