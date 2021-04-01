@@ -18,7 +18,7 @@ export class OrderSummary
           console.log("sum to jest: "+typeof sum);
       }
       console.log("generalPrice przed"+ typeof this.generalPrice)
-      this.generalPrice = toInt(sum.toFixed(2));
+      this.generalPrice = parseFloat(sum.toFixed(2));
       console.log("generalPrice po"+ typeof this.generalPrice)
       this.updateGeneralPrice(this.generalPrice);
     }
