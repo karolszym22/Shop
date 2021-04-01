@@ -42,19 +42,31 @@ body{
       display: flex;
       width: 100%;
       justify-content: flex-end;
+      cursor: pointer;
+      
+      h2
+      {
+        padding: 2.5px 7.5px;
+        background-color: orange;
+        color: white;
+       
+      }
+    }
+    .address-welcome
+    {
+      margin: 5px 0px;
     }
     .address-information-container
     {
       display: flex;
       flex-direction: column;
-      width: 50%;
+      width: 60%;
       font-size: 14px;
       padding: 10px;
       .address-input
       {
         display: flex;
         justify-content: space-between;
-        margin: 5px 0px;
         label
         {
           width: 100%;
@@ -67,6 +79,28 @@ body{
           resize: none;
           width: 100%;
         }
+      }
+      p
+      {
+        text-align: end;
+        color: rgb(133, 18, 18);
+        font-size: 12px;
+        height: 15px;
+      }
+    }
+    .save-address-information
+    {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      
+      .save-information
+      {
+        background-image: linear-gradient(to top, #f0c63e, #f4ad3c, #f6b83b, #f8c33b, #f9ce3b);
+        height: 30px;
+        border: 1px solid grey;
+        width: 100px;
+        margin: 10px 0px;
       }
     }
 

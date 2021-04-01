@@ -1,4 +1,5 @@
 import devices from "./ElectronicProducts.js";
+import {AddressModal} from "./AddressModal.js"
 import {ArticleToolsFactory} from './ArticleToolsFactory.js'
 import {Redirection} from "./RedirectionButtons.js"
 import {ShopCart} from "./ShopCart.js"
