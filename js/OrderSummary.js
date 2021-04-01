@@ -9,7 +9,33 @@ export class OrderSummary
      this.paymentMethod(this.generalPrice,this.shippingCost);
      this.deliveryOption();
      
+     
     }
+    setProductToOrder()
+    {
+        const orderContainer = document.querySelector(".order-container");
+        const productOrder = document.createElement("div");
+        productOrder.classList.add("product-order");
+        this.createProductContainer(productOrder);
+     
+    }
+    createProductContainer(productOrder)
+    {
+        let cartProducts = JSON.parse(sessionStorage.cart);
+        for(let i=0; i<cartProducts.length; i++)
+        {
+          productOrder.innerHTML = `<div class="product-order">
+          <div class="product-order-image">
+              <img src=${cartProducts[i].productImage}> 
+          </div>
+          <div class="product-order-description">
+            <p>${cartProducts[i].description}</p>
+            <div class="product-order-number"><a>Ilość:</a><a>${cartProducts[i].quantity}</a></div>
+           </div></div>`
+           orderContainer.appendChild(productOrder);
+        }
+    }
+
     setGeneralPrice() //Możliwy refactoring
     {
       let sum = 0;

@@ -40,6 +40,7 @@ export class ArticleToolsUI
     {
      let devices = JSON.parse(sessionStorage.devices);
      let products = eval("devices."+article);
+     console.log(products);
      sessionStorage.setItem("products", JSON.stringify(products));
      products.forEach(productInformation =>
         {
