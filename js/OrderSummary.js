@@ -7,6 +7,7 @@ export class OrderSummary
      this.cartPruducts = JSON.parse(sessionStorage.cart); //dodać "jeśli taki się znajduje"
      this.setGeneralPrice();
      this.paymentMethod(this.generalPrice,this.shippingCost);
+     this.deliveryOption();
      
     }
     setGeneralPrice() //Możliwy refactoring
@@ -33,23 +34,45 @@ export class OrderSummary
 
         creditCard.addEventListener("click", function()
         {
-         shippingCost = 15;
+         shippingCost = 0;
          let price = document.querySelectorAll(".general-price");
          for(let i=0; i<price.length; i++)
          price[i].textContent = (generalPrice + shippingCost);
-         console.log(typeof generalPrice, typeof shippingCost)
+         sessionStorage.setItem("paymentMethod", "credit-card");
         })
 
         cash.addEventListener("click", function()
         {
-            shippingCost = 0;
+            shippingCost = 15;
             let price = document.querySelectorAll(".general-price");
             for(let i=0; i<price.length; i++)
             price[i].textContent =(generalPrice + shippingCost);
+            sessionStorage.setItem("paymentMethod", "cash");
         })
     }
+    deliveryOption()
+    { 
+        const deliveryBttn = document.querySelectorAll(".delivery-method");
+        deliveryBttn.forEach(bttn => bttn.addEventListener("click", function()
+        {
+            if(bttn.id == "express")
+            {
+                sessionStorage.setItem("delivery", 1);
+
+            }else if(bttn.id == "slow")
+            {
+                sessionStorage.setItem("delivery", 5);
+            }else if(bttn.id == "standard")
+            {
+               let minutes = Math.floor(Math.random() * 3 )+ 1;
+               sessionStorage.setItem("delivery", minutes); 
+            }
+        }))
+    }
+   
+}    
+
     
-}  
 if(window.location.href=='http://127.0.0.1:5500/order-fulfillment.html')
  {
     const test = new OrderSummary();
