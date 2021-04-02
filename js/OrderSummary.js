@@ -1,9 +1,12 @@
-export class OrderSummary
+import {AddressModal} from "./AddressModal.js"
+export class OrderSummary extends AddressModal
 {
     constructor()
     {
+    super();   
      this.generalPrice = 0; 
      this.shippingCost = 0;
+     this.orderMonitoring();
      this.cartPruducts = JSON.parse(sessionStorage.cart); //dodać "jeśli taki się znajduje"
      this.setGeneralPrice();
      this.paymentMethod(this.generalPrice,this.shippingCost);
@@ -11,6 +14,11 @@ export class OrderSummary
      this.setProductToOrder();
      
      
+     
+    }
+    orderMonitoring()
+    {
+     this.updateDeliveryAddress()
     }
     setProductToOrder()
     {

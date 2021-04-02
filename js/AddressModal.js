@@ -19,7 +19,13 @@ export class AddressModal
 
     updateDeliveryAddress()
     {
-
+       const data = JSON.parse(sessionStorage.address);
+       const addressElement = document.querySelectorAll(".user-address-value");
+       addressElement.forEach((element, index) => 
+       {
+           console.log("wykonuje się nowa funkcja");
+            element.textContent = data[index];
+       })
     }
     checkEmail()
     {
@@ -58,6 +64,7 @@ export class AddressModal
             {
               sessionStorage.setItem("address", JSON.stringify(this.addressContainer));
               this.hideAddressModal();
+              this.updateDeliveryAddress();
             }else 
             {
             this.addressContainer = new Array();

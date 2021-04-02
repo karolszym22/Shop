@@ -42,17 +42,17 @@ class App
       console.log("cartContent się wykonuje teraz");
       const cart = document.querySelector(".shop-cart-info");
       if(sessionStorage.cart.length!=0)
-      {
         cart.style.display = "inline";
         cart.textContent = JSON.parse(sessionStorage.cart).length;
-      }
     }
     lastState()
     {
       if(sessionStorage.getItem("lastState"))
-      {
           sessionStorage.state = sessionStorage.lastState;
-      }
+    }
+    lastDelivery()
+    {
+      sessionStorage.setItem("lastDelivery", 45643398);
     }
 
   
@@ -67,6 +67,7 @@ app.getAllProducts();
 app.setCart();  
 app.cartContent();
 app.lastState();
+app.lastDelivery();
 const search = new SearchItem();
 
 
