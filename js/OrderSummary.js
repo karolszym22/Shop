@@ -6,8 +6,8 @@ export class OrderSummary extends AddressModal
     super();   
      this.generalPrice = 0; 
      this.shippingCost = 0;
-     this.orderMonitoring();
      this.cartPruducts = JSON.parse(sessionStorage.cart); //dodać "jeśli taki się znajduje"
+     this.orderMonitoring();
      this.setGeneralPrice();
      this.paymentMethod(this.generalPrice,this.shippingCost);
      this.deliveryOption();
@@ -18,7 +18,8 @@ export class OrderSummary extends AddressModal
     }
     orderMonitoring()
     {
-     this.updateDeliveryAddress()
+     if(sessionStorage.getItem("address"))   
+        this.updateDeliveryAddress();
     }
     setProductToOrder()
     {

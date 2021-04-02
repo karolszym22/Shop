@@ -8,14 +8,13 @@ export class AddressModal
        this.cityNameValidation = false;
        this.firstNameValidation = false;
        this.lastNameValidation = false;
-       this.saveMailChanges();
        this.closeAddressModal();
-
+       this.saveMailChanges();
        
     }
 
 
-
+   
 
     updateDeliveryAddress()
     {
@@ -102,6 +101,12 @@ export class AddressModal
         document.querySelector(".city-attention").textContent = ""; 
         this.cityNameValidation = true;
         this.addressContainer.push(cityName);
+    }
+    openAddressModal()
+    {
+        document.querySelector('.address-modal').style.display = "inline-flex";
+        document.querySelector('.dark-body').style.display = "inline-flex";
+        
     }
     closeAddressModal()
     {

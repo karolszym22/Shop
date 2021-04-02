@@ -30,6 +30,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   z-index: 5;
+  display: none;
 }
 
 .dark-body .address-modal {
@@ -45,6 +46,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 .dark-body .address-modal .close-address-modal {

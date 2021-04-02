@@ -42,13 +42,17 @@ class App
       console.log("cartContent się wykonuje teraz");
       const cart = document.querySelector(".shop-cart-info");
       if(sessionStorage.cart.length!=0)
+      {
         cart.style.display = "inline";
         cart.textContent = JSON.parse(sessionStorage.cart).length;
+      }
     }
     lastState()
     {
       if(sessionStorage.getItem("lastState"))
+      {
           sessionStorage.state = sessionStorage.lastState;
+      }
     }
     lastDelivery()
     {

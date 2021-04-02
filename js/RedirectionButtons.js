@@ -1,5 +1,7 @@
 import {ProdcutModal} from './ProductModal.js';
 import {ArticleToolsFactory} from "./ArticleToolsFactory.js";
+import {AddressModal} from "./AddressModal.js";
+
 let modal = new ProdcutModal();
 export class Redirection
 {
@@ -8,6 +10,7 @@ export class Redirection
        this.modalBttn = document.querySelectorAll(".look-image");
        this.openArticle();
        this.openProductModal(this.modalBttn);
+       this.changeAddress();
       }
 
       openProductModal(modalBttn)
@@ -29,6 +32,13 @@ export class Redirection
             sessionStorage.setItem("state",state);
         
         }))
+      }
+
+      changeAddress()
+      {
+          const address = new AddressModal();
+          const changeAddressBttn = document.querySelector(".change-address");
+          changeAddressBttn.addEventListener("click", address.openAddressModal);
       }
 
 
