@@ -612,6 +612,15 @@ header .main-head .center-head .search-container .search-value {
   top: 45px;
 }
 
+header .main-head .center-head .search-container .search-value .found-product {
+  padding: 5px;
+  cursor: pointer;
+}
+
+header .main-head .center-head .search-container .search-value .found-product:hover {
+  background-color: #dfdddd;
+}
+
 header .main-head .right-head {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

@@ -491,6 +491,15 @@ header
                 background-color: white;
                 position: absolute;
                 top: 45px;
+                .found-product
+                {
+                  padding: 5px;
+                  cursor: pointer;
+                  &:hover
+                  {
+                    background-color: rgb(223, 221, 221);
+                  }
+                }
               }
            }
           

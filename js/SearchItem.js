@@ -6,19 +6,31 @@ export class SearchItem
     }
     enterWord()
     {
+
+      search.addEventListener("keypress", this.getDevices.bind(this),false)
+    }
+    getDevices()
+        {document.querySelector(".search-value").innerHTML = "";
         const search = document.getElementById("search");
         const devices = JSON.parse(sessionStorage.devices);
-        console.log(search);
-        search.addEventListener("keypress", function()
+        for(let i in devices)
         {
-            for(let i in devices)
-            {
-                console.log(devices[i]);
-            }
-        })
+            let device = devices[i];
+            this.compareLetters(search,device);
+        }
     }
-    compareLetters(value,devices)
-    {
-      
+    compareLetters(search,device)
+    { 
+      device.forEach(element => {
+       
+          if(element.name.substr(0, search.value.length) == search.value && search.value.length > 0)
+          {
+              let product = document.createElement("p");
+              product.classList.add("found-product");
+              let container = document.querySelector(".search-value");
+              product.textContent = element.name;
+              container.appendChild(product);
+          }
+      });
     }
 }

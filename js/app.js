@@ -7,7 +7,7 @@ import {SearchItem} from "./SearchItem.js"
 import {OrderSummary} from "./OrderSummary.js"
 
 const buttons = new Redirection();
-const search = new SearchItem();
+
 class App
 {
     getAllProducts() ///refaktoring wskazany
@@ -66,3 +66,4 @@ app.getAllProducts();
 app.setCart();  
 app.cartContent();
 app.lastState();
+const search = new SearchItem();
