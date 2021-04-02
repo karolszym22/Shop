@@ -17,7 +17,10 @@ export class AddressModal
 
 
 
- 
+    updateDeliveryAddress()
+    {
+
+    }
     checkEmail()
     {
         var email = document.getElementById("email").value;
@@ -45,11 +48,11 @@ export class AddressModal
     }
     addressValidation()
     {
-        this.checkEmail();
-        this.checkPhoneNumber();
         this.checkFirstName();
         this.checkLastName();
         this.checkCity();
+        this.checkPhoneNumber();
+        this.checkEmail();
         if(this.emailValidation == true && this.phoneNumberValidation == true && this.cityNameValidation == true && 
             this.firstNameValidation == true && this.lastNameValidation == true)
             {
