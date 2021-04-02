@@ -12,6 +12,7 @@ export class OrderSummary extends AddressModal
      this.paymentMethod(this.generalPrice,this.shippingCost);
      this.deliveryOption();
      this.setProductToOrder();
+     this.orderFinalization();
      
      
      
@@ -93,17 +94,33 @@ export class OrderSummary extends AddressModal
         {
             if(bttn.id == "express")
             {
-                sessionStorage.setItem("delivery", 1);
+                sessionStorage.setItem("delivery", 60);
 
             }else if(bttn.id == "slow")
             {
-                sessionStorage.setItem("delivery", 5);
+                sessionStorage.setItem("delivery", 300);
             }else if(bttn.id == "standard")
             {
-               let minutes = Math.floor(Math.random() * 3 )+ 1;
+               let minutes = 60 * (Math.floor(Math.random() * 3 )+ 1);
                sessionStorage.setItem("delivery", minutes); 
             }
         }))
+    }
+    orderFinalization()
+    {
+        const payBttn = document.querySelectorAll(".complete");
+        payBttn.forEach(e => e.addEventListener("click", this.payForOrder));
+    }
+    payForOrder()
+    {
+        let order = new Array();
+        const userProducts = JSON.parse(sessionStorage.cart);
+        const generalPrice = document.querySelector(".general-price").textContent;
+        const deliveryTime = JSON.parse(sessionStorage.delivery);
+        order.push(userProducts,generalPrice,deliveryTime);
+        console.log(order);
+        sessionStorage.setItem("order", JSON.stringify(order));
+        
     }
    
 }    
