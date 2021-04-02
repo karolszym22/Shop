@@ -389,7 +389,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: -1;
 }
 
 header .main-head {
@@ -534,25 +533,26 @@ header .main-head .center-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: 300;
-  font-size: 14px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 header .main-head .center-head .search-container {
-  width: 95%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: flex;
   height: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 header .main-head .center-head .search-container .search-category {
@@ -603,6 +603,13 @@ header .main-head .center-head .search-container .search-button {
 
 header .main-head .center-head .search-container .search-button:hover {
   background-color: #ebb450;
+}
+
+header .main-head .center-head .search-container .search-value {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 45px;
 }
 
 header .main-head .right-head {
