@@ -2,7 +2,7 @@ export class AddressModal
 {
     constructor()
     {
-       this.addressContainer = new Array();
+       this.addressContainer = new Array(); ///test
        this.emailValidation = false;
        this.phoneNumberValidation = false;
        this.cityNameValidation = false;
