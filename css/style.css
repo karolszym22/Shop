@@ -1115,7 +1115,7 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 }
 
 .category-articles {
-  background-color: #fffefa;
+  background-color: #f5eaea;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1126,6 +1126,27 @@ header .secondary-head .nav-container .users-opinion h3:hover {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   min-height: calc(100vh - 110px);
+}
+
+.category-articles .lottery-game-container {
+  min-height: calc(100vh - 110px);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.category-articles .lottery-game-container .lottery-game {
+  width: 550px;
+  height: 500px;
+  border: 1px solid black;
+  background-color: #3ca5a5;
 }
 
 .category-articles .nav-subnav {

@@ -957,12 +957,30 @@ header
 .category-articles
 {
   
-  background-color: rgb(255, 254, 250);
+  background-color: rgb(245, 234, 234);
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   min-height: calc(100vh - 110px);
   
+   .lottery-game-container
+   {
+     
+    min-height: calc(100vh - 110px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+     .lottery-game
+     {
+       width: 550px;
+       height: 500px;
+       border: 1px solid black;
+       background-color: rgb(60, 165, 165);
+     }
+   }
+
    .nav-subnav
    {
      width: 100%;
