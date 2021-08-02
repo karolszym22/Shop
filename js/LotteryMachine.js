@@ -1,5 +1,5 @@
 
-export class AddressModal 
+export class LotteryMachine
 {
     constructor()
     {
