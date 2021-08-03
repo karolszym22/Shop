@@ -1257,11 +1257,52 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 }
 
 .category-articles .lottery-game-container .lottery-game .lottery-machine .lottery-machine-body .lottery-button-container {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.category-articles .lottery-game-container .lottery-game .lottery-machine .lottery-machine-body .lottery-button-container .lottery-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 60px;
   border-radius: 50px;
-  background-color: gold;
+  background-color: #f7b80c;
+  z-index: 2;
   cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.category-articles .lottery-game-container .lottery-game .lottery-machine .lottery-machine-body .lottery-button-container .lottery-button:active {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.category-articles .lottery-game-container .lottery-game .lottery-machine .lottery-machine-body .lottery-button-container .button-shadow {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: rgba(247, 184, 12, 0.596);
+  z-index: 1;
+  -webkit-transform: translateY(9px);
+          transform: translateY(9px);
 }
 
 .category-articles .nav-subnav {
