@@ -1,5 +1,5 @@
 import devices from "./ElectronicProducts.js";
-
+import {LotteryMachine} from './LotteryMachine.js';
 import {ArticleToolsFactory} from './ArticleToolsFactory.js'
 import {Redirection} from "./RedirectionButtons.js"
 import {ShopCart} from "./ShopCart.js"
@@ -67,6 +67,7 @@ class App
 
 console.log("no zadziałaj w koncu!");
 const app = new App();
+const game = new LotteryMachine();
 app.getAllProducts();
 app.setCart();  
 app.cartContent();
