@@ -7,7 +7,7 @@ export class LotteryMachine
      this.scoreCards = ["?", "?", "?"];
      this.coupons = ["10%", "5%", "2%"];
      this.numberIntervals = 0;
-     this.interval =  setInterval(this.couponDraw, 100);
+     this.interval =  setInterval(this.couponDraw, 60);
      
     
      
@@ -27,7 +27,7 @@ export class LotteryMachine
        this.showOnMachine(this.scoreCards[i],i);
     }
     this.numberIntervals++
-    if(this.numberIntervals===15)
+    if(this.numberIntervals===30)
     {
       clearInterval(this.interval);
     }
