@@ -67,7 +67,6 @@ class App
 
 console.log("no zadziałaj w koncu!");
 const app = new App();
-const game = new LotteryMachine();
 app.getAllProducts();
 app.setCart();  
 app.cartContent();
