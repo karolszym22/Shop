@@ -14,10 +14,12 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
          switch(article)
          {
              case 'laptops':
+                  document.querySelector(".category-name").innerHTML = "Elektronika i komputery"
                   const laptops = new ArticleToolsUI(article);
                   sessionStorage.setItem("lastState", article);
                   break;
              case 'shavers':
+                  document.querySelector(".category-name").innerHTML = "Elektronika i komputery"
                   const shavers = new ArticleToolsUI(article);
                   sessionStorage.setItem("lastState", article);
                   break;
