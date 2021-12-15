@@ -10,7 +10,7 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
 
      showArticle(article)
      {    
-       
+         
          switch(article)
          {
              case 'laptops':
@@ -21,6 +21,16 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
              case 'shavers':
                   document.querySelector(".category-name").innerHTML = "Elektronika i komputery"
                   const shavers = new ArticleToolsUI(article);
+                  sessionStorage.setItem("lastState", article);
+                  break;
+            case 'tShirts':
+                  document.querySelector(".category-name").innerHTML = "Zwykłe ubrania oraz garnitury"
+                  const tShirts = new ArticleToolsUI(article);
+                  sessionStorage.setItem("lastState", article);
+                  break;
+            case 'suits':
+                  document.querySelector(".category-name").innerHTML = "Zwykłe ubrania oraz garnitury"
+                  const suits = new ArticleToolsUI(article);
                   sessionStorage.setItem("lastState", article);
                   break;
             
