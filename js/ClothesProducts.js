@@ -55,4 +55,4 @@ let suits = [
     
   ]
 
-export default clothes;
+  export default {tShirts,suits};
