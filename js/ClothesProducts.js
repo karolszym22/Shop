@@ -1,4 +1,4 @@
-let clothes = [
+let tShirts = [
     {
 
         producer: "H&M",
@@ -16,7 +16,7 @@ let clothes = [
         
     },
     
-        {
+    {
     
             producer: "ZARA",
             description: "Klasyczny męski sweter wykonany w 100% z wysokogatunkowej czesanej bawełny, która podnosi komfort użytkowania",
@@ -31,6 +31,28 @@ let clothes = [
             productId: "tshirt2",
             name: "Green T-shirt",
             
-        },
+    },
     
 ]
+let suits = [
+   
+    {
+    
+            producer: "ZALANDO",
+            description: "Klasyczny męski garnitur na różnego rodzaju wydarzenia biznesowe.",
+            color: "czarny",
+            discount: false,
+            Composition: "65% poliester, 33% wiskoza, 2% elastan",
+            style: "Włoski",
+            sold: 6,
+            price: 649.99,
+            productImage: "./images/zielonaKoszula.jpg",
+            productImageZoom: "./images/asusZoom.jpg",
+            productId: "suit1",
+            name: "Black suit",
+            
+    },
+    
+  ]
+
+export default clothes;
