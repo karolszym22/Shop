@@ -9,7 +9,7 @@ export class ArticleToolsUI
     
       
   
-     
+      this.productList = ["clothes","devices"];
       const root = this.createSectionContainer();
       const productContainer = this.createProductsContainer(root);
       this.showProducts(productContainer, article);
@@ -18,7 +18,6 @@ export class ArticleToolsUI
   
     createSectionContainer = () =>
     {
-      console.log("funkcja wykonałą sie");
       const root = document.createElement("section");
       root.classList.add("products-list");
       root.innerHTML = `<h1 class="product-category">Dla Ciebie</h1><h3 class="chosen-by-us">Wyróżnione przez nas</h3>`
@@ -38,8 +37,10 @@ export class ArticleToolsUI
 
     showProducts(productsContainer,article)
     {
-     let devices = JSON.parse(sessionStorage.devices);
-     let products = eval("devices."+article);
+    
+     let category = this.getProductType(article)
+     let items = JSON.parse(eval("sessionStorage."+category))
+    let products = eval("items."+article); //możliwy refactoring w niedalekiej przyszłosci
      console.log(products);
      sessionStorage.setItem("products", JSON.stringify(products));
      products.forEach(productInformation =>
@@ -56,5 +57,24 @@ export class ArticleToolsUI
         })
     
     }
+    getProductType(article)
+    {
+      for (var i = 0; i < sessionStorage.length; i++){
+        let value = sessionStorage.key(i);
+            if(this.productList.includes(value))
+             { 
+               let score = JSON.parse(eval("sessionStorage."+ value));
+               if(article in score)
+               {
+                 return value
+                
+               }
+             }
+            
+     
+        }
+        
+    }
+    
 
 }

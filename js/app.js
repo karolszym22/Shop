@@ -1,4 +1,5 @@
 import devices from "./ElectronicProducts.js";
+import clothes from "./ClothesProducts.js";
 import {LotteryMachine} from './LotteryMachine.js';
 import {ArticleToolsFactory} from './ArticleToolsFactory.js'
 import {Redirection} from "./RedirectionButtons.js"
@@ -21,6 +22,7 @@ class App
       {
         console.log("nie ma");
         sessionStorage.setItem("devices", JSON.stringify(devices));
+        sessionStorage.setItem("clothes", JSON.stringify(clothes));
       }
     }
     setCart()///refaktoring wskazany
