@@ -353,7 +353,6 @@ header .main-head .right-head .shopping-cart {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -363,7 +362,7 @@ header .main-head .right-head .shopping-cart {
 
 header .main-head .right-head .shopping-cart .shopping-cart-container {
   position: absolute;
-  width: 100%;
+  width: 120%;
   background-color: white;
   position: absolute;
   top: 65px;
@@ -508,6 +507,9 @@ header .secondary-head .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header .secondary-head .nav-container .nav-menu {

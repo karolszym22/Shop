@@ -268,7 +268,7 @@ header
           color: rgb(197, 212, 196);
           height: 100%;
           justify-content: center;
-          width: 50%;
+          
           align-items: center;
           position: relative;
           z-index: 1;
@@ -276,7 +276,7 @@ header
           {
             
             position: absolute;
-            width: 100%;
+            width: 120%;
             background-color: white;
             position: absolute;
             top: 65px;
@@ -403,6 +403,7 @@ header
         {
           width: 95%;
           display: flex;
+          justify-content: space-between;
           .nav-menu
           {
             display: flex;
