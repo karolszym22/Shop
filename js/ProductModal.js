@@ -26,8 +26,10 @@ export class ProdcutModal
     }
     addZoomImage = (product) =>
     {
-        console.log(product.productImageZoom);
+        
+      console.log("moj produkt",product);
       const image = document.getElementById("magnifying_img");
+      console.log("mój obrazek w modalu",product.productImageZoom)
       image.src = product.productImageZoom;
       
     }
