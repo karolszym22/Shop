@@ -1218,7 +1218,6 @@ body {
 .category-articles .realization-product-container {
   width: 80%;
   margin: 10px 10%;
-  min-height: 500px;
 }
 
 .category-articles .realization-product-container .realization-product-informations {
@@ -1268,6 +1267,19 @@ body {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.category-articles .realization-product-container .realization-products-list {
+  padding: 30px 5%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.category-articles .realization-product-container .realization-products-list .realization-product {
+  padding: 20px 0px;
+}
+
+.category-articles .realization-product-container .realization-products-list .realization-product ul:before {
+  color: green;
 }
 
 .category-articles .lottery-game-container {

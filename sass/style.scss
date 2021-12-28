@@ -347,7 +347,7 @@ body{
   {
     width: 80%;
     margin: 10px 10%;
-    min-height: 500px;
+    
     .realization-product-informations
     {
       width: 100%;
@@ -395,6 +395,21 @@ body{
         }
       }
       
+    }
+    .realization-products-list
+    {
+      padding: 30px 5%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+      .realization-product
+      {
+        padding: 20px 0px;
+        ul
+        {
+          &:before {
+           color: green;
+           }
+        }
+      }
     }
   }
    .lottery-game-container
