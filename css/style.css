@@ -1208,6 +1208,68 @@ body {
   min-height: calc(100vh - 110px);
 }
 
+.category-articles .completed-orders-attention {
+  width: 80%;
+  margin: 50px 10%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.category-articles .realization-product-container {
+  width: 80%;
+  margin: 10px 10%;
+  min-height: 500px;
+}
+
+.category-articles .realization-product-container .realization-product-informations {
+  width: 100%;
+  min-height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.category-articles .realization-product-container .realization-product-informations p {
+  width: 20%;
+  text-align: center;
+  color: #636363;
+}
+
+.category-articles .realization-product-container .realization-orders-list {
+  width: 100%;
+}
+
+.category-articles .realization-product-container .realization-orders-list .realization-product-value {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.category-articles .realization-product-container .realization-orders-list .realization-product-value p {
+  width: 20%;
+  text-align: center;
+  padding-top: 15px;
+  font-weight: bolder;
+}
+
+.category-articles .realization-product-container .realization-orders-list .realization-product-value #productTimeStatus {
+  color: yellowgreen;
+}
+
+.category-articles .realization-product-container .realization-orders-list .realization-product-value button {
+  width: 20%;
+  height: 40px;
+  margin-top: 5px;
+  background-color: #febd69;
+  font-size: 16px;
+  font-weight: bolder;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 .category-articles .lottery-game-container {
   min-height: calc(100vh - 110px);
   width: 100%;
