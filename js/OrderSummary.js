@@ -7,6 +7,7 @@ export class OrderSummary extends AddressModal
      this.generalPrice = 0; 
      this.shippingCost = 0;
      this.cartPruducts = JSON.parse(sessionStorage.cart); //dodać "jeśli taki się znajduje"
+     console.log("moj koszyk kochany: ", this.cartPruducts);
      this.orderMonitoring();
      this.setGeneralPrice();
      this.paymentMethod(this.generalPrice,this.shippingCost);
@@ -108,21 +109,29 @@ export class OrderSummary extends AddressModal
     }
     orderFinalization()
     {
+        this.orderDate();
         const payBttn = document.querySelectorAll(".complete");
         payBttn.forEach(e => e.addEventListener("click", this.payForOrder));
     }
     payForOrder()
     {
+        const date =  new Date();
+        const day = date.getDate();
+        const month = date.getMonth();
+        const year = date.getFullYear();
+        console.log(`${day}, ${("0" + (month + 1)).slice(-2)}, ${year}`);
         let order = new Array();
         const userProducts = JSON.parse(sessionStorage.cart);
         const generalPrice = document.querySelector(".general-price").textContent;
-        const deliveryTime = JSON.parse(sessionStorage.delivery);
-        order.push(userProducts,generalPrice,deliveryTime);
-        console.log(order);
         sessionStorage.setItem("order", JSON.stringify(order));
         
+        
     }
-   
+    orderDate()
+    {
+
+       
+    }
 }    
 
     
