@@ -32,7 +32,63 @@ body{
   align-items: center;
   z-index: 5;
   display: none;
-  
+  .close-side-menu
+  {
+    position: absolute;
+    color: white;
+    top: 0px;
+    font-size: 30px;
+    left: 400px;
+    padding-left: 15px;
+    cursor: pointer;
+  }
+ 
+  .side-menu
+  {
+    height: 100vh;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    
+    .menu-customer
+    {
+      background-color: #232f3e;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      i
+      {
+        margin: 0 10px 0 36px
+      }
+      h2
+      {
+        color: white;
+      }
+    }
+    h3
+    {
+      padding-left: 36px;
+      padding-top: 15px;
+      
+    }
+    .side-menu-container
+    {
+      width: 100%;
+      margin-top: 10px;
+      .side-menu-category
+      {
+        padding-right: 20px;
+        padding-left: 36px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        &:hover
+        {
+          background-color: rgb(226, 218, 218);
+        }
+      }
+    }
+  }
   .address-modal
   {
     width: 400px;
@@ -766,6 +822,7 @@ body{
             border: 1px solid rgb(207, 143, 23);
             background-image: linear-gradient(to top, #f0c63e, #f4ad3c, #f6b83b, #f3d58a, #f0db97);
             cursor: pointer;
+           
           }
         }
         .terms-use
@@ -1087,6 +1144,13 @@ body{
             border: 1px solid rgb(207, 143, 23);
             background-image: linear-gradient(to top, #f0c63e, #f4ad3c, #f6b83b, #f3d58a, #f0db97);
             cursor: pointer;
+            a{
+              display: block;
+              height: 35px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
             
           }
         }
