@@ -7,11 +7,20 @@ import {ShopCart} from "./ShopCart.js"
 import {SearchItem} from "./SearchItem.js"
 import {OrderSummary} from "./OrderSummary.js"
 import {AddressModal} from "./AddressModal.js"
+import { OrderTime } from "./OrderTime.js";
 
 const buttons = new Redirection();
-
 class App
 {
+    checkOrder()
+    {
+      if(sessionStorage.cart)
+      {
+        const order = new OrderTime;
+      }
+      
+    }
+    
     getAllProducts() ///refaktoring wskazany
     { 
       console.log("no pobierz produkty");
@@ -69,6 +78,7 @@ class App
 
 console.log("no zadziałaj w koncu!");
 const app = new App();
+app.checkOrder();
 app.getAllProducts();
 app.setCart();  
 app.cartContent();
