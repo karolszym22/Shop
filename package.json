@@ -1,0 +1,27 @@
+{
+  "name": "aledrogo",
+  "version": "1.0.0",
+  "description": "Sklep wzorowany na stronie - Amazon. Strona dalej jest w budowie jednak posiada już kilka fukncjonalności",
+  "main": "kopia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karolszym22/Shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karolszym22/Shop/issues"
+  },
+  "homepage": "https://github.com/karolszym22/Shop#readme",
+  "dependencies": {
+    "@glidejs/glide": "^3.5.2",
+    "date-fns": "^2.28.0",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.66.0"
+  }
+}
