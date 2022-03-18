@@ -8,15 +8,16 @@ import {SearchItem} from "./SearchItem.js"
 import {OrderSummary} from "./OrderSummary.js"
 import {AddressModal} from "./AddressModal.js"
 import { OrderTime } from "./OrderTime.js";
-
+import { OrderTools } from "./OrderToolsFactory.js";
 const buttons = new Redirection();
+
 class App
 {
     checkOrder()
     {
       if(sessionStorage.cart)
       {
-        const order = new OrderTime;
+        const orderTime = new OrderTime;
       }
       
     }
@@ -58,13 +59,20 @@ class App
         cart.textContent = JSON.parse(sessionStorage.cart).length;
       }
     }
-    lastState()
+    orderHistoryContent()
     {
-      if(sessionStorage.getItem("lastState"))
+      const path = location.pathname;
+      if(path === "/history-orders.html")
       {
-          sessionStorage.state = sessionStorage.lastState;
+        const orderTools = new OrderTools();
       }
     }
+    lastState()
+    {
+     
+      sessionStorage.state = sessionStorage.lastState;
+    }
+
     lastDelivery()
     {
       sessionStorage.setItem("lastDelivery", 45643398);
@@ -84,6 +92,7 @@ app.setCart();
 app.cartContent();
 app.lastState();
 app.lastDelivery();
+app.orderHistoryContent();
 const search = new SearchItem();
 
 

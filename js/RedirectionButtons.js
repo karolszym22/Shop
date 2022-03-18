@@ -1,16 +1,19 @@
 import {ProdcutModal} from './ProductModal.js';
-import {ArticleToolsFactory} from "./ArticleToolsFactory.js";
 import {AddressModal} from "./AddressModal.js";
+import {OrderTools} from "./OrderToolsFactory.js"
 
 let modal = new ProdcutModal();
+
 export class Redirection
 {
       constructor()
       {
-       this.modalBttn = document.querySelectorAll(".look-image");
+       this.modalBttn = document.querySelectorAll(".look-image"); //mozliwy refactoring
        this.openArticle();
        this.openProductModal(this.modalBttn);
        this.changeAddress();
+       this.openOrdersHistory();
+      
       }
 
       openProductModal(modalBttn)
@@ -20,6 +23,7 @@ export class Redirection
       }
       createProductModal(e)
       {
+       
         let productId = e.target.id;
         modal.createModal(productId );
       }
@@ -33,7 +37,24 @@ export class Redirection
         
         }))
       }
-
+      openOrdersHistory()
+      {
+        const openOrdersHistoryBttn = document.getElementById('payOrder');
+        if(openOrdersHistoryBttn!==null)
+        {
+          console.log("dziala historia:");
+          sessionStorage.state, "orderHistory"
+          openOrdersHistoryBttn.addEventListener('click', () =>
+          {
+            
+            
+          })
+        }else
+        {
+          console.log("nie dziala historia:");
+        }
+        
+      }
       changeAddress()
       {
           const address = new AddressModal();
