@@ -112,20 +112,40 @@ export class OrderSummary extends AddressModal
         this.orderDate();
         const payBttn = document.querySelectorAll(".complete");
         payBttn.forEach(e => e.addEventListener("click", this.payForOrder));
+        this.payForOrder()
     }
     payForOrder()
     {
-        const date =  new Date();
-        const day = date.getDate();
-        const month = date.getMonth();
-        const year = date.getFullYear();
-        console.log(`${day}, ${("0" + (month + 1)).slice(-2)}, ${year}`);
-        let order = new Array();
+        //const date =  new Date();
+        ///const day = date.getDate();
+        ///const month = date.getMonth();
+        //const year = date.getFullYear();
+        ///console.log(`${day}, ${("0" + (month + 1)).slice(-2)}, ${year}`);
         const userProducts = JSON.parse(sessionStorage.cart);
         const generalPrice = document.querySelector(".general-price").textContent;
-        sessionStorage.setItem("order", JSON.stringify(order));
-        
-        
+        //let cartProducts = JSON.parse(sessionStorage.cart);
+        this.otherOrders(userProducts);
+     
+    }
+    otherOrders(userProducts)
+    {
+    
+        let ordersArray = new Array();
+        if(sessionStorage.getItem("historyOrders"))
+        {   
+            const olderOrders = JSON.parse(sessionStorage.historyOrders);
+            ordersArray.push(userProducts);
+            olderOrders.forEach(e => 
+                {
+                    ordersArray.push(e); 
+                })
+            sessionStorage.setItem("historyOrders", JSON.stringify(ordersArray));
+            console.log(JSON.parse(sessionStorage.historyOrders))
+        }else
+        {
+            ordersArray.push(userProducts);
+            sessionStorage.setItem("historyOrders", JSON.stringify(ordersArray));
+        }
     }
     orderDate()
     {
