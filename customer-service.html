@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nowe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/6eba277fb3.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></head>
+<body>
+    <header>
+        <div class="main-head">
+             <div class="left-head">
+                 <div class="logo-head">
+                    <div class="logo">
+                      <p>AleDrogo.pl</p>
+                    </div>
+                 </div>
+                <div class="addres-head">
+                    <div class="addres">
+                        <h5>Witamy</h5>
+                        <p class="change-address">Wybierz adres dostawy</p>
+                    </div>
+                </div>
+
+             </div>
+             <div class="center-head">
+                 <div class="search-container">
+                    <label class="search-category" for="search">
+                        Wszystkie kategorie</label>
+                    <input id="search" type="search">
+                    <label class="search-button">
+                        <i style="color:white" class="fas fa-search fa-2x"></i>
+                    </label>
+                </div>
+                 </div>
+               
+             <div class="right-head">
+                
+                    <div class="user-data">
+                        <div class="data">
+                          <h5>Witamy, podaj dane</h5>
+                          <p>Dane do zakupów</p>
+                        </div>
+                     </div>
+                     <div class="user-order">
+                        <div class="data">
+                          <h5>Zwroty</h5>
+                          <p>i zamówienia</p>
+                        </div>
+                     </div>
+                     <div class="shopping-cart">
+                         <div class="cart">
+                            <i class="fas fa-cart-arrow-down fa-2x"><a class="shop-cart-info">2</a></i>  
+                            <p>Koszyk</p>
+                         </div>
+                     </div>
+                     
+                
+             </div>
+        </div>
+        <div class="secondary-head">
+           <div class="nav-container">
+               <div class="nav-menu">
+                <div class="menu-bars"><i class="fas fa-bars fa-2x"></i>Menu</div>
+                <a>Okazje</a>
+                <a>Bestsellery</a>
+                <a>Wylosuj rabat</a>
+                <a>Dział obsługi klienta</a>
+               </div>
+               <div class="users-opinion">
+                  <h3>Dwójka zadowolonych klientów!</h3>
+               </div>
+           </div>
+        </div>
+
+    </header>
+    <main class="main-wrapper">
+       <div class="background-image">
+       </div>
+       <div class="wrapper">
+       </div>
+       <div class="category-articles">
+           <div class="customer-service">
+               <div class="service-container">
+                   <div class="personal-container">
+                       <div class="personal-photo">
+                           <img src="./images/personalPhoto.png">
+                       </div>
+                       <div class="personal-data">
+                           <h2>Karol Szymański</h2>
+                           <p style="margin-bottom: 5px;">
+                               <a>Email: </a><a  style="font-weight: bolder;">karolszym889@gmail.com</a>
+                           </p>
+                           <p style="margin-bottom: 15px;">
+                               <a>Tel: </a><a  style="font-weight: bolder;">karolszym889@gmail.com</a>
+                           </p>
+                           <p>
+                               <a>Miejcowość: </a><a>Turka</a>
+                          </p>
+                          <p>
+                            <a class="personal-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia velit voluptatibus sequi sapiente ea maxime quae, eum nisi optio iusto odio sed aliquam! Temporibus alias consectetur quasi ad vel!</a>
+                       </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </main>
+     <div class="dark-body">
+        <div class="address-modal">
+            <div class="close-address-modal">
+                <h2 id="close-address-modal">X</h2>
+            </div>
+            <h2 class="address-welcome">Podaj adres zamieszkania</h2>
+           <div class="address-information-container">
+             <div class="first-name address-input">
+                <label for="first-name"><a>Imię:</a></label>
+                <input  class="address-method"  type="text" id="first-name" name="first-name" placeholder="Podaj imię">
+            </div>
+            <p class="first-name-attention"></p>
+            <div class="last-name address-input">
+                <label for="standard"><a>Nazwisko:</a></label>
+                <input  class="address-method"  type="text" id="last-name" name="last-name" placeholder="Podaj nazwisko">
+            </div>
+            <p class="last-name-attention"></p>
+            <div class="last-name address-input">
+                <label for="standard"><a>Email:</a></label>
+                <input  class="address-method"  type="text" id="email" name="email" placeholder="Podaj e-mail">
+            </div>
+            <p class="email-attention"></p>
+            <div class="city address-input">
+                <label for="standard"><a>Miasto:</a></label>
+                <input  class="address-method"  type="text" id="city" name="city" placeholder="Podaj miasto">
+            </div>
+            <p class="city-attention"></p>
+            <div class="phone-number address-input">
+                <label for="standard"><a>Telefon:</a></label>
+                <input  class="address-method"  type="tel" id="phone-number" pattern="[0-9] {10}" name="city" placeholder="Podaj telefon">
+            </div>
+            <p class="phone-number-attention"></p>
+            <div class="phone-number address-input">
+                <label for="standard"><a>Ulica:</a></label>
+                <input  class="address-method"  type="text" id="phone-number" pattern="[0-9] {10}" name="city" placeholder="Podaj ulicę">
+            </div>
+            <p></p>
+           </div>
+           <div class="save-address-information">
+            <label >
+                <button class="save-information"><a>Zapisz</a></button>
+            </label>
+           </div>
+        </div>
+     <div class="product-modal">
+       <div class="close-modal-container">
+          <h2 class="close-modal">x</h2>
+       </div>
+        <div class="product-information-container">
+            <article class="product-image-zoom">
+                <figure id="magnifying_area">
+                    <img id="magnifying_img">
+                </figure>
+        
+           </article>
+           <article class="product-details">
+             <div class="product-heading-container">
+                 <h3 class="product-name">Laptop jest taki super, że hoho</h3>
+                 <a class="producer-name">Asus</a>
+             </div>
+             <div class="main-product-container">
+                <div class="price-infromation">
+                    <a class="price-tag">Cena:</a><a class="price-value">49.99 zł</a><a class="price-rabat">33.99</a>
+                </div>
+                <div class="delivery-infromation">
+                    <a class="quantity-product">Nowe (11) od</a><a class="price"> 49.99 </a><a> zł oraz DARMOWA dostawa dla zamówień powyżej 200 zł</a>
+                </div>
+                <div class="main-product-information">
+                 
+                </div>
+                <div class="product-buttons">
+                   <label>
+                       <button class="add-to-cart"><i class="fas fa-shopping-cart"></i><a>Dodaj do koszyka</a></button>
+                   </label>
+                   <label >
+                       <button class="buy-now"><i class="fas fa-sign-in-alt"></i><a href="./order-fulfillment.html">Kup teraz</a></button>
+                   </label>
+                </div>
+             </div>
+          </article>
+        </div>
+         
+     </div>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>

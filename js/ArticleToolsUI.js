@@ -33,14 +33,13 @@ export class ArticleToolsUI
         root.appendChild(productsContainer);
         return productsContainer;
     }
-
+    
 
     showProducts(productsContainer,article)
     {
-    
      let category = this.getProductType(article)
      let items = JSON.parse(eval("sessionStorage."+category))
-    let products = eval("items."+article); //możliwy refactoring w niedalekiej przyszłosci
+     let products = eval("items."+article); //możliwy refactoring w niedalekiej przyszłosci
      console.log(products);
      sessionStorage.setItem("products", JSON.stringify(products));
      products.forEach(productInformation =>
@@ -51,7 +50,8 @@ export class ArticleToolsUI
             product.innerHTML = ` <div  class ="product-image"><img id="${productInformation.productId}" class="look-image" src=${productInformation.productImage}></div>
             <p class ="product-description">${productInformation.description}</p>
             <a class ="product-producer">${productInformation.producer}</a>
-            <a class ="product-price">${productInformation.price+" zł"}</a>`
+            <a class ="product-price">${productInformation.price+" zł"}</a>
+            <div class="discount-container">`
             productsContainer.appendChild(product);
             
         })
