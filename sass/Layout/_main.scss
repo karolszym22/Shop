@@ -1,0 +1,231 @@
+.main-wrapper
+{
+
+  display: flex;
+  flex-direction: column;
+  
+  .wrapper
+  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'PT Sans', sans-serif;
+    .orders-history
+    {
+      background-color: rgb(255, 255, 250);
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      min-height: calc(100vh - 110px);
+      
+    }
+ 
+    .main-section
+    {
+      width: 1300px;
+      display: flex;
+      justify-content: center;
+      .article-products
+      {
+       
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+        .square
+        {
+          background-color: rgb(255, 254, 250);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-basis: 30%;
+          margin: 10px;
+          min-width: 242px;
+          min-height: 350px;
+          h3
+          {
+            margin: 15px;
+            width: 90%;
+          }
+            .square-2
+            {
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: center;
+             width: 90%;
+             min-height: 280px;
+              .category-container
+              {
+                flex-basis: 40%;
+                margin: 5.5px;
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                cursor: pointer;
+                font-weight: bold;
+                color: rgb(110, 108, 108);
+                
+              }
+
+              .home-article
+              {
+              
+                .square-image
+                {
+                  background-image: url("./../images/kuchnia.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              .motor-article
+              {
+               
+                .square-image
+                {
+                  background-image: url("./../images/motoryzacja.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              .suits-article
+              {
+                
+                .square-image
+                {
+                  background-image: url("./../images/ubrania.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              .electronics-article
+              {
+                
+                .square-image
+                {
+                  background-image: url("./../images/elektronika.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              .sale
+              {
+                flex-basis: 100%;
+                
+                .square-image
+                {
+                  background-image: url("./../images/wyprzedaż.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              .suits
+              {
+                flex-basis: 100%;
+                .square-image
+                {
+                  background-image: url("./../images/ubranie.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              
+              
+              .computer
+              {
+                
+                flex-basis: 100%;
+              
+                
+                .square-image
+                {
+                  background-image: url("./../images/laptop.png");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+              .shaver
+              {
+                flex-basis: 100%;
+                .square-image
+                {
+                  background-image: url("./../images/golarka.png");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: top
+                  
+                }
+              }
+              .pots-flower
+              {
+               
+                .square-image
+                {
+                  background-image: url("./../images/doniczka.png");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center
+                  
+                }
+              }
+              .furniture
+              {
+               
+                .square-image
+                {
+                  background-image: url("./../images/mebel.png");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center
+                  
+                }
+              }
+            }
+            .horizontal
+            {
+              flex-direction: column;
+              .cars
+              {
+                
+                .square-image
+                {
+                  background-image: url("./../images/samochód.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+
+              }
+              .motors 
+              {
+                
+                .square-image
+                {
+                  background-image: url("./../images/motor.jpg");
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                }
+
+              }
+            }
+        }
+        .bestseller-section
+        {
+          flex-basis: 100%;
+          margin: 50px;
+          display: none;
+        }
+        
+      }
+    }
+  }
+}

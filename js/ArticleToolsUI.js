@@ -2,14 +2,13 @@
 
 
 
+
 export class ArticleToolsUI
 {
     constructor(article)
     {
     
-      
-  
-      this.productList = ["clothes","devices"];
+     this.productList = ["clothes","devices", "vehicles","decors"]
       const root = this.createSectionContainer();
       const productContainer = this.createProductsContainer(root);
       this.showProducts(productContainer, article);
@@ -37,21 +36,27 @@ export class ArticleToolsUI
 
     showProducts(productsContainer,article)
     {
+     let discountState = 'style="display:none;"' 
      let category = this.getProductType(article)
+  
      let items = JSON.parse(eval("sessionStorage."+category))
      let products = eval("items."+article); //możliwy refactoring w niedalekiej przyszłosci
-     console.log(products);
      sessionStorage.setItem("products", JSON.stringify(products));
      products.forEach(productInformation =>
         {
-          
+            if(productInformation.discount)
+            {
+              discountState = 'style="display:flex;"' 
+            }
+
             const product = document.createElement("article");
             product.classList.add("product");
-            product.innerHTML = ` <div  class ="product-image"><img id="${productInformation.productId}" class="look-image" src=${productInformation.productImage}></div>
+            product.innerHTML = ` <div  class ="product-image">
+            <div ${discountState} class="discount-container"></div><img id="${productInformation.productId}" class="look-image" src=${productInformation.productImage}></div>
             <p class ="product-description">${productInformation.description}</p>
             <a class ="product-producer">${productInformation.producer}</a>
             <a class ="product-price">${productInformation.price+" zł"}</a>
-            <div class="discount-container">`
+            `
             productsContainer.appendChild(product);
             
         })

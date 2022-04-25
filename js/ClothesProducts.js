@@ -13,6 +13,7 @@ let tShirts = [
         productImageZoom: "./images/h&mZoom.jpg",
         productId: "tshirt1",
         name: "Black T-shirt",
+        discountPrice: 39.99
         
     },
     
@@ -30,6 +31,7 @@ let tShirts = [
             productImageZoom: "./images/zaraZoom.jpg",
             productId: "tshirt2",
             name: "Green T-shirt",
+            discountPrice: 129.99
             
     },
     
@@ -50,7 +52,7 @@ let suits = [
             productImageZoom: "./images/asusZoom.jpg",
             productId: "suit1",
             name: "Black suit",
-            
+            discountPrice: 559.99
     },
     
   ]

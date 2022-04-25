@@ -1,7 +1,7 @@
 import {ProdcutModal} from './ProductModal.js';
 import {AddressModal} from "./AddressModal.js";
 import {OrderTools} from "./OrderToolsFactory.js"
-
+import {OrderSummary} from './OrderSummary.js'
 let modal = new ProdcutModal();
 
 export class Redirection
@@ -39,21 +39,9 @@ export class Redirection
       }
       openOrdersHistory()
       {
+      
         const openOrdersHistoryBttn = document.getElementById('payOrder');
-        if(openOrdersHistoryBttn!==null)
-        {
-          console.log("dziala historia:");
-          sessionStorage.state, "orderHistory"
-          openOrdersHistoryBttn.addEventListener('click', () =>
-          {
-            
-            
-          })
-        }else
-        {
-          console.log("nie dziala historia:");
-        }
-        
+      
       }
       changeAddress()
       {

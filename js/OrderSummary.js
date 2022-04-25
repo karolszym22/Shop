@@ -7,7 +7,6 @@ export class OrderSummary extends AddressModal
      this.generalPrice = 0; 
      this.shippingCost = 0;
      this.cartPruducts = JSON.parse(sessionStorage.cart); //dodać "jeśli taki się znajduje"
-     console.log("moj koszyk kochany: ", this.cartPruducts);
      this.orderMonitoring();
      this.setGeneralPrice();
      this.paymentMethod(this.generalPrice,this.shippingCost);
@@ -84,7 +83,7 @@ export class OrderSummary extends AddressModal
             shippingCost = 15;
             let price = document.querySelectorAll(".general-price");
             for(let i=0; i<price.length; i++)
-            price[i].textContent =(generalPrice + shippingCost);
+            price[i].textContent = (generalPrice + shippingCost);
             sessionStorage.setItem("paymentMethod", "cash");
         })
     }
@@ -93,14 +92,14 @@ export class OrderSummary extends AddressModal
         const deliveryBttn = document.querySelectorAll(".delivery-method");
         deliveryBttn.forEach(bttn => bttn.addEventListener("click", function()
         {
-            if(bttn.id == "express")
+            if(bttn.id === "express")
             {
                 sessionStorage.setItem("delivery", 60);
 
-            }else if(bttn.id == "slow")
+            }else if(bttn.id === "slow")
             {
                 sessionStorage.setItem("delivery", 300);
-            }else if(bttn.id == "standard")
+            }else if(bttn.id === "standard")
             {
                let minutes = 60 * (Math.floor(Math.random() * 3 )+ 1);
                sessionStorage.setItem("delivery", minutes); 
@@ -109,30 +108,34 @@ export class OrderSummary extends AddressModal
     }
     orderFinalization()
     {
-        this.orderDate();
-        const payBttn = document.querySelectorAll(".complete");
-        payBttn.forEach(e => e.addEventListener("click", this.payForOrder));
-        this.payForOrder()
+        const finalBtnn = document.getElementById('payOrder');
+        finalBtnn.addEventListener('click', e => this.payForOrder(), false)
+       
     }
     payForOrder()
     {
-        //const date =  new Date();
-        ///const day = date.getDate();
-        ///const month = date.getMonth();
-        //const year = date.getFullYear();
-        ///console.log(`${day}, ${("0" + (month + 1)).slice(-2)}, ${year}`);
+         
         const userProducts = JSON.parse(sessionStorage.cart);
         const generalPrice = document.querySelector(".general-price").textContent;
         //let cartProducts = JSON.parse(sessionStorage.cart);
         this.otherOrders(userProducts);
-     
+        
+    }
+    orderDate()
+    {
+      const date =  new Date();
+      const day = date.getDate();
+      const month = date.getMonth();
+      const year = date.getFullYear();
+       return (`${day}, ${("0" + (month + 1)).slice(-2)}, ${year}`);  
     }
     otherOrders(userProducts)
     {
-    
+        
         let ordersArray = new Array();
         if(sessionStorage.getItem("historyOrders"))
         {   
+            ;
             const olderOrders = JSON.parse(sessionStorage.historyOrders);
             ordersArray.push(userProducts);
             olderOrders.forEach(e => 
@@ -140,22 +143,42 @@ export class OrderSummary extends AddressModal
                     ordersArray.push(e); 
                 })
             sessionStorage.setItem("historyOrders", JSON.stringify(ordersArray));
-            console.log(JSON.parse(sessionStorage.historyOrders))
+            this.orderDates()
+            window.location.href = "http://127.0.0.1:5500/history-orders.html";
+
         }else
         {
             ordersArray.push(userProducts);
             sessionStorage.setItem("historyOrders", JSON.stringify(ordersArray));
+            this.orderDates()
+            window.location.href = "http://127.0.0.1:5500/history-orders.html";
         }
     }
-    orderDate()
+    orderDates()
     {
-
-       
+        let date = this.orderDate();
+        let datesArray = new Array();
+        if(sessionStorage.getItem("orderDates"))
+        {
+            const olderDates = JSON.parse(sessionStorage.orderDates);
+            datesArray.push(date)
+            olderDates.forEach(e => 
+                {
+                    datesArray.push(e); 
+                })
+            sessionStorage.setItem("orderDates", JSON.stringify(datesArray));
+        }
+        else
+        {
+            datesArray.push(date)
+            sessionStorage.setItem("orderDates", JSON.stringify(datesArray));
+        }
     }
+    
 }    
 
     
-if(window.location.href=='http://127.0.0.1:5500/order-fulfillment.html')
+if(window.location.href=='http://127.0.0.1:5500/order-fulfillment.html' && sessionStorage.cart)
  {
     const test = new OrderSummary();
  }

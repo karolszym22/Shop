@@ -1,18 +1,36 @@
 import devices from "./ElectronicProducts.js";
 import clothes from "./ClothesProducts.js";
+import vehicles from "./Automotive.js";
+import decors from "./HomeProducts.js";
 import {LotteryMachine} from './LotteryMachine.js';
 import {ArticleToolsFactory} from './ArticleToolsFactory.js'
 import {Redirection} from "./RedirectionButtons.js"
 import {ShopCart} from "./ShopCart.js"
 import {SearchItem} from "./SearchItem.js"
+import { NavLinks } from "./NavLinks.js";
 import {OrderSummary} from "./OrderSummary.js"
 import {AddressModal} from "./AddressModal.js"
 import { OrderTime } from "./OrderTime.js";
 import { OrderTools } from "./OrderToolsFactory.js";
+import { purchaseStates } from "./purchaseStates.js";
+import { Discount } from "./DiscountGenerator.js";
 const buttons = new Redirection();
 
 class App
 {
+  constructor(){
+    sessionStorage.state = 'default'
+    const allProducts = [devices, clothes, vehicles, decors];
+    this.checkOrder();
+    this.getAllProducts(allProducts);
+    this.setCart();  
+    this.cartContent();
+    this.lastState();
+    this.lastDelivery();
+    this.orderHistoryContent();
+    
+  
+  }
     checkOrder()
     {
       if(sessionStorage.cart)
@@ -22,17 +40,16 @@ class App
       
     }
     
-    getAllProducts() ///refaktoring wskazany
+    getAllProducts(allProducts) ///refaktoring wskazany
     { 
-      console.log("no pobierz produkty");
-      if(sessionStorage.getItem("devices"))
+      if(sessionStorage.state === 'default')
       {
-          console.log("jest");
-      }else 
-      {
-        console.log("nie ma");
-        sessionStorage.setItem("devices", JSON.stringify(devices));
-        sessionStorage.setItem("clothes", JSON.stringify(clothes));
+        const discount = new Discount(allProducts)
+        const products = discount.updatedProducts;
+        sessionStorage.setItem("devices", JSON.stringify(products[0]));
+        sessionStorage.setItem("clothes", JSON.stringify(products[1]));
+        sessionStorage.setItem("vehicles", JSON.stringify(products[2]));
+        sessionStorage.setItem("decors", JSON.stringify(products[3]));
       }
     }
     setCart()///refaktoring wskazany
@@ -41,17 +58,15 @@ class App
 
       if(sessionStorage.getItem("cart"))
       {
-          console.log("jest");
+         
       }else 
       {
-        console.log("nie ma");
         sessionStorage.setItem("cart", cart );
 
       }
     }
     cartContent()
     {
-      console.log("cartContent się wykonuje teraz");
       const cart = document.querySelector(".shop-cart-info");
       if(sessionStorage.cart.length!=0)
       {
@@ -62,9 +77,9 @@ class App
     orderHistoryContent()
     {
       const path = location.pathname;
-      if(path === "/history-orders.html")
+      if(path === "/history-orders.html"  && sessionStorage.orderDates)
       {
-        const orderTools = new OrderTools();
+       const orderTools = new OrderTools();
       }
     }
     lastState()
@@ -86,13 +101,7 @@ class App
 
 console.log("no zadziałaj w koncu!");
 const app = new App();
-app.checkOrder();
-app.getAllProducts();
-app.setCart();  
-app.cartContent();
-app.lastState();
-app.lastDelivery();
-app.orderHistoryContent();
+const links = new NavLinks();
 const search = new SearchItem();
 
 

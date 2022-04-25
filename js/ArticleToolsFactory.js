@@ -1,11 +1,13 @@
-import devices from "./ElectronicProducts.js";
+
 import {ArticleToolsUI} from "./ArticleToolsUI.js";
 
  export class ArticleToolsFactory
  {
      constructor(state)
      {
+      
          this.showArticle(state);
+         
      }
 
      showArticle(article)
@@ -33,6 +35,26 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
                   const suits = new ArticleToolsUI(article);
                   sessionStorage.setItem("lastState", article);
                   break;
+            case 'motors':
+                  document.querySelector(".category-name").innerHTML = "Coś dla fanów motoryzacji"
+                  const motors = new ArticleToolsUI(article);
+                  sessionStorage.setItem("lastState", article);
+                  break;
+            case 'cars':
+                  document.querySelector(".category-name").innerHTML = "Coś dla fanów motoryzacji"
+                  const cars = new ArticleToolsUI(article);
+                  sessionStorage.setItem("lastState", article);
+                break;
+            case 'pot':
+                  document.querySelector(".category-name").innerHTML = "Coś dla fanów motoryzacji"
+                  const pot = new ArticleToolsUI(article);
+                  sessionStorage.setItem("lastState", article);
+                  break;   
+            case 'chairs':
+                  document.querySelector(".category-name").innerHTML = "Coś dla fanów motoryzacji"
+                  const chairs = new ArticleToolsUI(article);
+                  sessionStorage.setItem("lastState", article);
+                  break; 
             
                   
          }
@@ -42,6 +64,7 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
 
  if(window.location.href=='http://127.0.0.1:5500/category.html')
  {
+
     const tools = new ArticleToolsFactory(sessionStorage["state"]); 
  }
 

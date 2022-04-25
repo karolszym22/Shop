@@ -41,6 +41,7 @@ header
               display: flex;
               align-items: center;
               justify-content: center;
+              position: relative;
               width: 90%;
               height: 85%;
               box-sizing: border-box;
@@ -51,6 +52,12 @@ header
                {
                  border: 1px solid rgb(230, 230, 224);
                  border-radius: 2px;
+               }
+               .nav-link
+               {
+                 height: 100%;
+                 width: 100%;
+                 position: absolute;
                }
              }
            }
@@ -75,6 +82,7 @@ header
               display: flex;
               flex-direction: column;
               justify-content: center;
+              position: relative;
               width: 90%;
               height: 85%;
               box-sizing: border-box;
@@ -97,6 +105,12 @@ header
                  margin: 0;
                  font-weight: bold;
                  
+                }
+                .nav-link //refactoring w przyszlosci
+                {
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
                 }
                 
             }
@@ -193,10 +207,16 @@ header
         box-sizing: border-box;
         .user-data
         {
-          
+          position: relative;
           color: white;
           cursor: pointer;
           margin: 0 5px;
+          .nav-link
+          {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+          }
           .data
           {
             font-size: 14px;
@@ -231,6 +251,13 @@ header
         {
           color: white;
           cursor: pointer;
+          position: relative;
+          .nav-link
+          {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+          }
           .data
           {
             font-size: 14px;
@@ -244,6 +271,7 @@ header
             padding: 5px;
             border: 1px solid transparent;
             border-radius: 2px;
+           
             &:hover
                {
                  border: 1px solid rgb(230, 230, 224);
@@ -272,6 +300,12 @@ header
           align-items: center;
           position: relative;
           z-index: 1;
+           .nav-link
+          {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+          }
           .shopping-cart-container
           {
             
@@ -285,7 +319,12 @@ header
             display: flex;
             flex-direction: column;
             align-items: center;
+<<<<<<< HEAD
             display: none;   
+=======
+            display: none;
+               
+>>>>>>> 38a6e1a (REFACTORING: SASS)
             .cart-product
             {
               width: 90%;
@@ -420,6 +459,10 @@ header
               border-radius: 2px;
               width: 80px;
               cursor: pointer;
+              .customer-service
+              {
+                display: none;
+              }
               &:hover
               {
                 border: 1px solid rgb(230, 230, 224);
@@ -451,6 +494,13 @@ header
            align-items: center;
            color: rgba(255, 255, 255, 0.685);
            cursor: pointer;
+           position: relative;
+           .nav-link
+          {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+          }
            h3
            {
             color: rgba(255, 255, 255, 0.685);

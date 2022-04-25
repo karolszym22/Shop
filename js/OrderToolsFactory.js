@@ -3,25 +3,24 @@ export class OrderTools
 
     constructor()
     {
-       
+        
         this.products = JSON.parse(sessionStorage.products)
         this.orderNumber = JSON.parse(sessionStorage.lastDelivery)
+        this.orderDate = JSON.parse(sessionStorage.orderDates);
         this.addNewOrder(++this.orderNumber, this.products);
-        this.updateLastDelivery()
+        this.orderReset();
     }
     addProductsList = (productArray) =>
-    {  
+    { 
       const realisationProduct = document.createElement('ul');
       productArray.forEach(element => {
         let productsList = document.createElement('li');
         let product = document.createElement('a');
         product.innerHTML = element.description;
-        console.log(product)
         productsList.appendChild(product);
         realisationProduct.appendChild(productsList)
          
       })
-      console.log(realisationProduct)
      return realisationProduct;
       
 
@@ -32,7 +31,7 @@ export class OrderTools
         const [orderNumber, products] = args;
         let productList;
         const main = document.querySelector(".history-product-container");
-        orders.forEach(e => {
+        orders.forEach( (e, index) => {
           const realisationProductsList = document.createElement('div');
           realisationProductsList.classList.add('realization-products-list');
           const informations = document.createElement('h3');
@@ -43,18 +42,14 @@ export class OrderTools
           realizationProduct.innerHTML = `
           <div class="realization-product-informations">
                <p>nr zamówienia</p>
-               <p>data złożenia/potwierdzenia</p>
+               <p>data złożenia</p>
                <p>status</p>
-               <p>wartośc zamówienia</p>
-               <p>wartośc zamówienia</p>
           </div>
           <div class="realization-orders-list">
             <div class="realization-product-value">
-              <p>asdas</p>
-              <p>asdsadas</p>
-              <p id="productTimeStatus">5:25</p>
-              <p>hahahaha</p>
-              <button class="delete-product">Usuń z historii</button>
+              <p>${++this.orderNumber}</p>
+              <p>${this.orderDate[index]}</p>
+              <p id="productTimeStatus">Zrealizowano</p>
             </div>  
           </div>
              
@@ -70,7 +65,12 @@ export class OrderTools
 
     updateLastDelivery()
     {
-      sessionStorage.setItem('lastDelivery', "blablabla")
+      sessionStorage.setItem('lastDelivery', ++sessionStorage.lastDelivery)
     
     }
+    orderReset()
+    {
+      sessionStorage.removeItem("cart");
+    }
+    
 }
