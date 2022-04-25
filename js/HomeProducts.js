@@ -19,14 +19,14 @@ let pot = [
 
 let chairs = [
     {
-        producer: "Gant",
+        name: "Gant 233",
         description: " Krzesło Ganta posiada obszerne siedzisko i oparcie, dzięki czemu zaprasza do relaksu po wytężonym dniu pracy.",
         upholsteryType: "Tkanina",
         price: 249.99,
         discount: false,
         quantity: 9,
         sold: 6,
-        producer: "BrAun",
+        producer: "Gant",
         productImage:"./images/braun.jpg",
         productImageZoom: "./images/asusZoom.jpg",
         productId: "shaver1",
@@ -35,14 +35,14 @@ let chairs = [
         
     },
     {
-        producer: "GEDVED",
+        name: "GEDVED",
         description: "Siedzisko i oparcie wyściełane pianką.",
         upholsteryType: "Tkanina",
         price: 199.99,
         discount: false,
         quantity: 9,
         sold: 6,
-        producer: "PHILIPS",
+        producer: "GEDVED",
         productImage:"./images/philips.jpg",
         productImageZoom: "./images/asusZoom.jpg",
         productId: "shaver2",
@@ -50,14 +50,14 @@ let chairs = [
         
     },
     {
-        producer: "OREVED",
+        name: "OREVED 90",
         description: "iedzisko i oparcie wyściełane pianką.",
         upholsteryType: "Tkanina",
         price: 199.99,
         discount: false,
         quantity: 9,
         sold: 6,
-        producer: "PHILIPS",
+        producer: "OREVED",
         productImage:"./images/philips.jpg",
         productImageZoom: "./images/asusZoom.jpg",
         productId: "shaver2",
