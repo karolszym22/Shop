@@ -5,7 +5,6 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
  {
      constructor(state)
      {
-      
          this.showArticle(state);
          
      }
@@ -36,7 +35,7 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
                   sessionStorage.setItem("lastState", article);
                   break;
             case 'motors':
-                  document.querySelector(".category-name").innerHTML = "Coś dla fanów motoryzacji"
+                  document.querySelector(".category-name").innerHTML = "Coś dla fanów dwóch kółek"
                   const motors = new ArticleToolsUI(article);
                   sessionStorage.setItem("lastState", article);
                   break;
@@ -46,13 +45,18 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
                   sessionStorage.setItem("lastState", article);
                 break;
             case 'pot':
-                  document.querySelector(".category-name").innerHTML = "Coś dla fanów motoryzacji"
+                  document.querySelector(".category-name").innerHTML = "O rośliny trzeba dbać!"
                   const pot = new ArticleToolsUI(article);
                   sessionStorage.setItem("lastState", article);
                   break;   
             case 'chairs':
-                  document.querySelector(".category-name").innerHTML = "Coś dla fanów motoryzacji"
+                  document.querySelector(".category-name").innerHTML = "Przydałoby się tu umeblować coś"
                   const chairs = new ArticleToolsUI(article);
+                  sessionStorage.setItem("lastState", article);
+                  break; 
+            case 'promotions':
+                  document.querySelector(".category-name").innerHTML = "Bierz póki tanio!"
+                  const promotions = new ArticleToolsUI(article);
                   sessionStorage.setItem("lastState", article);
                   break; 
             

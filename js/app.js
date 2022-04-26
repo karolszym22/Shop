@@ -42,7 +42,7 @@ class App
     
     getAllProducts(allProducts) ///refaktoring wskazany
     { 
-      if(sessionStorage.state === 'default')
+      if(!sessionStorage.isDiscount)
       {
         const discount = new Discount(allProducts)
         const products = discount.updatedProducts;

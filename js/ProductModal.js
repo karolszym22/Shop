@@ -26,10 +26,7 @@ export class ProdcutModal
     }
     addZoomImage = (product) =>
     {
-        
-      console.log("moj produkt",product);
       const image = document.getElementById("magnifying_img");
-      console.log("mój obrazek w modalu",product.productImageZoom)
       image.src = product.productImageZoom;
       
     }
@@ -38,7 +35,6 @@ export class ProdcutModal
     {
         const products = JSON.parse(sessionStorage.products);
         var item = products.find(product => product.productId === productId);
-        console.log(item);
         return item;
         
     }
@@ -66,8 +62,8 @@ export class ProdcutModal
         let productQuantity = document.querySelector(".quantity-product");
         productQuantity.textContent = "Nowe ("+ product.quantity+ ") od ";
     }
-    getProductInformation = () =>
-    {   let info = sessionStorage.state;
+    getProductInformation = (type) =>
+    {   let info = type;
         for (let item in information){
             if(item === info)
             return information[info];
@@ -75,11 +71,12 @@ export class ProdcutModal
     }
     addProductInformation(product)
     {
-      
+        
         const container = document.createElement("div");
         container.classList.add("product-information");
         container.id = "productInformation";
-        let information = this.getProductInformation();
+        let information = this.getProductInformation(product.productType);
+        console.log(product)
         information.forEach((info, index) =>
             {
              let infoName = document.createElement('div');

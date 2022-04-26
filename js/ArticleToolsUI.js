@@ -8,7 +8,7 @@ export class ArticleToolsUI
     constructor(article)
     {
     
-     this.productList = ["clothes","devices", "vehicles","decors"]
+     this.productList = ["clothes","devices", "vehicles","decors", "promotionProducts"]
       const root = this.createSectionContainer();
       const productContainer = this.createProductsContainer(root);
       this.showProducts(productContainer, article);
@@ -38,7 +38,6 @@ export class ArticleToolsUI
     {
      let discountState = 'style="display:none;"' 
      let category = this.getProductType(article)
-  
      let items = JSON.parse(eval("sessionStorage."+category))
      let products = eval("items."+article); //możliwy refactoring w niedalekiej przyszłosci
      sessionStorage.setItem("products", JSON.stringify(products));

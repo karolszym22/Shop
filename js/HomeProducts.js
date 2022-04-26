@@ -13,7 +13,8 @@ let pot = [
         productImageZoom: "./images/pot1Zoom.jpg",
         productId: "pot1",
         name: "Doniczka",
-        discountPrice: 9.99
+        discountPrice: 9.99,
+        productType: "pot"
     }
 ]
 
@@ -27,11 +28,11 @@ let chairs = [
         quantity: 9,
         sold: 6,
         producer: "Gant",
-        productImage:"./images/braun.jpg",
-        productImageZoom: "./images/asusZoom.jpg",
+        productImage:"./images/chair2.jpg",
+        productImageZoom: "./images/chair2Zoom.png",
         productId: "shaver1",
-        discountPrice: 199.99
-        
+        discountPrice: 199.99,
+        productType: "chairs"
         
     },
     {
@@ -43,11 +44,11 @@ let chairs = [
         quantity: 9,
         sold: 6,
         producer: "GEDVED",
-        productImage:"./images/philips.jpg",
-        productImageZoom: "./images/asusZoom.jpg",
+        productImage:"./images/chair1.png",
+        productImageZoom: "./images/chair1Zoom.png",
         productId: "shaver2",
-        discountPrice: 119.99
-        
+        discountPrice: 119.99,
+        productType: "chairs"
     },
     {
         name: "OREVED 90",
@@ -58,11 +59,11 @@ let chairs = [
         quantity: 9,
         sold: 6,
         producer: "OREVED",
-        productImage:"./images/philips.jpg",
-        productImageZoom: "./images/asusZoom.jpg",
+        productImage:"./images/chair3.jpg",
+        productImageZoom: "./images/chair3Zoom.png",
         productId: "shaver2",
-        discountPrice: 119.99
-        
+        discountPrice: 119.99,
+        productType: "chairs"
     }
 ]
 
