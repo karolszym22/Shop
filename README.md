@@ -17,3 +17,4 @@ Modal z wybranym przedmiotem i jego opisem:
 Podsumowanie zamówienia:
 
 ![Alt text](https://raw.githubusercontent.com/karolszym22/Shop/main/images/example3.png)
+
