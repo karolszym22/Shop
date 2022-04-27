@@ -25,7 +25,7 @@ export class SearchItem
        
           if(element.name.substr(0, search.value.length) == search.value && search.value.length > 0)
           {
-              let product = document.createElement("p");
+              let product = document.createElement("a");
               product.classList.add("found-product");
               let container = document.querySelector(".search-value");
               product.textContent = element.name;
