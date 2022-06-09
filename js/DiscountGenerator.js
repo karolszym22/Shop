@@ -2,12 +2,11 @@ export class Discount
 {
     constructor(products)
     {
+      sessionStorage.setItem('isDiscount', true);
       this.products = products
       this.promotionProducts = []
       this.updatedProducts = this.getDiscount(this.products)
-      sessionStorage.setItem('isDiscount', true);
       this.setPromotionProducts(this.promotionProducts);
-      
     }
     getDiscount = (products) =>
     {
@@ -15,9 +14,9 @@ export class Discount
             for (const [key, value] of Object.entries(element)) {
                     value.forEach(e =>{
                         e.discount = this.generateRandomBoolean();
-                        if(e.discount == true)
+                        if(e.discount === true)
                         {
-                            this.getPromotionProducts(value);
+                            this.promotionProducts.push(e);
                         }
                     })
               }
@@ -39,5 +38,9 @@ export class Discount
     setPromotionProducts = (value) =>
     {
      sessionStorage.setItem('promotionProducts', JSON.stringify({promotions: value}))
+    }
+    promotionProductsFilter = (value) =>
+    {
+        
     }
 }
