@@ -187,7 +187,8 @@ header
                 top: 45px;
                 .found-product
                 {
-                  padding: 5px;
+                  //padding: 5px;
+                  display: block;
                   cursor: pointer;
                   &:hover
                   {
