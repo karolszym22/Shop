@@ -1,7 +1,7 @@
-import devices from "./ElectronicProducts.js";
-import clothes from "./ClothesProducts.js";
-import vehicles from "./Automotive.js";
-import decors from "./HomeProducts.js";
+import devices from "./data-base/ElectronicProducts.js";
+import clothes from "./data-base/ClothesProducts.js";
+import vehicles from "./data-base/Automotive.js";
+import decors from "./data-base/HomeProducts.js";
 import {LotteryMachine} from './LotteryMachine.js';
 import {ArticleToolsFactory} from './ArticleToolsFactory.js'
 import {Redirection} from "./RedirectionButtons.js"
@@ -26,8 +26,7 @@ class App
     this.setCart();  
     this.cartContent();
     this.lastState();
-    this.lastDelivery();
-    this.orderHistoryContent();
+    this.lastDelivery()
     
   
   }
@@ -74,14 +73,7 @@ class App
         cart.textContent = JSON.parse(sessionStorage.cart).length;
       }
     }
-    orderHistoryContent()
-    {
-      const path = location.pathname;
-      if(path === "/history-orders.html"  && sessionStorage.orderDates)
-      {
-       const orderTools = new OrderTools();
-      }
-    }
+   
     lastState()
     {
      

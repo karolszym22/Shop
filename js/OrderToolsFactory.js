@@ -74,3 +74,9 @@ export class OrderTools
     }
     
 }
+
+const path = location.pathname;
+      if(path === "/history-orders.html"  && sessionStorage.orderDates)
+      {
+        new OrderTools();
+      }
