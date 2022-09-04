@@ -14,8 +14,9 @@ let motors = [
         productImageZoom: "./images/motor2Zoom.jpg",
         productId: "motor2",
         name: "Kawasaki Ninja 300 ABS",
-        discountPrice: 12999.99
-        
+        discountPrice: 12999.99,
+        productType: "motors"
+
     },
     {
         
@@ -32,11 +33,11 @@ let motors = [
         productImage: "./images/motor1.jpg",
         productImageZoom: "./images/motor1Zoom.jpg",
         productId: "motor1",
-        discountPrice: 13299.99
+        discountPrice: 13299.99,
+        productType: "motors"
     },
-    
-]
 
+]
 let cars = [
     {
          
@@ -52,12 +53,12 @@ let cars = [
         name: "BMW Seria 3 328i XDrive",
         productImage: "./images/car1.jpg",
         productImageZoom: "./images/car1Zoom.jpg",
-        productId: "motor1",
-        discountPrice: 43299.99
-        
-        
+        productId: "car1",
+        discountPrice: 43299.99,
+        productType: "cars"
+
+
     },
-    
 ]
 
 export default {motors,cars};

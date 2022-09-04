@@ -1,6 +1,5 @@
 let tShirts = [
     {
-
         producer: "H&M",
         description: "Klasyczny męski T-shirt wykonany w 100% z wysokogatunkowej czesanej bawełny, która podnosi komfort użytkowania",
         Composition: "100% Bawełna",
@@ -13,10 +12,12 @@ let tShirts = [
         productImageZoom: "./images/h&mZoom.jpg",
         productId: "tshirt1",
         name: "Black T-shirt",
-        discountPrice: 39.99
-        
+        discountPrice: 39.99,
+        productType: "tShirts"
+
+
     },
-    
+
     {
     
             producer: "ZARA",
@@ -31,10 +32,11 @@ let tShirts = [
             productImageZoom: "./images/zaraZoom.jpg",
             productId: "tshirt2",
             name: "Green T-shirt",
-            discountPrice: 129.99
-            
+            discountPrice: 129.99,
+            productType: "tShirts"
+
     },
-    
+
 ]
 let suits = [
    
@@ -52,9 +54,10 @@ let suits = [
             productImageZoom: "./images/asusZoom.jpg",
             productId: "suit1",
             name: "Black suit",
-            discountPrice: 559.99
+            discountPrice: 559.99,
+            productType: "tShirts"
     },
-    
+
   ]
 
   export default {tShirts,suits};

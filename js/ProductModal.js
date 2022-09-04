@@ -51,6 +51,10 @@ export class ProdcutModal
     }
     addProductPrice(product) 
     {
+        if(product.discount)
+        {
+            product.price = product.discountPrice
+        }
         let productPrice = document.querySelector(".price-value")///do refaktoringu
         let productPrice2 = document.querySelector(".price")///do refaktoringu
         productPrice.textContent = product.price + " zł";
