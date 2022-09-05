@@ -18,7 +18,8 @@
         productId: "laptop1",
         name: "Lenovo IdeaPad Gaming",
         discountPrice: 2999.99,
-        productType: "laptops"
+        productType: "laptops",
+        category: 'devices'
         
     },
     {
@@ -40,7 +41,8 @@
         productImageZoom: "./images/lenovo.jpg",
         productId: "laptop2",
         discountPrice: 3299.99,
-        productType: "laptops"
+        productType: "laptops",
+        category: 'devices'
     },
     {
         producer: "ASUS",
@@ -60,7 +62,8 @@
         productImageZoom: "./images/asusZoom.jpg",
         productId: "laptop3",
         discountPrice: 2199.99,
-        productType: "laptops"
+        productType: "laptops",
+        category: 'devices'
     },
     {
         producer: "Acer",
@@ -80,7 +83,8 @@
         productImageZoom: "./images/acer.jpg",
         productId: "laptop4",
         discountPrice: 3299.99,
-        productType: "laptops"
+        productType: "laptops",
+        category: 'devices'
     },
     {
         producer: "Acer",
@@ -100,7 +104,8 @@
         productId: "laptop5",
         name: "Acer Nitro 5 V2",
         discountPrice: 3899.99,
-        productType: "laptops"
+        productType: "laptops",
+        category: 'devices'
     },
 
 ]
@@ -119,7 +124,9 @@ let shavers = [
         productImageZoom: "./images/asusZoom.jpg",
         productId: "shaver1",
         discountPrice: 199.99,
-        productType: "shavers"
+        productType: "shavers",
+        category: 'devices',
+        
         
         
     },
@@ -136,7 +143,8 @@ let shavers = [
         productImageZoom: "./images/asusZoom.jpg",
         productId: "shaver2",
         discountPrice: 119.99,
-        productType: "shavers"
+        productType: "shavers",
+        category: 'devices'
         
     }
     

@@ -15,8 +15,9 @@ let motors = [
         productId: "motor2",
         name: "Kawasaki Ninja 300 ABS",
         discountPrice: 12999.99,
-        productType: "motors"
-
+        productType: "motors",
+        category: 'vehicles'
+        
     },
     {
         
@@ -34,10 +35,12 @@ let motors = [
         productImageZoom: "./images/motor1Zoom.jpg",
         productId: "motor1",
         discountPrice: 13299.99,
-        productType: "motors"
+        productType: "motors",
+        category: 'vehicles'
     },
-
+    
 ]
+
 let cars = [
     {
          
@@ -55,10 +58,11 @@ let cars = [
         productImageZoom: "./images/car1Zoom.jpg",
         productId: "car1",
         discountPrice: 43299.99,
-        productType: "cars"
-
-
+        productType: "cars",
+        category: 'vehicles'
+        
     },
+    
 ]
 
 export default {motors,cars};

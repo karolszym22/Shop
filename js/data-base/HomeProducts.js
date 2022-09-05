@@ -14,7 +14,8 @@ let pot = [
         productId: "pot1",
         name: "Doniczka",
         discountPrice: 9.99,
-        productType: "pot"
+        productType: "pot",
+        category: "decors"
     }
 ]
 
@@ -30,9 +31,10 @@ let chairs = [
         producer: "Gant",
         productImage:"./images/chair2.jpg",
         productImageZoom: "./images/chair2Zoom.png",
-        productId: "shaver1",
+        productId: "chair1",
         discountPrice: 199.99,
-        productType: "chairs"
+        productType: "chairs",
+        category: "decors"
         
     },
     {
@@ -46,9 +48,10 @@ let chairs = [
         producer: "GEDVED",
         productImage:"./images/chair1.png",
         productImageZoom: "./images/chair1Zoom.png",
-        productId: "shaver2",
+        productId: "chair2",
         discountPrice: 119.99,
-        productType: "chairs"
+        productType: "chairs",
+        category: "decors"
     },
     {
         name: "OREVED 90",
@@ -61,9 +64,10 @@ let chairs = [
         producer: "OREVED",
         productImage:"./images/chair3.jpg",
         productImageZoom: "./images/chair3Zoom.png",
-        productId: "shaver2",
+        productId: "chair3",
         discountPrice: 119.99,
-        productType: "chairs"
+        productType: "chairs",
+        category: "decors"
     }
 ]
 
