@@ -27,7 +27,7 @@ class App
     this.cartContent();
     this.lastState();
     this.lastDelivery()
-    
+    new SearchItem(allProducts);
   
   }
     checkOrder()
@@ -91,10 +91,9 @@ class App
    
 }
 
-console.log("no zadziałaj w koncu!");
 const app = new App();
 const links = new NavLinks();
-const search = new SearchItem();
+
 
 
 let magnifying_area =  document.getElementById("magnifying_area");
