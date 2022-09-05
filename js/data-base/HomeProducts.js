@@ -46,7 +46,7 @@ let chairs = [
         quantity: 9,
         sold: 6,
         producer: "GEDVED",
-        productImage:"./images/chair1.png",
+        productImage:"./images/chair1.jpg",
         productImageZoom: "./images/chair1Zoom.png",
         productId: "chair2",
         discountPrice: 119.99,
