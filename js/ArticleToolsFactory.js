@@ -59,7 +59,11 @@ import {ArticleToolsUI} from "./ArticleToolsUI.js";
                   const promotions = new ArticleToolsUI(article);
                   sessionStorage.setItem("lastState", article);
                   break; 
-            
+            case 'foundItem':
+                  document.querySelector(".category-name").innerHTML = "Znalezione"
+                  const foundItem = new ArticleToolsUI(article);
+                  sessionStorage.setItem("lastState", article);
+                  break; 
                   
          }
      }
