@@ -1,8 +1,3 @@
-
-
-
-
-
 export class ArticleToolsUI
 {
     constructor(article)
@@ -20,7 +15,8 @@ export class ArticleToolsUI
       const root = document.createElement("section");
       root.classList.add("products-list");
       root.innerHTML = `<h1 class="product-category">Dla Ciebie</h1><h3 class="chosen-by-us">Wyróżnione przez nas</h3>`
-      return root;
+      
+          return root;
     }
 
 
@@ -30,25 +26,44 @@ export class ArticleToolsUI
         const productsContainer = document.createElement("div"); 
         productsContainer.classList.add("products-list-container");
         root.appendChild(productsContainer);
-        return productsContainer;
+        
+              return productsContainer;
     }
     
 
     showProducts(productsContainer,article)
     {
-     let discountState = 'style="display:none;"' 
+     let discountState = 'style="display:none;"'
+     console.log(article, "asdsadsadsa")
      let category = this.getProductType(article)
-     let items = JSON.parse(eval("sessionStorage."+category))
-     let products = eval("items."+article); //możliwy refactoring w niedalekiej przyszłosci
-     sessionStorage.setItem("products", JSON.stringify(products));
-     products.forEach(productInformation =>
+     if(article === 'foundItem')
+     {
+          this.showProductFound(productsContainer, discountState)
+     }else
+     {
+      let items = JSON.parse(eval("sessionStorage."+ category))
+      let products = eval("items." + article);
+      sessionStorage.setItem("products", JSON.stringify(products));
+      products.forEach(productInformation =>
         {
-            if(productInformation.discount)
-            {
-              discountState = 'style="display:flex;"' 
-            }
+           productInformation.discount ?
+           (
+            discountState = 'style="display:flex;"' ,
+            productInformation.price = productInformation.discountPrice
+           ) : discountState = 'style="display:nonte"' 
+           this.createProductArticle(productsContainer, discountState, productInformation)
+        })
+     }
 
-            const product = document.createElement("article");
+    
+
+       
+     }
+
+
+    createProductArticle = (productsContainer, discountState, productInformation) =>
+    {
+      const product = document.createElement("article");
             product.classList.add("product");
             product.innerHTML = ` <div  class ="product-image">
             <div ${discountState} class="discount-container"></div><img id="${productInformation.productId}" class="look-image" src=${productInformation.productImage}></div>
@@ -57,10 +72,20 @@ export class ArticleToolsUI
             <a class ="product-price">${productInformation.price+" zł"}</a>
             `
             productsContainer.appendChild(product);
-            
-        })
-    
     }
+    showProductFound = (productsContainer, discountState) =>
+    {
+       const item = JSON.parse(sessionStorage.lastFoundProduct)
+       this.createProductArticle(productsContainer, discountState, item)
+       console.log(item)
+       let devices = JSON.parse(eval("sessionStorage."+ item.category))
+       let product = eval("devices."+ item.productType)
+       sessionStorage.setItem("products", JSON.stringify(product));
+      
+     
+
+    }
+
     getProductType(article)
     {
       for (var i = 0; i < sessionStorage.length; i++){
@@ -71,7 +96,6 @@ export class ArticleToolsUI
                if(article in score)
                {
                  return value
-                
                }
              }
             
