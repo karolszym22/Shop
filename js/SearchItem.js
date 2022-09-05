@@ -1,8 +1,10 @@
 export class SearchItem
 {
-    constructor()
+    constructor(products)
     {
+       this.products = products
        this.enterWord();
+       this.hideSearchedData();
     }
     enterWord()
     {
@@ -10,27 +12,59 @@ export class SearchItem
       search.addEventListener("keypress", this.getDevices.bind(this),false)
     }
     getDevices()
-        {document.querySelector(".search-value").innerHTML = "";
+    {document.querySelector(".search-value").innerHTML = "";
         const search = document.getElementById("search");
         const devices = JSON.parse(sessionStorage.devices);
-        for(let i in devices)
+        
+    this.products.forEach((allProducts) => {
+        for(let i in allProducts)
         {
-            let device = devices[i];
-            this.compareLetters(search,device);
+
+            let product = allProducts[i];
+            this.compareLetters(search, product);
         }
+    })     
     }
-    compareLetters(search,device)
+
+    hideSearchedData()
+    {
+        document.onclick = ((e) =>{
+            const myNode = document.querySelector(".search-value")
+            if(e.target.className!== 'found-product') 
+            {
+                myNode.innerHTML = ''
+                
+            }else 
+            {
+                alert("udało sie!")
+            }
+         });
+        
+            
+    }
+
+    compareLetters(search, product)
     { 
-      device.forEach(element => {
+        product.forEach(element => {
        
           if(element.name.substr(0, search.value.length) == search.value && search.value.length > 0)
           {
-              let product = document.createElement("p");
-              product.classList.add("found-product");
+              let product = document.createElement("a");
+                product.href = '/category.html'
+                product.dataset.state = 'foundItem'
+                product.dataset.id = element.productId;
+                product.classList.add("found-product");
+                product.classList.add("open-article");
               let container = document.querySelector(".search-value");
-              product.textContent = element.name;
-              container.appendChild(product);
+                product.textContent = element.name;
+                container.appendChild(product);
+                    product.addEventListener('click', ()=>{
+                        const state = product .getAttribute('data-state');
+                        sessionStorage.setItem('lastFoundProduct', JSON.stringify(element));
+                        sessionStorage.setItem("state", state);
+                 } )
           }
       });
     }
+
 }
