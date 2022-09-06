@@ -96,8 +96,30 @@ const links = new NavLinks();
 
 
 
-let magnifying_area =  document.getElementById("magnifying_area");
-let magnifying_img =  document.getElementById("magnifying_img");
+const OpenSideMenuBttn = document.getElementById('open-side-menu')
+const CloseSideMenuBttn = document.getElementById('close-side-menu')
+
+OpenSideMenuBttn.addEventListener('click', function(){
+  document.querySelector('.dark-body').style.display = "inline-flex";
+  document.querySelector('.side-menu').style.display = "block";
+ 
+})
+
+
+CloseSideMenuBttn.addEventListener('click', function(){
+  document.querySelector('.dark-body').style.display = "none";
+  document.querySelector('.side-menu').style.display = "none";
+ 
+})
+
+
+
+
+
+
+
+const  magnifying_area =  document.getElementById("magnifying_area");
+const magnifying_img =  document.getElementById("magnifying_img");
 
 magnifying_area.addEventListener("mousemove",function(event){
  let clientX = event.clientX - magnifying_area.offsetLeft
