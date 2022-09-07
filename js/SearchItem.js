@@ -46,7 +46,6 @@ export class SearchItem
     compareLetters(search, product)
     { 
         product.forEach(element => {
-       
           if(element.name.substr(0, search.value.length) == search.value && search.value.length > 0)
           {
               let product = document.createElement("a");
