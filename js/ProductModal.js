@@ -62,7 +62,6 @@ export class ProdcutModal {
     container.classList.add("product-information");
     container.id = "productInformation";
     let information = this.getProductInformation(product.productType);
-    console.log(product);
     information.forEach((info, index) => {
       let infoName = document.createElement("div");
       infoName.classList.add("information");
@@ -84,13 +83,11 @@ export class ProdcutModal {
     document.getElementById("productInformation").remove();
     document.querySelector(".dark-body").style.display = "none";
     document.querySelector(".product-modal").style.display = "none";
-    console.log("asdsadas");
   }
 
   dropToCart = () => {
     let addToCartBttn = document.querySelector(".add-to-cart");
     addToCartBttn.addEventListener("click", this.createShopCart, false);
-    console.log("w metodzie" + this.product);
   };
   buyNow() {
     let buyNowBttn = document.querySelector(".buy-now");

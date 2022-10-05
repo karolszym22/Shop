@@ -140,7 +140,7 @@
   border-radius: 20px;
   text-align: center;
   right: 10px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   display: none;
 }
@@ -167,7 +167,7 @@ header .main-head {
   display: -ms-flexbox;
   display: flex;
   height: 60px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   background-color: #131921;
 }
 
@@ -189,7 +189,7 @@ header .main-head .left-head {
 
 header .main-head .left-head .logo-head {
   color: white;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   cursor: pointer;
   height: 100%;
   display: -webkit-box;
@@ -245,7 +245,7 @@ header .main-head .left-head .logo-head .logo .nav-link {
 
 header .main-head .left-head .addres-head {
   color: white;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   cursor: pointer;
   height: 100%;
   display: -webkit-box;
@@ -358,7 +358,7 @@ header .main-head .center-head .search-container .search-category {
   cursor: pointer;
 }
 
-header .main-head .center-head .search-container input[type=search] {
+header .main-head .center-head .search-container input[type="search"] {
   resize: none;
   width: 80%;
   height: 40px;
@@ -533,7 +533,7 @@ header .secondary-head {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: white;
 }
 
@@ -867,7 +867,7 @@ header .secondary-head .nav-container .users-opinion h3:hover {
 body {
   background-color: #28a9e2;
   margin: 0px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   background-image: url(../images/backgroundNature.jpg);
   background-position: top;
   background-repeat: no-repeat;
@@ -1363,9 +1363,9 @@ body {
   min-width: 250px;
   margin-top: 40px;
   border-radius: 15px;
-  border: 2px solid #FFAF38;
-  border-left: 5px solid #FFAF38;
-  border-right: 5px solid #FFAF38;
+  border: 2px solid #ffaf38;
+  border-left: 5px solid #ffaf38;
+  border-right: 5px solid #ffaf38;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1753,7 +1753,7 @@ body {
   display: flex;
 }
 
-.category-articles .articles-container .nav-menu-articles .price-range input[type=text] {
+.category-articles .articles-container .nav-menu-articles .price-range input[type="text"] {
   resize: none;
   width: 300%;
   margin: 0 3px;
@@ -1873,9 +1873,30 @@ body {
   color: gray;
 }
 
+.category-articles .articles-container .articles-products .products-list .products-list-container article .product-producer .discount-price {
+  position: absolute;
+  height: 2px;
+  width: 40%;
+  right: 10%;
+  bottom: 10%;
+  color: orange;
+  font-size: 19px;
+}
+
 .category-articles .articles-container .articles-products .products-list .products-list-container article .product-price {
   font-weight: bold;
   color: black;
+}
+
+.category-articles .articles-container .articles-products .products-list .products-list-container article .product-price .strikethrough {
+  position: absolute;
+  bottom: 4%;
+  left: -2%;
+  height: 2px;
+  width: 40%;
+  background-color: red;
+  -webkit-transform: rotate(0.99turn);
+          transform: rotate(0.99turn);
 }
 
 .category-articles .articles-container .articles-products .products-list .products-list-container article .discount-container {
@@ -2436,8 +2457,7 @@ body {
 }
 
 @media (max-width: 1050px) {
-  .category-articles .order-container .finalizing-order
-.products-order .user-products-order .products-order-container {
+  .category-articles .order-container .finalizing-order .products-order .user-products-order .products-order-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2491,24 +2511,19 @@ body {
   .category-articles .nav-subnav-order {
     display: none;
   }
-  .category-articles .articles-container
-.articles-products .products-list {
+  .category-articles .articles-container .articles-products .products-list {
     margin: 5px 5px;
     font-size: 14px;
   }
-  .category-articles .articles-container
-.articles-products .products-list
-.products-list-container article {
+  .category-articles .articles-container .articles-products .products-list .products-list-container article {
     margin: 15px 5px;
   }
-  .category-articles .articles-container .articles-products
-.products-list .products-list-container {
+  .category-articles .articles-container .articles-products .products-list .products-list-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .category-articles .order-container
-.finalizing-order .delivery-address-order {
+  .category-articles .order-container .finalizing-order .delivery-address-order {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2526,8 +2541,7 @@ body {
   .category-articles .order-container .finalizing-order .products-order .user-products-order {
     margin: 0px 0px;
   }
-  .category-articles .order-container .finalizing-order
-.buy-now-container {
+  .category-articles .order-container .finalizing-order .buy-now-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2536,8 +2550,7 @@ body {
   .category-articles .realization-product-container .realization-product-informations {
     font-size: 11px;
   }
-  .category-articles .realization-product-container
-.realization-orders-list .realization-product-value {
+  .category-articles .realization-product-container .realization-orders-list .realization-product-value {
     font-size: 10px;
   }
   .category-articles .realization-product-container .realization-products-list ul li a {

@@ -46,7 +46,8 @@ class App {
       sessionStorage.setItem("decors", JSON.stringify(products[3]));
     }
   }
-  setCart() { ///refaktoring wskazany
+  setCart() {
+    ///refaktoring wskazany
     let cart = new Array();
 
     if (sessionStorage.getItem("cart")) {

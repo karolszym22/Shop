@@ -41,8 +41,7 @@ export class ArticleToolsUI {
       sessionStorage.setItem("products", JSON.stringify(products));
       products.forEach((productInformation) => {
         productInformation.discount
-          ? ((discountState = 'style="display:flex;"'),
-            (productInformation.price = productInformation.discountPrice))
+          ? ((discountState = 'style="display:flex;"'))
           : (discountState = 'style="display:nonte"');
         this.createProductArticle(
           productsContainer,
@@ -58,6 +57,7 @@ export class ArticleToolsUI {
     discountState,
     productInformation
   ) => {
+    console.log(productInformation)
     const product = document.createElement("article");
     product.classList.add("product");
     product.innerHTML = ` <div  class ="product-image">
@@ -67,8 +67,12 @@ export class ArticleToolsUI {
             <p class ="product-description">${
               productInformation.description
             }</p>
-            <a class ="product-producer">${productInformation.producer}</a>
-            <a class ="product-price">${productInformation.price + " zł"}</a>
+            <div class ="product-producer">${productInformation.producer}
+            ${productInformation.discount ? ('<div class ="discount-price">'+`${productInformation.discountPrice}zł!`+'</div>') : ""}
+            </div>
+            <div class ="product-price">${productInformation.price + " zł"}
+            ${productInformation.discount ? '<div class ="strikethrough"></div>' : ""}
+            </div>
             `;
     productsContainer.appendChild(product);
   };
