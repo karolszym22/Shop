@@ -5,19 +5,21 @@ export class SearchItem {
     this.hideSearchedData();
   }
   enterWord() {
+    const search = document.getElementById("search");
     search.addEventListener("keypress", this.getDevices.bind(this), false);
   }
   getDevices() {
-    document.querySelector(".search-value").innerHTML = "";
-    const search = document.getElementById("search");
-    const devices = JSON.parse(sessionStorage.devices);
+    setTimeout(() => {
+      document.querySelector(".search-value").innerHTML = "";
+      const searchValue = document.getElementById("search");
 
-    this.products.forEach((allProducts) => {
-      for (let i in allProducts) {
-        let product = allProducts[i];
-        this.compareLetters(search, product);
-      }
-    });
+      this.products.forEach((allProducts) => {
+        for (let i in allProducts) {
+          let product = allProducts[i];
+          this.compareLetters(searchValue, product);
+        }
+      });
+    }, 700);
   }
 
   hideSearchedData() {
@@ -32,11 +34,9 @@ export class SearchItem {
   }
 
   compareLetters(search, product) {
+    console.log(product, search.value);
     product.forEach((element) => {
-      if (
-        element.name.substr(0, search.value.length) == search.value &&
-        search.value.length > 0
-      ) {
+      if (element.name.substr(0, search.value.length) == search.value) {
         let product = document.createElement("a");
         product.href = "/category.html";
         product.dataset.state = "foundItem";
