@@ -53,12 +53,12 @@ export class OrderTools {
     });
   };
 
-  updateLastDelivery() {
+  updateLastDelivery = () => {
     sessionStorage.setItem("lastDelivery", ++sessionStorage.lastDelivery);
-  }
-  orderReset() {
+  };
+  orderReset = () => {
     sessionStorage.removeItem("cart");
-  }
+  };
 }
 
 const path = location.pathname;

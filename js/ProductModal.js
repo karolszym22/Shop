@@ -30,15 +30,15 @@ export class ProdcutModal {
     return item;
   };
 
-  addProductName(product) {
+  addProductName = (product) => {
     let productName = document.querySelector(".product-name");
     productName.textContent = product.name;
-  }
-  addProducerName(product) {
+  };
+  addProducerName = (product) => {
     let producerName = document.querySelector(".producer-name");
     producerName.textContent = product.producer;
-  }
-  addProductPrice(product) {
+  };
+  addProductPrice = (product) => {
     if (product.discount) {
       product.price = product.discountPrice;
     }
@@ -46,18 +46,18 @@ export class ProdcutModal {
     let productPrice2 = document.querySelector(".price");
     productPrice.textContent = product.price + " zł";
     productPrice2.textContent = product.price + " zł";
-  }
-  addProductQuantity(product) {
+  };
+  addProductQuantity = (product) => {
     let productQuantity = document.querySelector(".quantity-product");
     productQuantity.textContent = "Nowe (" + product.quantity + ") od ";
-  }
+  };
   getProductInformation = (type) => {
     let info = type;
     for (let item in information) {
       if (item === info) return information[info];
     }
   };
-  addProductInformation(product) {
+  addProductInformation = (product) => {
     const container = document.createElement("div");
     container.classList.add("product-information");
     container.id = "productInformation";
@@ -70,7 +70,7 @@ export class ProdcutModal {
       container.appendChild(infoName);
     });
     document.querySelector(".main-product-information").appendChild(container);
-  }
+  };
   addProductValue = (info, item) => {
     const productValue = `<a class ="feature"> ${info}</a><a class ="feature-value"> ${item}</a>`;
     return productValue;
@@ -79,24 +79,24 @@ export class ProdcutModal {
     const closeBttn = document.querySelector(".close-modal");
     closeBttn.addEventListener("click", this.deleteModalInformation);
   };
-  deleteModalInformation() {
+  deleteModalInformation = () => {
     document.getElementById("productInformation").remove();
     document.querySelector(".dark-body").style.display = "none";
     document.querySelector(".product-modal").style.display = "none";
-  }
+  };
 
   dropToCart = () => {
     let addToCartBttn = document.querySelector(".add-to-cart");
     addToCartBttn.addEventListener("click", this.createShopCart, false);
   };
-  buyNow() {
+  buyNow = () => {
     let buyNowBttn = document.querySelector(".buy-now");
     buyNowBttn.addEventListener("click", function () {
       sessionStorage.state = "";
     });
-  }
+  };
   createShopCart = () => {
     let test = JSON.stringify(this.product);
-    let cart = new ShopCart(test);
+    new ShopCart(test);
   };
 }

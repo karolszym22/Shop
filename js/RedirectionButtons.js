@@ -13,12 +13,12 @@ export class Redirection {
     this.openOrdersHistory();
   }
 
-  openProductModal(modalBttn) {
+  openProductModal = (modalBttn) => {
     modalBttn.forEach((bttn) =>
       bttn.addEventListener("click", (e) => this.createProductModal(e), false)
     );
   }
-  createProductModal(e) {
+  createProductModal = (e) => {
     let productId = e.target.id;
     modal.createModal(productId);
   }
@@ -31,10 +31,8 @@ export class Redirection {
       })
     );
   };
-  openOrdersHistory() {
-    const openOrdersHistoryBttn = document.getElementById("payOrder");
-  }
-  changeAddress() {
+
+  changeAddress = () => {
     const address = new AddressModal();
     const changeAddressBttn = document.querySelector(".change-address");
     changeAddressBttn.addEventListener("click", address.openAddressModal);

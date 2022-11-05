@@ -10,7 +10,7 @@ export class AddressModal {
     this.saveMailChanges();
   }
 
-  updateDeliveryAddress() {
+  updateDeliveryAddress = () => {
     const data = JSON.parse(sessionStorage.address);
     const addressElement = document.querySelectorAll(".user-address-value");
     addressElement.forEach((element, index) => {
@@ -18,7 +18,7 @@ export class AddressModal {
       element.textContent = data[index];
     });
   }
-  checkEmail() {
+  checkEmail = () => {
     var email = document.getElementById("email").value;
 
     var re = /^[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)*@([a-zA-Z0-9_-]+)(\.[a-zA-Z0-9_-]+)*(\.[a-zA-Z]{2,4})$/i;
@@ -29,7 +29,7 @@ export class AddressModal {
     this.emailValidation = true;
     this.addressContainer.push(email);
   }
-  checkPhoneNumber() {
+  checkPhoneNumber = () => {
     let tel = document.getElementById("phone-number").value;
     console.log(tel);
     let reg = /^[0-9\+]{8,13}$/;
@@ -40,7 +40,7 @@ export class AddressModal {
     this.phoneNumberValidation = true;
     this.addressContainer.push(tel);
   }
-  addressValidation() {
+  addressValidation = () => {
     this.checkFirstName();
     this.checkLastName();
     this.checkCity();
@@ -60,7 +60,7 @@ export class AddressModal {
       this.addressContainer = new Array();
     }
   }
-  checkFirstName() {
+  checkFirstName = () => {
     let firstName = document.getElementById("first-name").value;
     if (firstName.length < 3)
       document.querySelector(".first-name-attention").textContent =
@@ -69,7 +69,7 @@ export class AddressModal {
     this.firstNameValidation = true;
     this.addressContainer.push(firstName);
   }
-  checkLastName() {
+  checkLastName = () => {
     let lastName = document.getElementById("last-name").value;
     if (lastName.length < 3)
       document.querySelector(".last-name-attention").textContent =
@@ -78,7 +78,7 @@ export class AddressModal {
     this.lastNameValidation = true;
     this.addressContainer.push(lastName);
   }
-  checkCity() {
+  checkCity = () => {
     let cityName = document.getElementById("city").value;
     if (cityName.length < 2)
       document.querySelector(".city-attention").textContent = "błędne miasto";
@@ -86,19 +86,19 @@ export class AddressModal {
     this.cityNameValidation = true;
     this.addressContainer.push(cityName);
   }
-  openAddressModal() {
+  openAddressModal = () => {
     document.querySelector(".address-modal").style.display = "inline-flex";
     document.querySelector(".dark-body").style.display = "inline-flex";
   }
-  closeAddressModal() {
+  closeAddressModal = () => {
     const closeBttn = document.getElementById("close-address-modal");
     closeBttn.addEventListener("click", this.hideAddressModal);
   }
-  hideAddressModal() {
+  hideAddressModal = () => {
     document.querySelector(".address-modal").style.display = "none";
     document.querySelector(".dark-body").style.display = "none";
   }
-  saveMailChanges() {
+  saveMailChanges = () => {
     const saveBttn = document.querySelector(".save-information");
     saveBttn.addEventListener(
       "click",

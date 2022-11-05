@@ -29,7 +29,7 @@ export class ArticleToolsUI {
     return productsContainer;
   };
 
-  showProducts(productsContainer, article) {
+  showProducts = (productsContainer, article) => {
     let discountState = 'style="display:none;"';
     console.log(article, "asdsadsadsa");
     let category = this.getProductType(article);
@@ -85,7 +85,7 @@ export class ArticleToolsUI {
     sessionStorage.setItem("products", JSON.stringify(product));
   };
 
-  getProductType(article) {
+  getProductType = (article) => {
     for (var i = 0; i < sessionStorage.length; i++) {
       let value = sessionStorage.key(i);
       if (this.productList.includes(value)) {

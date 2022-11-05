@@ -5,7 +5,7 @@ export class ArticleToolsFactory {
     this.showArticle(state);
   }
 
-  showArticle(article) {
+  showArticle = (article) => {
     switch (article) {
       case "laptops":
         document.querySelector(".category-name").innerHTML =
@@ -71,5 +71,5 @@ export class ArticleToolsFactory {
 }
 
 if (window.location.href == "http://127.0.0.1:5500/category.html") {
-  const tools = new ArticleToolsFactory(sessionStorage["state"]);
+  new ArticleToolsFactory(sessionStorage["state"]);
 }

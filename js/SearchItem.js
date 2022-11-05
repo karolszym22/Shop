@@ -4,11 +4,11 @@ export class SearchItem {
     this.enterWord();
     this.hideSearchedData();
   }
-  enterWord() {
+  enterWord = () => {
     const search = document.getElementById("search");
     search.addEventListener("keypress", this.getDevices.bind(this), false);
   }
-  getDevices() {
+  getDevices = () => {
     setTimeout(() => {
       document.querySelector(".search-value").innerHTML = "";
       const searchValue = document.getElementById("search");
@@ -22,18 +22,16 @@ export class SearchItem {
     }, 700);
   }
 
-  hideSearchedData() {
+  hideSearchedData= () =>{
     document.onclick = (e) => {
       const myNode = document.querySelector(".search-value");
       if (e.target.className !== "found-product") {
         myNode.innerHTML = "";
-      } else {
-        alert("udało sie!");
-      }
+      } 
     };
   }
 
-  compareLetters(search, product) {
+  compareLetters = (search, product) => {
     console.log(product, search.value);
     product.forEach((element) => {
       if (element.name.substr(0, search.value.length) == search.value) {

@@ -36,7 +36,7 @@ export class OrderSummary extends AddressModal {
     }
   }
 
-  setGeneralPrice() { //Możliwy refactoring
+  setGeneralPrice = () => { //Możliwy refactoring
     let sum = 0;
     for (let i = 0; i < this.cartPruducts.length; i++) {
       sum += this.cartPruducts[i].price;
@@ -48,7 +48,7 @@ export class OrderSummary extends AddressModal {
     let price = document.querySelectorAll(".general-price");
     for (let i = 0; i < price.length; i++) price[i].textContent = generalPrice;
   };
-  paymentMethod(generalPrice, shippingCost) {
+  paymentMethod = (generalPrice, shippingCost) => {
     const creditCard = document.getElementById("credit-card");
     const cash = document.getElementById("cash");
 
@@ -68,7 +68,7 @@ export class OrderSummary extends AddressModal {
       sessionStorage.setItem("paymentMethod", "cash");
     });
   }
-  deliveryOption() {
+  deliveryOption = () => {
     const deliveryBttn = document.querySelectorAll(".delivery-method");
     deliveryBttn.forEach((bttn) =>
       bttn.addEventListener("click", function () {
@@ -83,24 +83,24 @@ export class OrderSummary extends AddressModal {
       })
     );
   }
-  orderFinalization() {
+  orderFinalization = () => {
     const finalBtnn = document.getElementById("payOrder");
     finalBtnn.addEventListener("click", (e) => this.payForOrder(), false);
   }
-  payForOrder() {
+  payForOrder = () => {
     const userProducts = JSON.parse(sessionStorage.cart);
     const generalPrice = document.querySelector(".general-price").textContent;
     //let cartProducts = JSON.parse(sessionStorage.cart);
     this.otherOrders(userProducts);
   }
-  orderDate() {
+  orderDate = () => {
     const date = new Date();
     const day = date.getDate();
     const month = date.getMonth();
     const year = date.getFullYear();
     return `${day}, ${("0" + (month + 1)).slice(-2)}, ${year}`;
   }
-  otherOrders(userProducts) {
+  otherOrders = (userProducts) => {
     let ordersArray = new Array();
     if (sessionStorage.getItem("historyOrders")) {
       const olderOrders = JSON.parse(sessionStorage.historyOrders);
@@ -118,7 +118,7 @@ export class OrderSummary extends AddressModal {
       window.location.href = "http://127.0.0.1:5500/history-orders.html";
     }
   }
-  orderDates() {
+  orderDates = () => {
     let date = this.orderDate();
     let datesArray = new Array();
     if (sessionStorage.getItem("orderDates")) {
