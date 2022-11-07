@@ -6,7 +6,7 @@ export class Discount {
     this.updatedProducts = this.getDiscount(this.products);
     this.setPromotionProducts(this.promotionProducts);
   }
-  getDiscount = (products) => {
+  getDiscount = products => {
     products.forEach((element) => {
       for (const [key, value] of Object.entries(element)) {
         value.forEach((e) => {
@@ -23,16 +23,16 @@ export class Discount {
     let isDiscount = Math.random() < 0.1;
     return isDiscount;
   };
-  getPromotionProducts = (value) => {
+  getPromotionProducts = value => {
     value.forEach((e) => {
       this.promotionProducts.push(e);
     });
   };
-  setPromotionProducts = (value) => {
+  setPromotionProducts = value => {
     sessionStorage.setItem(
       "promotionProducts",
       JSON.stringify({ promotions: value })
     );
   };
-  promotionProductsFilter = (value) => {};
+  //promotionProductsFilter = (value) => {};
 }

@@ -21,7 +21,7 @@ export class ArticleToolsUI {
     return root;
   };
 
-  createProductsContainer = (root) => {
+  createProductsContainer = root => {
     const productsContainer = document.createElement("div");
     productsContainer.classList.add("products-list-container");
     root.appendChild(productsContainer);
@@ -57,7 +57,6 @@ export class ArticleToolsUI {
     discountState,
     productInformation
   ) => {
-    console.log(productInformation)
     const product = document.createElement("article");
     product.classList.add("product");
     product.innerHTML = ` <div  class ="product-image">
@@ -85,7 +84,7 @@ export class ArticleToolsUI {
     sessionStorage.setItem("products", JSON.stringify(product));
   };
 
-  getProductType = (article) => {
+  getProductType = article => {
     for (var i = 0; i < sessionStorage.length; i++) {
       let value = sessionStorage.key(i);
       if (this.productList.includes(value)) {

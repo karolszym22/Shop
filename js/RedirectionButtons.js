@@ -10,7 +10,7 @@ export class Redirection {
     this.openArticle();
     this.openProductModal(this.modalBttn);
     this.changeAddress();
-    this.openOrdersHistory();
+    //this.openOrdersHistory();
   }
 
   openProductModal = (modalBttn) => {

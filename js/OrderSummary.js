@@ -12,14 +12,14 @@ export class OrderSummary extends AddressModal {
     this.setProductToOrder();
     this.orderFinalization();
   }
-  orderMonitoring() {
+  orderMonitoring = () => {
     if (sessionStorage.getItem("address")) this.updateDeliveryAddress();
   }
-  setProductToOrder() {
+  setProductToOrder = () => {
     const orderContainer = document.querySelector(".order-product-container");
     this.createProductContainer(orderContainer);
   }
-  createProductContainer(orderContainer) {
+  createProductContainer = orderContainer => {
     let cartProducts = JSON.parse(sessionStorage.cart);
     for (let i = 0; i < cartProducts.length; i++) {
       const productOrder = document.createElement("div");
@@ -44,7 +44,7 @@ export class OrderSummary extends AddressModal {
     this.generalPrice = parseFloat(sum.toFixed(2));
     this.updateGeneralPrice(this.generalPrice);
   }
-  updateGeneralPrice = (generalPrice) => {
+  updateGeneralPrice = generalPrice => {
     let price = document.querySelectorAll(".general-price");
     for (let i = 0; i < price.length; i++) price[i].textContent = generalPrice;
   };
@@ -100,7 +100,7 @@ export class OrderSummary extends AddressModal {
     const year = date.getFullYear();
     return `${day}, ${("0" + (month + 1)).slice(-2)}, ${year}`;
   }
-  otherOrders = (userProducts) => {
+  otherOrders = userProducts => {
     let ordersArray = new Array();
     if (sessionStorage.getItem("historyOrders")) {
       const olderOrders = JSON.parse(sessionStorage.historyOrders);
