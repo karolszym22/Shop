@@ -14,14 +14,13 @@ export class AddressModal {
     const data = JSON.parse(sessionStorage.address);
     const addressElement = document.querySelectorAll(".user-address-value");
     addressElement.forEach((element, index) => {
-      console.log("wykonuje się nowa funkcja");
       element.textContent = data[index];
     });
   }
   checkEmail = () => {
-    var email = document.getElementById("email").value;
+    let email = document.getElementById("email").value;
 
-    var re = /^[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)*@([a-zA-Z0-9_-]+)(\.[a-zA-Z0-9_-]+)*(\.[a-zA-Z]{2,4})$/i;
+    let re = /^[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)*@([a-zA-Z0-9_-]+)(\.[a-zA-Z0-9_-]+)*(\.[a-zA-Z]{2,4})$/i;
     if (email.match(re) == null)
       document.querySelector(".email-attention").textContent =
         "Ten adres nie jest prawidłowy";

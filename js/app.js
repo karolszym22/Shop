@@ -2,7 +2,6 @@ import devices from "./data-base/ElectronicProducts.js";
 import clothes from "./data-base/ClothesProducts.js";
 import vehicles from "./data-base/Automotive.js";
 import decors from "./data-base/HomeProducts.js";
-import { LotteryMachine } from "./LotteryMachine.js";
 import { ArticleToolsFactory } from "./ArticleToolsFactory.js";
 import { Redirection } from "./RedirectionButtons.js";
 import { ShopCart } from "./ShopCart.js";
