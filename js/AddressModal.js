@@ -1,11 +1,12 @@
 export class AddressModal {
   constructor() {
     this.addressContainer = new Array(); ///test
-    this.emailValidation = false;
-    this.phoneNumberValidation = false;
-    this.cityNameValidation = false;
-    this.firstNameValidation = false;
-    this.lastNameValidation = false;
+    this.isErrors = true;;
+    this.emailError= true;;
+    this.phoneNumberError = true;;
+    this.cityNameError = true;;
+    this.firstNameError = true;;
+    this.lastNameError = true;;
     this.closeAddressModal();
     this.saveMailChanges();
   }
@@ -25,7 +26,7 @@ export class AddressModal {
       document.querySelector(".email-attention").textContent =
         "Ten adres nie jest prawidłowy";
     else document.querySelector(".email-attention").textContent = "";
-    this.emailValidation = true;
+    this.emailError= false;
     this.addressContainer.push(email);
   }
   checkPhoneNumber = () => {
@@ -36,7 +37,7 @@ export class AddressModal {
       document.querySelector(".phone-number-attention").textContent =
         "nie poprawny numer telefonu";
     else document.querySelector(".phone-number-attention").textContent = "";
-    this.phoneNumberValidation = true;
+    this.phoneNumberError = false;
     this.addressContainer.push(tel);
   }
   addressValidation = () => {
@@ -46,11 +47,11 @@ export class AddressModal {
     this.checkPhoneNumber();
     this.checkEmail();
     if (
-      this.emailValidation == true &&
-      this.phoneNumberValidation == true &&
-      this.cityNameValidation == true &&
-      this.firstNameValidation == true &&
-      this.lastNameValidation == true
+      this.emailError== true &&
+      this.phoneNumberError == true &&
+      this.cityNameError == true &&
+      this.firstNameError == true &&
+      this.lastNameError == true
     ) {
       sessionStorage.setItem("address", JSON.stringify(this.addressContainer));
       this.hideAddressModal();
@@ -60,12 +61,13 @@ export class AddressModal {
     }
   }
   checkFirstName = () => {
+    const minimumLengthName = 1;
     let firstName = document.getElementById("first-name").value;
-    if (firstName.length < 3)
+    if (firstName.length < minimumLengthName)
       document.querySelector(".first-name-attention").textContent =
         "błędne imię";
     else document.querySelector(".first-name-attention").textContent = "";
-    this.firstNameValidation = true;
+    this.firstNameError = false;
     this.addressContainer.push(firstName);
   }
   checkLastName = () => {
@@ -74,7 +76,7 @@ export class AddressModal {
       document.querySelector(".last-name-attention").textContent =
         "błędne nazwisko";
     else document.querySelector(".last-name-attention").textContent = "";
-    this.lastNameValidation = true;
+    this.lastNameError = false;
     this.addressContainer.push(lastName);
   }
   checkCity = () => {
@@ -82,7 +84,7 @@ export class AddressModal {
     if (cityName.length < 2)
       document.querySelector(".city-attention").textContent = "błędne miasto";
     else document.querySelector(".city-attention").textContent = "";
-    this.cityNameValidation = true;
+    this.cityNameError = false;
     this.addressContainer.push(cityName);
   }
   openAddressModal = () => {
