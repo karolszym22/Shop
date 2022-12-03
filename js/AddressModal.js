@@ -1,12 +1,12 @@
 export class AddressModal {
   constructor() {
     this.addressContainer = new Array(); ///test
-    this.isErrors = true;;
-    this.emailError= true;;
-    this.phoneNumberError = true;;
-    this.cityNameError = true;;
-    this.firstNameError = true;;
-    this.lastNameError = true;;
+    this.areErrors = true;
+    this.emailError = true;
+    this.phoneNumberError = true;
+    this.cityNameError = true;
+    this.firstNameError = true;
+    this.lastNameError = true;
     this.closeAddressModal();
     this.saveMailChanges();
   }
@@ -17,7 +17,7 @@ export class AddressModal {
     addressElement.forEach((element, index) => {
       element.textContent = data[index];
     });
-  }
+  };
   checkEmail = () => {
     let email = document.getElementById("email").value;
 
@@ -26,9 +26,9 @@ export class AddressModal {
       document.querySelector(".email-attention").textContent =
         "Ten adres nie jest prawidłowy";
     else document.querySelector(".email-attention").textContent = "";
-    this.emailError= false;
+    this.emailError = false;
     this.addressContainer.push(email);
-  }
+  };
   checkPhoneNumber = () => {
     let tel = document.getElementById("phone-number").value;
     console.log(tel);
@@ -39,7 +39,7 @@ export class AddressModal {
     else document.querySelector(".phone-number-attention").textContent = "";
     this.phoneNumberError = false;
     this.addressContainer.push(tel);
-  }
+  };
   addressValidation = () => {
     this.checkFirstName();
     this.checkLastName();
@@ -47,11 +47,13 @@ export class AddressModal {
     this.checkPhoneNumber();
     this.checkEmail();
     if (
-      this.emailError== true &&
-      this.phoneNumberError == true &&
-      this.cityNameError == true &&
-      this.firstNameError == true &&
-      this.lastNameError == true
+      (this.areErrors = Boolean(
+        this.emailError ||
+          this.phoneNumberError ||
+          this.cityNameError ||
+          this.firstNameError ||
+          this.lastNameError
+      ))
     ) {
       sessionStorage.setItem("address", JSON.stringify(this.addressContainer));
       this.hideAddressModal();
@@ -59,7 +61,7 @@ export class AddressModal {
     } else {
       this.addressContainer = new Array();
     }
-  }
+  };
   checkFirstName = () => {
     const minimumLengthName = 1;
     let firstName = document.getElementById("first-name").value;
@@ -69,7 +71,7 @@ export class AddressModal {
     else document.querySelector(".first-name-attention").textContent = "";
     this.firstNameError = false;
     this.addressContainer.push(firstName);
-  }
+  };
   checkLastName = () => {
     let lastName = document.getElementById("last-name").value;
     if (lastName.length < 3)
@@ -78,7 +80,7 @@ export class AddressModal {
     else document.querySelector(".last-name-attention").textContent = "";
     this.lastNameError = false;
     this.addressContainer.push(lastName);
-  }
+  };
   checkCity = () => {
     let cityName = document.getElementById("city").value;
     if (cityName.length < 2)
@@ -86,19 +88,19 @@ export class AddressModal {
     else document.querySelector(".city-attention").textContent = "";
     this.cityNameError = false;
     this.addressContainer.push(cityName);
-  }
+  };
   openAddressModal = () => {
     document.querySelector(".address-modal").style.display = "inline-flex";
     document.querySelector(".dark-body").style.display = "inline-flex";
-  }
+  };
   closeAddressModal = () => {
     const closeBttn = document.getElementById("close-address-modal");
     closeBttn.addEventListener("click", this.hideAddressModal);
-  }
+  };
   hideAddressModal = () => {
     document.querySelector(".address-modal").style.display = "none";
     document.querySelector(".dark-body").style.display = "none";
-  }
+  };
   saveMailChanges = () => {
     const saveBttn = document.querySelector(".save-information");
     saveBttn.addEventListener(
@@ -106,7 +108,7 @@ export class AddressModal {
       this.addressValidation.bind(this),
       false
     );
-  }
+  };
 }
 
 const addressModal = new AddressModal();
