@@ -89,8 +89,7 @@ export class OrderSummary extends AddressModal {
   }
   payForOrder = () => {
     const userProducts = JSON.parse(sessionStorage.cart);
-    const generalPrice = document.querySelector(".general-price").textContent;
-    //let cartProducts = JSON.parse(sessionStorage.cart);
+
     this.otherOrders(userProducts);
   }
   orderDate = () => {

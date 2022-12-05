@@ -19,7 +19,7 @@ export class OrderTools {
   };
   addNewOrder = (...args) => {
     const orders = JSON.parse(sessionStorage.historyOrders);
-    const [orderNumber, products] = args;
+    //const [orderNumber, products] = args;
     let productList;
     const main = document.querySelector(".history-product-container");
     orders.forEach((e, index) => {

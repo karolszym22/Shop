@@ -71,8 +71,8 @@ class App {
   }
 }
 
-const app = new App();
-const links = new NavLinks();
+new App();
+new NavLinks();
 
 const OpenSideMenuBttn = document.getElementById("open-side-menu");
 const CloseSideMenuBttn = document.getElementById("close-side-menu");

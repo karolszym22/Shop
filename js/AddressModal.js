@@ -111,4 +111,4 @@ export class AddressModal {
   };
 }
 
-const addressModal = new AddressModal();
+new AddressModal();

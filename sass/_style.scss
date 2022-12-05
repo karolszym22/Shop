@@ -7,7 +7,6 @@
   padding: 0%;
 }
 
-html {}
 
 body {
   background-color: $bodyBackgroundColor;
@@ -79,12 +78,6 @@ body {
         padding-top: 13px;
         padding-bottom: 13px;
 
-        a {
-          color: black;
-          text-decoration: none;
-          display: block;
-          height: 100%;
-        }
 
         &:hover {
           background-color: rgb(226, 218, 218);
@@ -795,7 +788,8 @@ body {
               font-size: 14px;
               font-weight: bold;
               color: gray;
-              .discount-price{
+
+              .discount-price {
                 position: absolute;
                 height: 2px;
                 width: 40%;
@@ -817,7 +811,6 @@ body {
                 height: 2px;
                 width: 40%;
                 background-color: red;
-                transform: rotate(0.99turn);
               }
             }
 
@@ -825,7 +818,7 @@ body {
               position: absolute;
               background-image: url("../images/tag.png");
               height: 60px;
-              width: 60px;
+              width:59px;
               background-size: 60px;
               background-repeat: no-repeat;
               display: none;
@@ -844,7 +837,6 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    h2 {}
 
     .cash-register {
       display: flex;
@@ -1077,7 +1069,6 @@ body {
                 margin: 0 10px;
                 background: -webkit-linear-gradient(rgb(145, 8, 8),
                     rgb(247, 177, 47));
-                -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
               }
             }

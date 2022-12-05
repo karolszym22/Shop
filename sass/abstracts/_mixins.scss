@@ -1,0 +1,6 @@
+@mixin square($height, $cover) {
+    height: $height;
+    background-size: $cover;
+    background-position: $cover;
+  }
+  
