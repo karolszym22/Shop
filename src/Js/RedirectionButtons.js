@@ -1,7 +1,7 @@
 import { ProdcutModal } from "./ProductModal.js";
-import { AddressModal } from "./AddressModal.js";
+import { AddressModal } from "./AddressModa.js/AddressModal.js";
 import { OrderTools } from "./OrderToolsFactory.js";
-import { OrderSummary } from "./OrderSummary.js";
+import { OrderSummary } from "./OrderSummary/OrderSummary.js";
 let modal = new ProdcutModal();
 
 export class Redirection {
