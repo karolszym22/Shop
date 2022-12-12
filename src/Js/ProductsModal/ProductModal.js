@@ -1,5 +1,5 @@
-import { ShopCart } from "./ShopCart.js";
-import information from "./ProductsInformation.js";
+import { ShopCart } from "../ShopCart.js";
+import information from "../ProductsInformation/ProductsInformation.js";
 export class ProdcutModal {
   createModal(productId) {
     this.product = this.findItem(productId);

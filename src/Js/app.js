@@ -2,16 +2,13 @@ import devices from "./data-base/ElectronicProducts.js";
 import clothes from "./data-base/ClothesProducts.js";
 import vehicles from "./data-base/Automotive.js";
 import decors from "./data-base/HomeProducts.js";
-import { ArticleToolsFactory } from "./ArticleToolsFactory/ArticleToolsFactory.js";
-import { Redirection } from "./RedirectionButtons.js";
+import { Redirection } from "./RedirectionButtons/RedirectionButtons.js";
 import { ShopCart } from "./ShopCart.js";
 import { SearchItem } from "./SearchItem.js";
-import { NavLinks } from "./NavLinks.js";
-import { OrderSummary } from "./OrderSummary/OrderSummary.js";
-import { AddressModal } from "./AddressModa.js/AddressModal.js";
+import { NavLinks } from "./NavLinks/NavLinks.js"
+
 import { OrderTime } from "./OrderTime.js";
-import { OrderTools } from "./OrderToolsFactory.js";
-import { purchaseStates } from "./purchaseStates.js";
+
 import { Discount } from "./DiscountGenerator/DiscountGenerator.js";
 const buttons = new Redirection();
 
