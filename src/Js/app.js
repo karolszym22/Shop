@@ -3,11 +3,10 @@ import clothes from "./data-base/ClothesProducts.js";
 import vehicles from "./data-base/Automotive.js";
 import decors from "./data-base/HomeProducts.js";
 import { Redirection } from "./RedirectionButtons/RedirectionButtons.js";
-import { ShopCart } from "./ShopCart.js";
-import { SearchItem } from "./SearchItem.js";
+import { SearchItem } from "./SearchItem/SearchItem.js";
 import { NavLinks } from "./NavLinks/NavLinks.js"
 
-import { OrderTime } from "./OrderTime.js";
+import { OrderTime } from "./OrderTime/OrderTime.js"
 
 import { Discount } from "./DiscountGenerator/DiscountGenerator.js";
 const buttons = new Redirection();

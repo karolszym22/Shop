@@ -1,4 +1,4 @@
-import { AddressModal } from "../AddressModa.js/AddressModal.js";
+import { AddressModal } from "../AddressModal/AddressModal.js";
 export class OrderSummary extends AddressModal {
   constructor() {
     super();

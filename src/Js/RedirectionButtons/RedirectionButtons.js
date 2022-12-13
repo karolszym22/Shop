@@ -1,8 +1,6 @@
-import { ProdcutModal } from "./ProductModal.js";
-import { AddressModal } from "../AddressModa.js/AddressModal.js";
-import { OrderTools } from "./OrderToolsFactory.js";
-import { OrderSummary } from "../OrderSummary/OrderSummary.js";
-let modal = new ProdcutModal();
+import { ProductModal } from "../ProductModal/ProductModal.js"
+import { AddressModal } from "../AddressModal/AddressModal.js";
+let modal = new ProductModal();
 
 export class Redirection {
   constructor() {
@@ -23,6 +21,7 @@ export class Redirection {
     modal.createModal(productId);
   }
   openArticle = () => {
+    alert("wykonuje sie")
     const articleBttn = document.querySelectorAll(".open-article");
     articleBttn.forEach((bttn) =>
       bttn.addEventListener("click", (ev) => {
