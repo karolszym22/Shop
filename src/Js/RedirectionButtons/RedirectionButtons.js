@@ -21,7 +21,6 @@ export class Redirection {
     modal.createModal(productId);
   }
   openArticle = () => {
-    alert("wykonuje sie")
     const articleBttn = document.querySelectorAll(".open-article");
     articleBttn.forEach((bttn) =>
       bttn.addEventListener("click", (ev) => {

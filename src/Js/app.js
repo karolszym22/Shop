@@ -5,9 +5,11 @@ import decors from "./data-base/HomeProducts.js";
 import { Redirection } from "./RedirectionButtons/RedirectionButtons.js";
 import { SearchItem } from "./SearchItem/SearchItem.js";
 import { NavLinks } from "./NavLinks/NavLinks.js"
-
+import { ArticleToolsFactory } from "./ArticleToolsFactory/ArticleToolsFactory.js";
 import { OrderTime } from "./OrderTime/OrderTime.js"
-
+import { purchaseStates } from "./PurchaseStates/PurchaseStates.js";
+import { OrderSummary } from "./OrderSummary/OrderSummary.js";
+import { AddressModal } from "./AddressModal/AddressModal.js";
 import { Discount } from "./DiscountGenerator/DiscountGenerator.js";
 const buttons = new Redirection();
 
@@ -59,7 +61,7 @@ class App {
   }
 
   lastState() {
-    sessionStorage.state = sessionStorage.lastState;
+    sessionStorage.state = "default";
   }
 
   lastDelivery() {
