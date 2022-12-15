@@ -27,7 +27,6 @@ export class NavLinks
     {
         this.toFinishOrder.addEventListener('click', ()=>
         {
-            console.log("wykonuje sie!!!!!!!!!!!")
             window.location.href='http://127.0.0.1:5500/order-fulfillment.html'
         })
     }

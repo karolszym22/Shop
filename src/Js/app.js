@@ -15,13 +15,12 @@ const buttons = new Redirection();
 
 class App {
   constructor() {
-    sessionStorage.state = "default";
+
     const allProducts = [devices, clothes, vehicles, decors];
     this.checkOrder();
     this.getAllProducts(allProducts);
     this.setCart();
     this.cartContent();
-    this.lastState();
     this.lastDelivery();
     new SearchItem(allProducts);
   }
@@ -60,17 +59,13 @@ class App {
     }
   }
 
-  lastState() {
-    sessionStorage.state = "default";
-  }
-
   lastDelivery() {
     sessionStorage.setItem("lastDelivery", 45643398);
   }
 }
 
 new App();
-new NavLinks();
+//new NavLinks();
 
 const OpenSideMenuBttn = document.getElementById("open-side-menu");
 const CloseSideMenuBttn = document.getElementById("close-side-menu");
