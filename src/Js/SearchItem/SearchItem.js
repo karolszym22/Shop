@@ -32,7 +32,6 @@ export class SearchItem {
   }
 
   compareLetters = (search, product) => {
-    console.log(product, search.value);
     product.forEach((element) => {
       if (element.name.substr(0, search.value.length) == search.value) {
         let product = document.createElement("a");
@@ -49,6 +48,7 @@ export class SearchItem {
           sessionStorage.setItem("lastFoundProduct", JSON.stringify(element));
           sessionStorage.setItem("state", state);
         });
+        console.log(element.name)
       }
     });
   }

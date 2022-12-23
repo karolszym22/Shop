@@ -12,7 +12,7 @@ import { OrderSummary } from "./OrderSummary/OrderSummary.js";
 import { AddressModal } from "./AddressModal/AddressModal.js";
 import { Discount } from "./DiscountGenerator/DiscountGenerator.js";
 const buttons = new Redirection();
-
+const navLinks= new NavLinks();
 class App {
   constructor() {
 
@@ -22,11 +22,11 @@ class App {
     this.setCart();
     this.cartContent();
     this.lastDelivery();
-    new SearchItem(allProducts);
+    return new SearchItem(allProducts);
   }
   checkOrder() {
     if (sessionStorage.cart) {
-      const orderTime = new OrderTime();
+        return new OrderTime();
     }
   }
 
